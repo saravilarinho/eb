@@ -1,19 +1,20 @@
 import React from 'react';
 import '../Styles.css';
+import {Link} from 'react-router-dom'
 
 
 function Navbar() {
     return (
         <div className={"row"}>
-            <nav>
-                <a href="#">
+            <nav className={"navbar"}>
+                <a >
                 </a>
                 <div>
-                    <ul>
-                        <li><a href="#">Séries</a></li>
-                        <li><a href="#">Filmes</a></li>
-                        <li><a href="#">Iniciar Sessão</a></li>
-                    </ul>
+                        <p><Link href="#">Movies</Link></p>
+                        <p><Link href="#">TV Shows</Link></p>
+                        <p><Link href="#">Books</Link></p>
+                        <p><Link href="#">Music</Link></p>
+                        <p><Link href="#">Log In/Sign In</Link></p>
                 </div>
             </nav>
         </div>

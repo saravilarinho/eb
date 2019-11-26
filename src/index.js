@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import Homepage from './Homepage';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Menu from './Componentes/Menu';
+import Navbar from './Componentes/Navbar';
 import Footer from './Componentes/Footer'
 
 ReactDOM.render(
     <Router>
-        <Menu/>
+        <Navbar/>
         <div>
             <Switch>
                 <Route path="/homepage" component={Homepage}/>

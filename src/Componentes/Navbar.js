@@ -2,15 +2,15 @@ import React from 'react';
 import '../Styles.css';
 
 
-function Menu() {
+function Navbar() {
     return (
         <div>
 
             <p>
-                Menu
+                Navbar
             </p>
             </div>
     );
 }
 
-export default Menu;
+export default Navbar;

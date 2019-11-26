@@ -7,14 +7,14 @@ function Navbar() {
     return (
         <div className={"row"}>
             <nav className={"navbar"}>
-                <a >
-                </a>
-                <div>
-                        <p><Link href="#">Movies</Link></p>
-                        <p><Link href="#">TV Shows</Link></p>
-                        <p><Link href="#">Books</Link></p>
-                        <p><Link href="#">Music</Link></p>
-                        <p><Link href="#">Log In/Sign In</Link></p>
+                <Link to={"/Homepage"}>  <img src={"IMGS/Logo.png"} className={'img-fluid logo'}/>
+                </Link>
+                <div className={"links"}>
+                        <Link to={"/Movies"} >Movies</Link>
+                        <Link to={"/TvShows"}>TV Shows</Link>
+                        <Link to={"/Books"}>Books</Link>
+                        <Link to={"/Music"}>Music</Link>
+                        <Link to={"/LogIn"}>Log In/Sign In</Link>
                 </div>
             </nav>
         </div>

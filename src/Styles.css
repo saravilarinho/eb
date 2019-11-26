@@ -38,11 +38,25 @@
 }
 
 .defaultlettering{
-    color: white;
+    color: white !important;
 }
 
 .navbar {
   background: black;
   width: 100%;
   height: 100px;
+    text-underline-mode: none;
+    text-underline: none !important;
+;
+}
+
+.logo {
+    width: 25%;
+    height: 100%;
+
+}
+
+.links {
+    text-underline-mode: none;
+    text-underline: none !important;
 }

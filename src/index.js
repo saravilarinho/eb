@@ -1,24 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Homepage from './Homepage';
-import * as serviceWorker from './serviceWorker';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Navbar from './Componentes/Navbar';
 import Footer from './Componentes/Footer'
+import Movies from './Movies';
+import TvShows from "./TvShows";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import * as serviceWorker from './serviceWorker';
+
 
 ReactDOM.render(
     <Router>
         <Navbar/>
         <div>
             <Switch>
-                <Route path="/homepage" component={Homepage}/>
-                <Route path="/movies"/>
-                <Route path="/series"/>
-                <Route path="/books"/>
-                <Route path="/music"/>
-                <Route path="/login"/>
-                <Route path="/registo"/>
-                <Route path="/favourites"/>
+                <Route path="/Homepage" component={Homepage}/>
+                <Route path="/Movies" component={Movies}/>
+                <Route path="/TvShows" component={TvShows}/>
+                <Route path="/Books"/>
+                <Route path="/Music"/>
+                <Route path="/Login"/>
+                <Route path="/Registo"/>
+                <Route path="/Favourites"/>
                 <Route component={Homepage}/>
             </Switch>
 

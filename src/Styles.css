@@ -27,16 +27,13 @@
 
 .footer{
   background-color: #FFD015;
-  width: 100%;
-  height: 100px;
   text-align: center;
   margin: auto;
+    color: #000;
+
 
 }
 
-.footertext {
-  top: 50%;
-}
 
 .defaultlettering{
     color: white !important;

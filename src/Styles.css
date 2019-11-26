@@ -61,3 +61,47 @@
     text-underline-mode: none;
     text-underline: none !important;
 }
+
+
+
+.Backdrop {
+
+    color: #FFD015;
+    background-image: url("Backdrop.png");
+    height: 45vw !important;
+    background-color: black;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.Backdrop h1 {
+
+    font-size: 6vw;
+
+}
+
+
+.Backdrop h6 {
+
+    margin-left: 3vw!important;
+    font-size: 3vw;
+
+}
+
+.Backdrop .filler {
+
+    height: 5vw!important;
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .Backdrop h6 {
+
+        font-size: 6vw;
+
+    }
+}
+

@@ -4,11 +4,11 @@ import '../Styles.css';
 
 function Backdrop() {
     return (
-        <div>
+        <div className={'row'}>
 
-            <p>
-                Backdrop
-            </p>
+            <div className={'col-12'}>
+            <img src={'IMGS/Backdrop.png'} className={'img-fluid'}/>
+            </div>
         </div>
     );
 }

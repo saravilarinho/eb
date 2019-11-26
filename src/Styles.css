@@ -2,6 +2,18 @@
 }
 
 
+
+body{
+
+    background-color: black;
+    font-size: calc(10px + 2vmin);
+    color: white;
+
+
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -10,16 +22,6 @@
   height: 40vmin;
 }
 
-.background {
-  background-color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #09d3ac;
@@ -65,7 +67,7 @@
 
     color: #FFD015;
     background-image: url("Backdrop.png");
-    height: 45vw !important;
+    height: 35vw !important;
     background-color: black;
     background-size: 100% auto;
     background-position: center;
@@ -76,6 +78,7 @@
 .Backdrop h1 {
 
     font-size: 6vw;
+    font-weight: bolder;
 
 }
 
@@ -84,6 +87,7 @@
 
     margin-left: 3vw!important;
     font-size: 3vw;
+    font-weight: lighter;
 
 }
 
@@ -94,11 +98,24 @@
 
 }
 
+
+
+.footer p{
+
+   font-size: 17px
+}
+
 @media screen and (max-width: 700px) {
     .Backdrop h6 {
 
         font-size: 6vw;
 
     }
+
+
+
 }
+
+
+
 

@@ -12,7 +12,6 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
     <Router>
         <Navbar/>
-        <div>
             <Switch>
                 <Route path="/Homepage" component={Homepage}/>
                 <Route path="/Movies" component={Movies}/>
@@ -25,7 +24,6 @@ ReactDOM.render(
                 <Route component={Homepage}/>
             </Switch>
 
-        </div>
     <Footer/>
     </Router>, document.getElementById('root'));
 

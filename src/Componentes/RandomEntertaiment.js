@@ -4,9 +4,9 @@ import '../Styles.css';
 
 function RandomEntertaiment() {
     return (
-        <div>
+        <div className={'row h-100 d-flex align-items-center'}>
 
-            <p>
+            <p className={'col-4'}>
                 RandomEntertaiment
             </p>
         </div>

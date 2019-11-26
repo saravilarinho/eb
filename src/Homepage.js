@@ -5,7 +5,7 @@ import RandomEntertaiment from './Componentes/RandomEntertaiment'
 
 function Homepage() {
   return (
-    <div className={"background"}>
+    <div>
         <Backdrop/>
         <RandomEntertaiment/>
     </div>

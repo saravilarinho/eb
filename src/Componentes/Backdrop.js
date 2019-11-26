@@ -7,7 +7,8 @@ function Backdrop() {
         <div className={'row'}>
 
             <div className={'col-12'}>
-            <img src={'IMGS/Backdrop.png'} className={'img-fluid'}/>
+
+            <img src={'./src/Componentes/IMGS/Backdrop.png'} className={'img-fluid'}/>
             </div>
         </div>
     );

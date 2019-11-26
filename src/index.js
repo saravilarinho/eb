@@ -4,7 +4,7 @@ import Homepage from './Homepage';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Menu from './Componentes/Menu';
-import Footer from './Componentes/Footer';
+import Footer from './Componentes/Footer'
 
 ReactDOM.render(
     <Router>

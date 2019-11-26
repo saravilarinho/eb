@@ -4,12 +4,19 @@ import '../Styles.css';
 
 function Navbar() {
     return (
-        <div>
-
-            <p>
-                Navbar
-            </p>
-            </div>
+        <div className={"row"}>
+            <nav>
+                <a href="#">
+                </a>
+                <div>
+                    <ul>
+                        <li><a href="#">Séries</a></li>
+                        <li><a href="#">Filmes</a></li>
+                        <li><a href="#">Iniciar Sessão</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     );
 }
 

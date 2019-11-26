@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import Homepage from './Homepage';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Menu from './Menu';
-import Footer from './Footer'
+import Menu from './Componentes/Menu';
+import Footer from './Componentes/Footer'
 
 ReactDOM.render(
     <Router>

@@ -1,16 +1,16 @@
 import React from 'react';
-import './Styles.css';
+import '../Styles.css';
 
 
-function Menu() {
+function Footer() {
     return (
         <div>
 
             <p>
-                Menu
+                Footer
             </p>
             </div>
     );
 }
 
-export default Menu;
+export default Footer;

@@ -4,11 +4,9 @@ import '../Styles.css';
 
 function Footer() {
     return (
-        <div>
+        <div className={"row footer col-md-12"}>
 
-            <p>
-                Footer
-            </p>
+            <p className={"footertext"}>Entertainment Base 2019</p>
             </div>
     );
 }

@@ -2,12 +2,18 @@ import React from 'react';
 import './Styles.css';
 
 
-class Movies {
+function Movies (){
+    return (
 
+        <div className={"background"}>
+            <p>MOVIES</p>
+
+        </div>
+)
 
 
 }
 
 
 
-
+export default Movies;

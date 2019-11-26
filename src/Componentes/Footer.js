@@ -4,7 +4,7 @@ import '../Styles.css';
 
 function Footer() {
     return (
-        <div className={"row footer justify-content-center"}>
+        <div className={"row footer justify-content-center pt-2"}>
 
             <div className={'col-2 '}>
                 <div className={'row justify-content-center' }>

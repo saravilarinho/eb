@@ -9,6 +9,7 @@ const Music = () =>{
 
             <div className={"backgroundmusic align-items-center col-md-12"}>
                 <h3 className={"align-self-center comingsoon"}>COMING SOON...</h3>
+                <p>We are building something very cool. Stay tuned and be patient.</p>
             </div>
 
         </div>

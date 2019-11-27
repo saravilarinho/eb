@@ -21,6 +21,7 @@ ReactDOM.render(
                 <Route path="/Login"/>
                 <Route path="/Registo"/>
                 <Route path="/Favourites"/>
+                <Route path="/Movies/Individual/:id_entertaiment"/>
                 <Route component={Homepage}/>
             </Switch>
 

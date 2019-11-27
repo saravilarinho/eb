@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d544ab74-b15a-4dfc-83b7-fdf4b0caa461" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Componentes/IndividualEntertaiment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Componentes/IndividualEntertaiment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Componentes/RandomEntertaiment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Componentes/RandomEntertaiment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +34,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Componentes/IndividualEntertaiment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+            <state relative-caret-position="248">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -109,16 +120,16 @@
         <option value="$PROJECT_DIR$/src/RandomEntertaiment.js" />
         <option value="$PROJECT_DIR$/src/Componentes/Backdrop.js" />
         <option value="$PROJECT_DIR$/src/Homepage.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Componentes/Footer.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/Componentes/RandomEntertaiment.js" />
         <option value="$PROJECT_DIR$/src/Styles.css" />
         <option value="$PROJECT_DIR$/src/Componentes/IndividualEntertaiment.js" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="692" />
     <option name="y" value="43" />
     <option name="width" value="1198" />
@@ -141,12 +152,6 @@
               <item name="eb" type="b2602c69:ProjectViewProjectNode" />
               <item name="eb" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eb" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="IMGS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eb" type="b2602c69:ProjectViewProjectNode" />
@@ -217,18 +222,18 @@
       <workItem from="1574777414229" duration="13359000" />
       <workItem from="1574807847887" duration="5917000" />
       <workItem from="1574815680126" duration="7188000" />
-      <workItem from="1574850234309" duration="4785000" />
+      <workItem from="1574850234309" duration="5104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31249000" />
+    <option name="totallyTimeSpent" value="31568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="692" y="43" width="1198" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43233743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -317,16 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Homepage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -379,8 +374,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Componentes/IndividualEntertaiment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+        <state relative-caret-position="248">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Universidade 3º ano 1º semestre/LABV/aula_12_11/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

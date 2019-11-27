@@ -315,3 +315,18 @@ color: #FFD015;
 
     padding-top: 5vh!important;
 }
+
+.thumbs {
+
+    display: none!important;
+}
+
+.control-dots{
+
+    display: none!important;
+}
+
+.nothing{
+
+    display: none!important;
+}

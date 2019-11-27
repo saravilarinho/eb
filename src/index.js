@@ -9,6 +9,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import Page_individual from './Page_individual'
 import Music from "./Music";
+import Login from './Login'
+import Registo from './Registo'
 
 ReactDOM.render(
     <Router>
@@ -20,8 +22,8 @@ ReactDOM.render(
                 <Route path="/Series" component={Series}/>
                 <Route path="/Books"/>
                 <Route path="/Music" component={Music}/>
-                <Route path="/Login"/>
-                <Route path="/Registo"/>
+                <Route path="/Login" component={Login}/>
+                <Route path="/Registo" component={Registo}/>
                 <Route path="/Favourites"/>
                 <Route component={Homepage}/>
             </Switch>

@@ -3,6 +3,12 @@ import './Styles.css';
 
 
 function Series () {
+    return(
+        <div>
+
+        </div>
+
+    )
 
 
 }

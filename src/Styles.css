@@ -51,19 +51,21 @@ body {
 }
 
 .logo {
-    width: 25%;
+    width: 55%;
     height: 100%;
     margin: 3vw !important;
+    position: relative;
 }
 
 .links {
     text-underline-mode: none;
     text-underline: none !important;
-    padding: 2vw !important;
+    padding: 1.5vw !important;
     text-decoration: none !important;
     color: white;
     font-size: 20px;
     display: inline;
+
 
 }
 
@@ -82,15 +84,15 @@ body {
 }
 
 .lupa {
-    margin-left: -30px !important;
+    margin-left: -45px !important;
 }
 
 .logo_link {
-    width: 25vw;
+    width: 9vw;
 }
 
 .barra{
-    margin-right: 1.2vw !important;
+    margin-right: 4vw !important;
 }
 
 

@@ -16,7 +16,7 @@ function Footer() {
                 <img className={'col-2 img-fluid p-2'} src={twitter}/>
                 </div>
                 <div className={'row  text-center p-2'}>
-                    <p className={'col-12'}>Entertement Base 2018</p>
+                    <p className={'col-12'}>Entertainment Base 2019</p>
                 </div>
             </div>
 

@@ -4,7 +4,7 @@ import Homepage from './Homepage';
 import Navbar from './Componentes/Navbar';
 import Footer from './Componentes/Footer'
 import Movies from './Movies';
-import TvShows from "./TvShows";
+import Series from "./Series";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import Page_individual from './Page_individual'
@@ -16,7 +16,7 @@ ReactDOM.render(
                 <Route path="/Homepage" component={Homepage}/>
                 <Route path="/Movies/:id_entertaiment" component={Page_individual}/>
                 <Route path="/Movies" component={Movies}/>
-                <Route path="/TvShows" component={TvShows}/>
+                <Route path="/Series" component={Series}/>
                 <Route path="/Books"/>
                 <Route path="/Music"/>
                 <Route path="/Login"/>

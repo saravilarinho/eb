@@ -95,6 +95,39 @@ body {
     margin-right: 4vw !important;
 }
 
+.backgroundmusic {
+    background-image: url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
+    position: relative;
+    background-size: cover;
+    text-align: center;
+    margin: auto;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(100%);
+    opacity: 0.6;
+    z-index: -1000;
+    background-image: -webkit-linear-gradient(top,
+    rgba(0,0,0,1) 9%,
+    rgba(0,0,0,0) 130%,
+    rgba(0,0,0,0) 80%,
+    rgba(0,0,0,0.9) 100%
+    ), url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
+    height: 62.5vh;
+}
+
+
+.comingsoon{
+    margin-top: 20vh!important;
+    font-size: 60px;
+}
+
+.titulos {
+    text-align: start;
+    margin-left: 2.5vw !important;
+    margin-top: 7vh !important;
+    color: #FFD015 !important;
+
+}
+
 
 .Backdrop {
 
@@ -105,6 +138,8 @@ body {
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
+    object-fit: cover;
+
 }
 
 
@@ -182,14 +217,10 @@ body {
 
 
 .IndividualEntertaiment .Director{
-
-
     object-fit: cover;
     clip-path: polygon(100% 0, 100% 60%, 52% 100%, 0 60%, 0 0);
     filter: grayscale(100%) contrast(100%);
     opacity: 0.6;
-
-
 
 }
 

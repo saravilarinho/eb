@@ -53,12 +53,44 @@ body {
 .logo {
     width: 25%;
     height: 100%;
-
+    margin: 3vw !important;
 }
 
 .links {
     text-underline-mode: none;
     text-underline: none !important;
+    padding: 2vw !important;
+    text-decoration: none !important;
+    color: white;
+    font-size: 20px;
+    display: inline;
+
+}
+
+.links:hover{
+    color: #FFD015;
+    font-size: 25px !important;
+    transition: all .2s ease-in-out;
+
+}
+
+.barrapesquisa {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1vw !important;
+    width: 19vw;
+}
+
+.lupa {
+    margin-left: -30px !important;
+}
+
+.logo_link {
+    width: 25vw;
+}
+
+.barra{
+    margin-right: 1.2vw !important;
 }
 
 

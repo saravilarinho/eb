@@ -19,7 +19,7 @@ function IndividualEntertaiment() {
 
                 </div>
 
-                <div className={'col-10 col-md-6 col-lg-8  img-enter d-flex align-items-center p-5'}>
+                <div className={'col-12 col-md-6 col-lg-8  img-enter d-flex align-items-center p-5'}>
 
                     <div>
                     <h1>Titulo</h1>

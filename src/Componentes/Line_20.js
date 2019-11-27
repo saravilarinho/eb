@@ -11,7 +11,7 @@ class Line20 extends Component {
         return (
             <Carousel>
                 <div className={'row justify-content-around ml-5'}>
-                    <img src={img} className={'col-2 img-fluid nothing'}/>
+                    <img src={''} className={'col-2 img-fluid nothing'}/>
                     <ListEntertaiment/>
                     <ListEntertaiment/>
                     <ListEntertaiment/>

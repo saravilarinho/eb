@@ -134,12 +134,39 @@ body {
 
 
 
-.IndividualEntertaiment .h1{
+.IndividualEntertaiment h1{
 
     font-weight: bold;
     color: #FFD015;
+    text-transform: uppercase;
+    padding: 4vh 1vw!important;
+
 
 }
+
+
+
+
+.IndividualEntertaiment .Director{
+
+
+    object-fit: cover;
+    clip-path: polygon(100% 0, 100% 60%, 52% 100%, 0 60%, 0 0);
+    filter: grayscale(100%) contrast(100%);
+    opacity: 0.6;
+
+
+
+}
+
+
+.IndividualEntertaiment p{
+
+    font-weight: lighter;
+}
+
+
+
 
 
 
@@ -177,9 +204,10 @@ body {
 
         visibility: hidden;
         display: block;
+        color: #FFD015;
         position: relative;
         margin: 15vw auto !important;
-        height: 7vw !important;
+        height: auto !important;
         width: auto;
         z-index: 3;
         transition: all .2s ease-in-out;
@@ -205,5 +233,37 @@ body {
 
 
 
+.DirectorContain{
+
+    margin: 5vh auto!important;
+
+}
+
+.DirectorContain h2{
+
+color: #FFD015;
+
+}
 
 
+.EnterButton button{
+
+    background-color: #FFD015;
+    border: none;
+    padding: 1vh!important;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.EnterButton button:hover{
+
+   font-weight: bolder;
+    font-size: 4vh;
+   transform: scale(1.05);
+}
+
+
+.EnterButton button{
+
+    margin: 6vh!important;
+}

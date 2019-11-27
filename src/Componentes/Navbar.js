@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles.css';
 import SearchBar from './SearchBar';
+import Logo from '../IMGS/Logo.png'
 import {Link} from 'react-router-dom'
 
 
@@ -8,7 +9,7 @@ function Navbar() {
     return (
         <div className={"row"}>
             <nav className={"navbar"}>
-                <Link to={"/Homepage"} className={'logo_link'}>  <img src={"IMGS/Logo.png"} className={'img-fluid logo '}/></Link>
+                <Link to={"/Homepage"} className={'logo_link'}>  <img src={Logo} className={'img-fluid logo '}/></Link>
                 <div>
                     <span className="nav-item dropdown">
                             <Link to={"/Movies"} className={"links nav-link dropdown-toggle col-md-1"}  >Movies</Link>

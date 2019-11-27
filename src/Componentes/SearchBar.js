@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Lupa from '../IMGS/search-solid-01.png'
 import '../Styles.css';
 
 
@@ -16,7 +17,7 @@ class SearchBar extends React.Component{
                 <div className={'barra'}>
                     <input className={'barrapesquisa'} onChange={this.atualizar_pai}/>
                         <a onClick={this.at} className={'lupa'}>
-                            <img src={'IMGS/search-solid-01.png'} style={{width: '20px', height: '20px'}}/>
+                            <img src={Lupa} style={{width: '20px', height: '20px'}}/>
                         </a>
                 </div>
 

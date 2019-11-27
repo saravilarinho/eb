@@ -1,14 +1,14 @@
 import React from 'react';
 import '../Styles.css';
+import IndividualEntertaiment from './IndividualEntertaiment'
 
 
 function RandomEntertaiment() {
     return (
-        <div className={'row h-100 d-flex align-items-center'}>
+        <div>
 
-            <p className={'col-4'}>
-                RandomEntertaiment
-            </p>
+            <IndividualEntertaiment/>
+
         </div>
     );
 }

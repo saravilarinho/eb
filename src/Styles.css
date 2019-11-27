@@ -1,9 +1,11 @@
-*{padding: 0!important; margin: 0!important;font-family: 'Barlow', sans-serif;
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'Barlow', sans-serif;
 }
 
 
-
-body{
+body {
 
     background-color: black;
     font-size: calc(10px + 2vmin);
@@ -13,41 +15,39 @@ body{
 }
 
 
-
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+    height: 40vmin;
 }
 
 
 .App-link {
-  color: #09d3ac;
+    color: #09d3ac;
 }
 
-.footer{
-  background-color: #FFD015;
-  text-align: center;
-  margin: auto;
+.footer {
+    background-color: #FFD015;
+    text-align: center;
+    margin: auto;
     color: #000;
 
 
 }
 
 
-.defaultlettering{
+.defaultlettering {
     color: white !important;
 }
 
 .navbar {
-  background: black;
-  width: 100%;
-  height: 100px;
+    background: black;
+    width: 100%;
+    height: 100px;
     text-underline-mode: none;
-    text-underline: none !important;
-;
+    text-underline: none !important;;
 }
 
 .logo {
@@ -60,7 +60,6 @@ body{
     text-underline-mode: none;
     text-underline: none !important;
 }
-
 
 
 .Backdrop {
@@ -85,7 +84,7 @@ body{
 
 .Backdrop h6 {
 
-    margin-left: 3vw!important;
+    margin-left: 3vw !important;
     font-size: 3vw;
     font-weight: lighter;
 
@@ -93,16 +92,15 @@ body{
 
 .Backdrop .filler {
 
-    height: 5vw!important;
+    height: 5vw !important;
 
 
 }
 
 
+.footer p {
 
-.footer p{
-
-   font-size: 17px
+    font-size: 17px
 }
 
 @media screen and (max-width: 700px) {
@@ -113,8 +111,98 @@ body{
     }
 
 
+}
+
+
+.IndividualEntertaiment .entertaiment {
+
+    height: 110vw !important;
+    object-fit: cover;
+    transition: all .2s ease-in-out;
+    z-index: 2;
+
 
 }
+
+
+
+.IndividualEntertaiment  .icon{
+
+    display: none;
+
+}
+
+
+
+.IndividualEntertaiment .h1{
+
+    font-weight: bold;
+    color: #FFD015;
+
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .IndividualEntertaiment .entertaiment {
+
+        height: 110vw !important;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .IndividualEntertaiment .entertaiment {
+
+        height: 60vw !important;
+    }
+
+}
+
+
+@media screen and (min-width: 960px) {
+    .IndividualEntertaiment .entertaiment {
+
+        height: 37vw !important;
+        z-index: 2;
+        position: absolute;
+
+    }
+
+    .IndividualEntertaiment .icon {
+
+
+        visibility: hidden;
+        display: block;
+        position: relative;
+        margin: 15vw auto !important;
+        height: 7vw !important;
+        width: auto;
+        z-index: 3;
+        transition: all .2s ease-in-out;
+
+    }
+
+    .IndividualEntertaiment .img-enter:hover .entertaiment{
+
+        transform: scale(1.2) translate3d(0, 0, 0);
+        object-fit: cover;
+        filter: grayscale(100%) contrast(100%) blur(1px);
+        opacity: 0.95;
+
+
+    }
+
+    .IndividualEntertaiment .img-enter:hover .icon{
+
+        visibility: visible;
+
+    }
+}
+
 
 
 

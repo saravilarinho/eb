@@ -2,11 +2,11 @@ import React from 'react';
 import './Styles.css';
 
 
-function TvShows () {
+function Series () {
 
 
 }
 
 
 
-export default TvShows;
+export default Series;

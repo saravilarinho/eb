@@ -299,3 +299,17 @@ color: #FFD015;
 
     margin: 6vh!important;
 }
+
+
+.videoorpreview{
+
+    width: 100vw!important;
+    height: 100vh!important;
+    border: none;
+    margin: 5vh 0!important;
+}
+
+.pads{
+
+    padding-top: 5vh!important;
+}

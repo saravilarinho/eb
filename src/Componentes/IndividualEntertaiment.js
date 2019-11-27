@@ -1,5 +1,12 @@
 import React from 'react';
 import '../Styles.css';
+import eyeicon from '../IMGS/eye_icon.png'
+import hearticon from '../IMGS/heart-regular.svg'
+import film from '../IMGS/8b6b6ae81b05a817ac275d45fa09e18f10bf5c78_hq.jpg'
+import director from '../IMGS/Director.png'
+
+
+
 
 
 function IndividualEntertaiment() {
@@ -13,9 +20,9 @@ function IndividualEntertaiment() {
 
                 <div className={'col-10 col-md-5 col-lg-3  img-enter d-flex align-items-center'}>
                     <img className={'col-12 entertaiment'}
-                         src={'IMGS/8b6b6ae81b05a817ac275d45fa09e18f10bf5c78_hq.jpg'}/>
-                    <img className={'col-4 icon'} src={'IMGS/eye_icon.png'}/>
-                    <img className={'col-3  icon'} src={'IMGS/heart-regular.svg'}/>
+                         src={film}/>
+                    <img className={'col-4 icon'} src={eyeicon}/>
+                    <img className={'col-3  icon'} src={hearticon}/>
 
                 </div>
 
@@ -38,7 +45,7 @@ function IndividualEntertaiment() {
 
          <section className={'row justify-content-around'}>
             <section className={'col-10 col-lg-3 DirectorContain'}>
-                <img className={'col-5 h-100 Director'} src={'IMGS/Director.png'}/>
+                <img className={'col-5 h-100 Director'} src={director}/>
 
                 <section className={'col-4 pl-5 pr-5 pt-4 d-inline-block text-center'}>
                     <h2>DIRECTOR</h2>
@@ -47,7 +54,7 @@ function IndividualEntertaiment() {
             </section>
 
             <section className={'col-10 col-lg-3 DirectorContain'}>
-                <img className={'col-5 h-100 Director'} src={'IMGS/Director.png'}/>
+                <img className={'col-5 h-100 Director'} src={director}/>
 
                 <section className={'col-4 pl-5 pr-5 pt-4 d-inline-block text-center'}>
                     <h2>DIRECTOR</h2>
@@ -56,7 +63,7 @@ function IndividualEntertaiment() {
             </section>
 
             <section className={'col-10 col-lg-3 DirectorContain'}>
-                <img className={'col-5 h-100 Director'} src={'IMGS/Director.png'}/>
+                <img className={'col-5 h-100 Director'} src={director}/>
 
                 <section className={'col-4 pl-5 pr-5 pt-4 d-inline-block text-center'}>
                     <h2>DIRECTOR</h2>

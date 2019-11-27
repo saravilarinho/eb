@@ -7,13 +7,14 @@ import Movies from './Movies';
 import TvShows from "./TvShows";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
-
+import Page_individual from './Page_individual'
 
 ReactDOM.render(
     <Router>
         <Navbar/>
             <Switch>
                 <Route path="/Homepage" component={Homepage}/>
+                <Route path="/Movies/:id_entertaiment" component={Page_individual}/>
                 <Route path="/Movies" component={Movies}/>
                 <Route path="/TvShows" component={TvShows}/>
                 <Route path="/Books"/>
@@ -21,7 +22,6 @@ ReactDOM.render(
                 <Route path="/Login"/>
                 <Route path="/Registo"/>
                 <Route path="/Favourites"/>
-                <Route path="/Movies/Individual/:id_entertaiment"/>
                 <Route component={Homepage}/>
             </Switch>
 

@@ -16,7 +16,6 @@ function Navbar() {
                                 <a className="dropdown-item" href="#">Action</a>
                                 <a className="dropdown-item" href="#">Another action</a>
                             </span>
-
                     </span>
                         <Link to={"/TvShows"} className={"links col-md-2"}>TV Shows</Link>
                         <Link to={"/Books"} className={"links col-md-2"}>Books</Link>

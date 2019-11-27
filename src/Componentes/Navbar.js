@@ -9,7 +9,9 @@ function Navbar() {
     return (
         <div className={"row"}>
             <nav className={"navbar"}>
-                <Link to={"/Homepage"} className={'logo_link'}>  <img src={Logo} className={'img-fluid logo '}/></Link>
+                <Link to={"/Homepage"} className={'logo_link'}>
+                    <img src={Logo} className={'img-fluid logo '}/>
+                </Link>
                 <div>
                     <span className="nav-item dropdown">
                             <Link to={"/Movies"} className={"links nav-link dropdown-toggle col-md-1"}  >Movies</Link>

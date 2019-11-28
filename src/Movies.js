@@ -7,9 +7,14 @@ function Movies (){
     return (
 
         <div>
-            <p>MOVIES</p>
+            <h1 className="titulos">MOVIES</h1>
+            <Line20/>
 
             <Line20/>
+
+            <Line20/>
+
+
         </div>
 )
 

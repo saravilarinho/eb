@@ -131,6 +131,14 @@ body {
     color: #FFD015 !important;
 }
 
+
+.titulos2 {
+    text-align: start;
+    margin-left: 2.5vw !important;
+    margin-top: 5vh !important;
+    font-weight: lighter;
+}
+
 .formulario{
     margin-left: 18vw !important;
     margin-top: 15vh !important;
@@ -240,18 +248,6 @@ body {
         height: 110vw !important;
 
     }
-    .carcontrol{
-
-        height: 110vw !important;
-
-    }
-
-    .carcontrol{
-
-        position: absolute ;
-        height: 110vw !important;
-        top: -110vw!important;
-    }
 
 
 }
@@ -269,24 +265,31 @@ body {
 
     }
 
-    .carcontrol{
-
-        height: 60vw !important;
-
-    }
-
-    .carcontrol{
-
-        position: absolute ;
-        height: 60vw !important;
-        top: -60vw!important;
-    }
-
 
 }
 
 
 @media screen and (min-width: 960px) {
+
+
+    .listentertaiment:hover .img-back{
+        transition: all .2s ease-in-out;
+        filter: grayscale(100%) contrast(100%) ;
+        opacity: 0.35;
+        transform: scale(1.05);
+
+    }
+
+
+
+    .listentertaiment:hover .above{
+
+        transition: all .2s ease-in-out;
+
+        visibility: visible;
+    }
+
+
     .IndividualEntertaiment .entertaiment {
 
         height: 37vw !important;
@@ -331,11 +334,9 @@ body {
 
     }
 
-    .carcontrol{
+    .seemore{
 
-        position: absolute ;
-        height: 37vw !important;
-        top: -37vw!important;
+        display: none;
     }
 
 }
@@ -385,10 +386,7 @@ body {
     margin: 5vh 0 !important;
 }
 
-.nothing {
 
-    display: none !important;
-}
 
 .scroll-box {
     padding-left: 10vw!important;
@@ -410,19 +408,6 @@ li {
  }
 
 
-.carcontrol button{
-
-    border: none;
-    background-color: rgba(0,0,0,0.5);
-
-}
-
-.carcontrol{
-
-    position: relative;
-}
-
-
 
 
 .listentertaiment{
@@ -436,5 +421,60 @@ li {
     height: 100%;
     object-fit: cover;
 
+
+}
+
+
+.buttonseemore{
+
+    background-color: #FFD015;
+    border-radius: 10px;
+    border: none;
+    padding: 2vh!important;
+    font-weight: bold;
+
+
+
+}
+
+
+.seemore{
+
+    position: relative;
+    top: -4vh;
+}
+
+
+.above{
+
+    height: 37vw;
+    top: 0;
+    visibility: hidden;
+
+}
+
+
+.breakword{
+
+    word-wrap: break-word;
+}
+
+
+.above p {
+
+
+    font-size: large;
+}
+
+.above h1{
+
+    font-weight: bold;
+    color: #FFD015;
+    margin-bottom: 2vh!important;
+}
+
+.text-adapt {
+
+    font-size: 1.1vw!important;
 
 }

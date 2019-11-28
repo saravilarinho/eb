@@ -1,41 +1,79 @@
 import React, {Component} from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
 import '../Styles.css';
 import ListEntertaiment from '../Componentes/ListEntertaiment'
-import img from "../IMGS/8b6b6ae81b05a817ac275d45fa09e18f10bf5c78_hq.jpg";
+import arrowfront from "../IMGS/chevron-front-solid.svg";
+import arrowback from "../IMGS/chevron-back-solid.svg";
+
 
 
 class Line20 extends Component {
+
     render() {
+
+
+        function sideScroll(element, direction, speed, distance, step) {
+            let scrollAmount = 0;
+            let slideTimer = setInterval(function () {
+                if (direction === 'left') {
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if (scrollAmount >= distance) {
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
+
+
         return (
-            <Carousel>
-                <div className={'row justify-content-around ml-5'}>
-                    <img src={''} className={'col-2 img-fluid nothing'}/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                </div>
-                <div>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                </div>
-                <div>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                    <ListEntertaiment/>
-                </div>
-            </Carousel>
+
+
+
+                <section >
+                    <ul className={'row justify-content-around'}>
+
+                        <li className="scroll-box col-12" id={'container'}>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                            <ListEntertaiment/>
+                        </li>
+                    </ul>
+                    <div className={'row carcontrol'}>
+                        <li className={'col-1  text-center h-100'}>
+                            <button className={' prev w-100 h-100'} id={"slideBack"} onClick={() => {
+                                let container = document.getElementById('container');
+                                sideScroll(container, 'left', 8, 400, 15);
+                            }}> <img src={arrowback} className={'img-fluid'}/>
+                            </button>
+                        </li>
+                        <li className={'col-10'}></li>
+                        <li className={' col-1 text-center h-100'}>
+                            <button className={'w-100 next h-100'} id={"slide"} onClick={() => {
+                                let container = document.getElementById('container');
+                                sideScroll(container, 'right', 8, 400, 15);
+                            }}>  <img src={arrowfront} className={'img-fluid'}/>
+                            </button>
+
+                        </li>
+
+                    </div>
+                </section>
+
         );
     }
 }

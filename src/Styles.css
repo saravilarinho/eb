@@ -69,7 +69,7 @@ body {
 
 }
 
-.links:hover{
+.links:hover {
     color: #FFD015;
     font-size: 25px !important;
     transition: all .2s ease-in-out;
@@ -91,7 +91,7 @@ body {
     width: 9vw;
 }
 
-.barra{
+.barra {
     margin-right: 4vw !important;
 }
 
@@ -106,17 +106,17 @@ body {
     opacity: 0.6;
     z-index: -1000;
     background-image: -webkit-linear-gradient(top,
-    rgba(0,0,0,1) 9%,
-    rgba(0,0,0,0) 130%,
-    rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0.9) 100%
+    rgba(0, 0, 0, 1) 9%,
+    rgba(0, 0, 0, 0) 130%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0.9) 100%
     ), url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
     height: 60vh;
 }
 
 
-.comingsoon{
-    margin-top: 20vh!important;
+.comingsoon {
+    margin-top: 20vh !important;
     font-size: 60px;
 }
 
@@ -194,29 +194,25 @@ body {
 }
 
 
-
-.IndividualEntertaiment  .icon{
+.IndividualEntertaiment .icon {
 
     display: none;
 
 }
 
 
-
-.IndividualEntertaiment h1{
+.IndividualEntertaiment h1 {
 
     font-weight: bold;
     color: #FFD015;
     text-transform: uppercase;
-    padding: 4vh 1vw!important;
+    padding: 4vh 1vw !important;
 
 
 }
 
 
-
-
-.IndividualEntertaiment .Director{
+.IndividualEntertaiment .Director {
     object-fit: cover;
     clip-path: polygon(100% 0, 100% 60%, 52% 100%, 0 60%, 0 0);
     filter: grayscale(100%) contrast(100%);
@@ -225,14 +221,10 @@ body {
 }
 
 
-.IndividualEntertaiment p{
+.IndividualEntertaiment p {
 
     font-weight: lighter;
 }
-
-
-
-
 
 
 @media screen and (max-width: 576px) {
@@ -241,6 +233,23 @@ body {
         height: 110vw !important;
     }
 
+    .listentertaiment{
+
+        height: 110vw !important;
+
+    }
+    .carcontrol{
+
+        height: 110vw !important;
+
+    }
+
+    .carcontrol{
+
+        position: absolute ;
+        height: 110vw !important;
+        top: -110vw!important;
+    }
 
 
 }
@@ -251,6 +260,26 @@ body {
 
         height: 60vw !important;
     }
+
+    .listentertaiment{
+
+        height: 60vw !important;
+
+    }
+
+    .carcontrol{
+
+        height: 60vw !important;
+
+    }
+
+    .carcontrol{
+
+        position: absolute ;
+        height: 60vw !important;
+        top: -60vw!important;
+    }
+
 
 }
 
@@ -279,7 +308,7 @@ body {
 
     }
 
-    .IndividualEntertaiment .img-enter:hover .entertaiment{
+    .IndividualEntertaiment .img-enter:hover .entertaiment {
 
         transform: scale(1.2) translate3d(0, 0, 0);
         object-fit: cover;
@@ -289,75 +318,122 @@ body {
 
     }
 
-    .IndividualEntertaiment .img-enter:hover .icon{
+    .IndividualEntertaiment .img-enter:hover .icon {
 
         visibility: visible;
 
     }
+
+    .listentertaiment{
+
+        height: 37vw !important;
+
+    }
+
+    .carcontrol{
+
+        position: absolute ;
+        height: 37vw !important;
+        top: -37vw!important;
+    }
+
 }
 
 
+.DirectorContain {
 
-.DirectorContain{
-
-    margin: 5vh auto!important;
-
-}
-
-.DirectorContain h2{
-
-color: #FFD015;
+    margin: 5vh auto !important;
 
 }
 
+.DirectorContain h2 {
 
-.EnterButton button{
+    color: #FFD015;
+
+}
+
+
+.EnterButton button {
 
     background-color: #FFD015;
     border: none;
-    padding: 1vh!important;
+    padding: 1vh !important;
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
 
-.EnterButton button:hover{
+.EnterButton button:hover {
 
-   font-weight: bolder;
+    font-weight: bolder;
     font-size: 4vh;
-   transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 
-.EnterButton button{
+.EnterButton button {
 
-    margin: 6vh!important;
+    margin: 6vh !important;
 }
 
 
-.videoorpreview{
+.videoorpreview {
 
-    width: 100vw!important;
-    height: 100vh!important;
+    width: 100vw !important;
+    height: 100vh !important;
     border: none;
-    margin: 5vh 0!important;
+    margin: 5vh 0 !important;
 }
 
-.pads{
+.nothing {
 
-    padding-top: 5vh!important;
+    display: none !important;
 }
 
-.thumbs {
-
-    display: none!important;
+.scroll-box {
+    padding-left: 10vw!important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
-.control-dots{
 
-    display: none!important;
+
+li {
+    display: inline-block;
 }
 
-.nothing{
 
-    display: none!important;
+
+::-webkit-scrollbar {
+     display: none!important;
+ }
+
+
+.carcontrol button{
+
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.carcontrol{
+
+    position: relative;
+}
+
+
+
+
+.listentertaiment{
+
+    display: inline-block;
+}
+
+
+.listentertaiment img {
+
+    height: 100%;
+    object-fit: cover;
+
+
 }

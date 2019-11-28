@@ -33,8 +33,10 @@ body {
     text-align: center;
     margin: auto;
     color: #000;
-
-
+}
+.divform{
+    margin-top: 15vh !important;
+    margin-bottom: 18.3vh !important;
 }
 
 
@@ -76,6 +78,29 @@ body {
 
 }
 
+
+.botao {
+    font-size: 18px;
+    height: 5vh !important;
+    background-color: #FFD015;
+
+}
+
+
+.registate {
+    color: #FFD015;
+    font-size: 20px;
+    margin-left: 8px !important;
+    text-decoration: none !important;
+
+}
+
+.registate:hover {
+    color: rgba(255, 204, 24, 0.75);
+}
+
+
+
 .barrapesquisa {
     border-radius: 5px;
     padding: 10px;
@@ -115,8 +140,8 @@ body {
 }
 
 
-.comingsoon {
-    margin-top: 20vh !important;
+.comingsoon{
+    margin-top: 17vh!important;
     font-size: 60px;
 }
 
@@ -127,6 +152,22 @@ body {
     color: #FFD015 !important;
 
 }
+
+.formulario{
+    margin-left: 18vw !important;
+    margin-top: 15vh !important;
+}
+
+.aindanao{
+    font-size: 20px;
+    margin-left: 18vw !important;
+
+}
+
+
+
+
+
 
 
 .Backdrop {
@@ -314,7 +355,6 @@ body {
         object-fit: cover;
         filter: grayscale(100%) contrast(100%) blur(1px);
         opacity: 0.95;
-
 
     }
 

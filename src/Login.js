@@ -19,7 +19,7 @@ function Login () {
                     <Input type="password" name="password" id="examplePassword" placeholder=" Password" />
                 </FormGroup>
 
-                <Button className={'col-md-2 mt-4 botao pt-1'}>SUBMIT</Button>
+                <Button className={'col-md-2 mt-4 botao pt-1'}>LOGIN</Button>
 
             </Form>
 

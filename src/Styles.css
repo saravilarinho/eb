@@ -4,28 +4,11 @@
     font-family: 'Barlow', sans-serif;
 }
 
-
 body {
 
     background-color: black;
     font-size: calc(10px + 2vmin);
     color: white;
-
-
-}
-
-
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-}
-
-
-.App-link {
-    color: #09d3ac;
 }
 
 .footer {
@@ -34,6 +17,7 @@ body {
     margin: auto;
     color: #000;
 }
+
 .divform{
     margin-top: 15vh !important;
     margin-bottom: 18.3vh !important;
@@ -78,14 +62,12 @@ body {
 
 }
 
-
 .botao {
     font-size: 18px;
     height: 5vh !important;
     background-color: #FFD015;
 
 }
-
 
 .registate {
     color: #FFD015;
@@ -98,8 +80,6 @@ body {
 .registate:hover {
     color: rgba(255, 204, 24, 0.75);
 }
-
-
 
 .barrapesquisa {
     border-radius: 5px;
@@ -139,7 +119,6 @@ body {
     height: 60vh;
 }
 
-
 .comingsoon{
     margin-top: 17vh!important;
     font-size: 60px;
@@ -150,7 +129,6 @@ body {
     margin-left: 2.5vw !important;
     margin-top: 7vh !important;
     color: #FFD015 !important;
-
 }
 
 .formulario{
@@ -163,12 +141,6 @@ body {
     margin-left: 18vw !important;
 
 }
-
-
-
-
-
-
 
 .Backdrop {
 
@@ -183,14 +155,12 @@ body {
 
 }
 
-
 .Backdrop h1 {
 
     font-size: 6vw;
     font-weight: bolder;
 
 }
-
 
 .Backdrop h6 {
 
@@ -203,10 +173,7 @@ body {
 .Backdrop .filler {
 
     height: 5vw !important;
-
-
 }
-
 
 .footer p {
 
@@ -215,12 +182,8 @@ body {
 
 @media screen and (max-width: 700px) {
     .Backdrop h6 {
-
         font-size: 6vw;
-
     }
-
-
 }
 
 
@@ -247,7 +210,7 @@ body {
     font-weight: bold;
     color: #FFD015;
     text-transform: uppercase;
-    padding: 4vh 1vw !important;
+    padding: 4vh 1vw!important;
 
 
 }
@@ -258,9 +221,7 @@ body {
     clip-path: polygon(100% 0, 100% 60%, 52% 100%, 0 60%, 0 0);
     filter: grayscale(100%) contrast(100%);
     opacity: 0.6;
-
 }
-
 
 .IndividualEntertaiment p {
 

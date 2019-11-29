@@ -4,10 +4,12 @@ import '../Styles.css';
 import img from "../IMGS/8b6b6ae81b05a817ac275d45fa09e18f10bf5c78_hq.jpg";
 import eyeicon from '../IMGS/eye_icon.png'
 import hearticon from '../IMGS/heart-regular.svg'
+import {Link} from 'react-router-dom'
 
-const ListEntertaiment=(props)=>{
 
-    const path ='https://image.tmdb.org/t/p/w600_and_h900_bestv2/'+ props.img;
+const ListEntertaiment = (props) => {
+
+    const path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
     return (
 
         <section className={'d-inline'}>
@@ -18,9 +20,11 @@ const ListEntertaiment=(props)=>{
                         <h1 className={'text-wrap'}> {props.title} </h1>
                         <p className={' text-adapt text-wrap'}>{props.text}
                         </p>
-                        <div className={'row justify-content-around pt-4'}>
-                        <img className={'col-4 img-fluid pt-2 pb-2'} src={eyeicon}/>
-                        <img className={'col-3 img-fluid'} src={hearticon}/>
+                        <div className={'row justify-content-between likeandview w-100 '}>
+                            <Link to={"/Movies/" + props.id} className={"col-5 col-lg-4 d-flex align-items-center"}>
+                                <img className={'img-fluid '} src={eyeicon}/>
+                            </Link>
+                            <img className={"col-5 col-lg-4 img-fluid d-flex align-items-center"} src={hearticon}/>
                         </div>
                     </div>
                 </section>

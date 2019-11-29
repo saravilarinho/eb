@@ -49,7 +49,7 @@ const Line20 = (props) =>  {
 
                     <li className="scroll-box col-12" id={props.titulo}>
 
-                        {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview} title={item.title}/>)}
+                        {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview} title={item.title} id={item.id}/>)}
 
                     </li>
 

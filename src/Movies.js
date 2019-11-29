@@ -412,7 +412,7 @@ function Movies (){
     return (
 
         <div>
-            <h1 className="titulos">MOVIES</h1>
+            <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
 
             <Line20 titulo={'titulo1'} info={info_movies} type={'movie'}/>

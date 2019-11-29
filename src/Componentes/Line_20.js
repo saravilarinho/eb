@@ -1,8 +1,7 @@
 import React from 'react';
 import '../Styles.css';
 import ListEntertaiment from '../Componentes/ListEntertaiment'
-import arrowfront from "../IMGS/chevron-front-solid.svg";
-import arrowback from "../IMGS/chevron-back-solid.svg";
+import arrowemblem from "../IMGS/arrow-emblem.svg"
 
 
 const Line20 = (props) =>  {
@@ -27,31 +26,48 @@ const Line20 = (props) =>  {
 
             <section>
 
-                <h1 className={'titulos2 pb-5'}>{props.titulo}</h1>
-
+                <div className={'titulos2 pt-5 pb-5'}>
+                <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
+                   <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                </div>
                 <div className={'row justify-content-between controls w-100'}>
                     <button className={'listentertaiment back'} id={"slideBack"} onClick={() => {
                         let container = document.getElementById(props.titulo);
                         sideScroll(container, 'left', 8, 400, 15);
-                    }}><img src={arrowback} className={'arrow'}/>
+                    }}><img src={arrowemblem} className={'arrow'}/>
                     </button>
 
 
                     <button className={'listentertaiment front'} id={"slide"} onClick={() => {
                         let container = document.getElementById(props.titulo);
                         sideScroll(container, 'right', 8, 400, 15);
-                    }}><img src={arrowfront} className={'arrow'}/>
+                    }}><img src={arrowemblem} className={'arrow'}/>
                     </button>
                 </div>
 
                 <ul className={'row justify-content-around '}>
 
+                    {(() => {
+                        if(props.type==="movie") {
 
-                    <li className="scroll-box col-12" id={props.titulo}>
+                            return <li className="scroll-box col-12" id={props.titulo}>
 
-                        {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview} title={item.title} id={item.id}/>)}
+                                {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview} title={item.title} id={item.id}/>)}
 
-                    </li>
+                            </li>
+                        }
+
+                        if (props.type==='serie'){
+
+                            return <li className="scroll-box col-12" id={props.titulo}>
+
+                                {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview} title={item.name} id={item.id}/>)}
+
+                            </li>
+                        }
+                    })()}
+
+
 
 
                 </ul>

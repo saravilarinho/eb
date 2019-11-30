@@ -414,13 +414,11 @@ function Movies (){
         <div>
             <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
+            <Line20 titulo={'Upcoming ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Upcoming'}/>
 
-            <Line20 titulo={'titulo1'} info={info_movies} type={'movie'}/>
+            <Line20 titulo={'Top Rated ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'TopRated'}/>
 
-            <Line20 titulo={'titulo2'} info={info_movies} type={'movie'}/>
-
-            <Line20 titulo={'titulo2'} info={info_movies} type={'movie'}/>
-
+            <Line20 titulo={'Popular ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Popular'}/>
 
         </div>
 )

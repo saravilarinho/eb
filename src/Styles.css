@@ -141,7 +141,20 @@ body {
     margin-left: 2.5vw !important;
     margin-top: 5vh !important;
     font-weight: lighter;
+    color: white;
 }
+
+.titulos1 h1 {
+
+
+    text-transform: uppercase;
+    text-align: start;
+    margin-left: 2.5vw !important;
+    margin-top: 5vh !important;
+    font-weight: lighter;
+    color: white;
+}
+
 
 .formulario {
     margin-left: 18vw !important;
@@ -548,6 +561,7 @@ opacity: 0}
 
     color: #FFD015;
     font-weight: bold;
+    text-decoration: none;
 }
 
 
@@ -557,4 +571,8 @@ opacity: 0}
     50%  {left: 100px;}
     100%   {left: 0px;}
 
+}
+
+a {
+    text-decoration: none!important;
 }

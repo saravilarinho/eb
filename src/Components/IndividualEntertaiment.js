@@ -1,9 +1,9 @@
 import React from 'react';
-import '../Styles.css';
-import eyeicon from '../IMGS/eye_icon.png'
-import hearticon from '../IMGS/heart-regular.svg'
-import film from '../IMGS/8b6b6ae81b05a817ac275d45fa09e18f10bf5c78_hq.jpg'
-import director from '../IMGS/Director.png'
+import '../Styles/Styles.css';
+import eyeicon from '../Images/eye_icon.png'
+import hearticon from '../Images/heart_unfill.svg'
+import film from '../Images/film.jpg'
+import director from '../Images/director.png'
 
 
 

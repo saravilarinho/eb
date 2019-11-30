@@ -1,8 +1,8 @@
 import React from 'react';
-import '../Styles.css';
-import twitter from '../IMGS/twitter_icon.png'
-import face from '../IMGS/face_icon.png'
-import insta from '../IMGS/insta_icon.png'
+import './Styles/Styles.css';
+import twitter from './Images/twitter_icon.png'
+import face from './Images/face_icon.png'
+import insta from './Images/insta_icon.png'
 
 
 function Footer() {

@@ -4,28 +4,11 @@
     font-family: 'Barlow', sans-serif;
 }
 
-
 body {
 
     background-color: black;
     font-size: calc(10px + 2vmin);
     color: white;
-
-
-}
-
-
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-}
-
-
-.App-link {
-    color: #09d3ac;
 }
 
 .footer {
@@ -35,15 +18,10 @@ body {
     color: #000;
 }
 
-
-
-.divform{
+.divform {
     margin-top: 15vh !important;
     margin-bottom: 18.3vh !important;
 }
-
-
-
 
 
 .defaultlettering {
@@ -77,13 +55,12 @@ body {
 
 }
 
-.links:hover{
+.links:hover {
     color: #FFD015;
     font-size: 25px !important;
     transition: all .2s ease-in-out;
 
 }
-
 
 .botao {
     font-size: 18px;
@@ -91,7 +68,6 @@ body {
     background-color: #FFD015;
 
 }
-
 
 .registate {
     color: #FFD015;
@@ -104,8 +80,6 @@ body {
 .registate:hover {
     color: rgba(255, 204, 24, 0.75);
 }
-
-
 
 .barrapesquisa {
     border-radius: 5px;
@@ -122,12 +96,12 @@ body {
     width: 9vw;
 }
 
-.barra{
+.barra {
     margin-right: 4vw !important;
 }
 
 .backgroundmusic {
-    background-image: url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
+    background-image: url("../Images/music_backdrop.jpg");
     position: relative;
     background-size: cover;
     text-align: center;
@@ -137,49 +111,66 @@ body {
     opacity: 0.6;
     z-index: -1000;
     background-image: -webkit-linear-gradient(top,
-    rgba(0,0,0,1) 9%,
-    rgba(0,0,0,0) 130%,
-    rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0.9) 100%
-    ), url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
+    rgba(0, 0, 0, 1) 9%,
+    rgba(0, 0, 0, 0) 130%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0.9) 100%
+    ), url("../Images/music_backdrop.jpg");
     height: 60vh;
 }
 
-
-.comingsoon{
-    margin-top: 17vh!important;
+.comingsoon {
+    margin-top: 17vh !important;
     font-size: 60px;
 }
 
 .titulos {
     text-align: start;
+    font-size: 5vw!important;
     margin-left: 2.5vw !important;
     margin-top: 7vh !important;
     color: #FFD015 !important;
-
 }
 
-.formulario{
+
+.titulos2 h1 {
+
+
+    text-transform: uppercase;
+    text-align: start;
+    margin-left: 2.5vw !important;
+    margin-top: 5vh !important;
+    font-weight: lighter;
+    color: white;
+}
+
+.titulos1 h1 {
+
+
+    text-transform: uppercase;
+    text-align: start;
+    margin-left: 2.5vw !important;
+    margin-top: 5vh !important;
+    font-weight: lighter;
+    color: white;
+}
+
+
+.formulario {
     margin-left: 18vw !important;
     margin-top: 15vh !important;
 }
 
-.aindanao{
+.aindanao {
     font-size: 20px;
     margin-left: 18vw !important;
 
 }
 
-
-
-
-
-
-
 .Backdrop {
 
     color: #FFD015;
-    background-image: url("Backdrop.png");
+    background-image: url("../Images/backdrop.png");
     height: 35vw !important;
     background-color: black;
     background-size: 100% auto;
@@ -189,14 +180,12 @@ body {
 
 }
 
-
 .Backdrop h1 {
 
     font-size: 6vw;
     font-weight: bolder;
 
 }
-
 
 .Backdrop h6 {
 
@@ -209,10 +198,7 @@ body {
 .Backdrop .filler {
 
     height: 5vw !important;
-
-
 }
-
 
 .footer p {
 
@@ -221,12 +207,8 @@ body {
 
 @media screen and (max-width: 700px) {
     .Backdrop h6 {
-
         font-size: 6vw;
-
     }
-
-
 }
 
 
@@ -241,45 +223,35 @@ body {
 }
 
 
-
-.IndividualEntertaiment  .icon{
+.IndividualEntertaiment .icon {
 
     display: none;
 
 }
 
 
-
-.IndividualEntertaiment h1{
+.IndividualEntertaiment h1 {
 
     font-weight: bold;
     color: #FFD015;
     text-transform: uppercase;
-    padding: 4vh 1vw!important;
+    padding: 4vh 1vw !important;
 
 
 }
 
 
-
-
-.IndividualEntertaiment .Director{
+.IndividualEntertaiment .Director {
     object-fit: cover;
     clip-path: polygon(100% 0, 100% 60%, 52% 100%, 0 60%, 0 0);
     filter: grayscale(100%) contrast(100%);
     opacity: 0.6;
-
 }
 
-
-.IndividualEntertaiment p{
+.IndividualEntertaiment p {
 
     font-weight: lighter;
 }
-
-
-
-
 
 
 @media screen and (max-width: 576px) {
@@ -288,6 +260,11 @@ body {
         height: 110vw !important;
     }
 
+    .listentertaiment {
+
+        height: 110vw !important;
+
+    }
 
 
 }
@@ -299,10 +276,36 @@ body {
         height: 60vw !important;
     }
 
+    .listentertaiment {
+
+        height: 60vw !important;
+
+    }
+
+
 }
 
 
 @media screen and (min-width: 960px) {
+
+
+    .listentertaiment:hover .img-back {
+        transition: all .2s ease-in-out;
+        filter: grayscale(100%) contrast(100%);
+        opacity: 0.35;
+        transform: scale(1.05);
+
+    }
+
+
+    .listentertaiment:hover .above {
+
+        transition: all .2s ease-in-out;
+
+        visibility: visible;
+    }
+
+
     .IndividualEntertaiment .entertaiment {
 
         height: 37vw !important;
@@ -326,85 +329,250 @@ body {
 
     }
 
-    .IndividualEntertaiment .img-enter:hover .entertaiment{
+    .IndividualEntertaiment .img-enter:hover .entertaiment {
 
         transform: scale(1.2) translate3d(0, 0, 0);
         object-fit: cover;
         filter: grayscale(100%) contrast(100%) blur(1px);
         opacity: 0.95;
 
-
     }
 
-    .IndividualEntertaiment .img-enter:hover .icon{
+    .IndividualEntertaiment .img-enter:hover .icon {
 
         visibility: visible;
 
     }
-}
 
+    .listentertaiment {
 
+        height: 37vw !important;
 
-.DirectorContain{
+    }
 
-    margin: 5vh auto!important;
+    .seemore {
 
-}
-
-.DirectorContain h2{
-
-color: #FFD015;
+        display: none;
+    }
 
 }
 
 
-.EnterButton button{
+.DirectorContain {
+
+    margin: 5vh auto !important;
+
+}
+
+.DirectorContain h2 {
+
+    color: #FFD015;
+
+}
+
+
+.EnterButton button {
 
     background-color: #FFD015;
     border: none;
-    padding: 1vh!important;
+    padding: 1vh !important;
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
 
-.EnterButton button:hover{
+.EnterButton button:hover {
 
-   font-weight: bolder;
+    font-weight: bolder;
     font-size: 4vh;
-   transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 
-.EnterButton button{
+.EnterButton button {
 
-    margin: 6vh!important;
+    margin: 6vh !important;
 }
 
 
-.videoorpreview{
+.videoorpreview {
 
-    width: 100vw!important;
-    height: 100vh!important;
+    width: 100vw !important;
+    height: 100vh !important;
     border: none;
-    margin: 5vh 0!important;
+    margin: 5vh 0 !important;
 }
 
-.pads{
 
-    padding-top: 5vh!important;
+.scroll-box {
+    padding-left: 10vw !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
-.thumbs {
 
-    display: none!important;
+li {
+    display: inline-block;
 }
 
-.control-dots{
 
-    display: none!important;
+::-webkit-scrollbar {
+    display: none !important;
 }
 
-.nothing{
 
-    display: none!important;
+.listentertaiment {
+
+    display: inline-block;
+}
+
+
+.listentertaiment .img-back {
+
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+
+.buttonseemore {
+
+    background-color: #FFD015;
+    border-radius: 10px;
+    border: none;
+    padding: 2vh !important;
+    font-weight: bold;
+
+
+}
+
+
+.seemore {
+
+    position: relative;
+    top: -4vh;
+}
+
+
+.above {
+
+    height: 37vw;
+    top: 0;
+    visibility: hidden;
+
+}
+
+
+.breakword {
+
+    word-wrap: break-word;
+}
+
+
+.above p {
+
+
+    font-size: large;
+}
+
+.above h1 {
+
+    font-weight: bold;
+    color: #FFD015;
+    margin-bottom: 2vh !important;
+    font-size: 2vw !important;
+}
+
+.text-adapt {
+
+    font-size: 1.13vw !important;
+
+}
+
+.arrow {
+
+    width: 40px !important;
+    margin: 1vw !important;
+    height: auto;
+
+
+}
+
+
+.controls button {
+
+    border: none;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+
+.controls button:hover {
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+
+}
+
+
+.back {
+
+    left: 0 !important;
+    transform: scaleX(-1)
+}
+
+.front {
+    right: 0 !important;
+}
+
+.likeandview {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 4vw 2vw 4vw !important;
+}
+
+
+.arrowemblem {
+
+    position: relative;
+    top: -0.7vh !important;
+    left: 0;
+opacity: 0}
+
+
+.titulos2:hover .arrowemblem {
+
+
+    display: block;
+    animation: myfirst 1s 1 ease-in-out;
+    transition: all .2s ease-in-out;
+
+
+
+}
+
+
+.titulos2:hover h1{
+
+    color: #FFD015;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+@keyframes myfirst {
+    0%   {opacity: 0;left: 0px;}
+5%{opacity: 1}
+    50%  {left: 100px;}
+    100%   {left: 0px;}
+
+}
+
+a {
+    text-decoration: none!important;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Lupa from '../IMGS/search-solid-01.png'
-import '../Styles.css';
+import Lupa from '../Images/search_icon.png'
+import '../Styles/Styles.css';
 
 
 class SearchBar extends React.Component{

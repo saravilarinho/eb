@@ -1,6 +1,6 @@
 import React from 'react';
-import './Styles.css'
-import Select_Individual_Movies from './Componentes/Select_Individual_Movie'
+import './Styles/Styles.css'
+import Select_Individual_Movies from './Components/Select_Individual_Movie'
 
 
 function Select_Movies (){

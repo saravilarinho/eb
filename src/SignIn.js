@@ -1,9 +1,9 @@
 import React from 'react';
-import './Styles.css';
+import './Styles/Styles.css';
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
 import {Link} from "react-router-dom";
 
-function Registo () {
+function SignIn () {
     return(
 
 
@@ -45,4 +45,4 @@ function Registo () {
     )
 }
 
-export default Registo;
+export default SignIn;

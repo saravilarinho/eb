@@ -1,6 +1,6 @@
 import React from 'react';
-import './Styles.css'
-import Line20 from './Componentes/Line_20'
+import './Styles/Styles.css'
+import HorizontalList from './Components/HorizontalList'
 
 const info_movies =[
     {
@@ -422,15 +422,15 @@ function Movies (){
         <div>
             <h1 className="titulos pt-3 pb-3">SERIES</h1>
 
-            <Line20 titulo={'Upcoming ...'} info={info_movies} type={'serie'} listacess={'yes'} content={'Upcoming'}/>
+            <HorizontalList titulo={'Upcoming ...'} info={info_movies} type={'serie'} listacess={'yes'} content={'Upcoming'}/>
 
-            <Line20 titulo={'Top Rated ...'} info={info_movies} type={'serie'} listacess={'yes'} content={'TopRated'}/>
+            <HorizontalList titulo={'Top Rated ...'} info={info_movies} type={'serie'} listacess={'yes'} content={'TopRated'}/>
 
-            <Line20 titulo={'Popular ...'} info={info_movies} type={'serie'} listacess={'yes'} content={'Popular'}/>
+            <HorizontalList titulo={'Popular ...'} info={info_movies} type={'serie'} listacess={'yes'} content={'Popular'}/>
 
-            <Line20 titulo={'Favorites ...'} info={info_movies} type={'serie'} listacess={'no'}/>
+            <HorizontalList titulo={'Favorites ...'} info={info_movies} type={'serie'} listacess={'no'}/>
 
-            <Line20 titulo={'Recommended ...'} info={info_movies} type={'serie'} listacess={'no'}/>
+            <HorizontalList titulo={'Recommended ...'} info={info_movies} type={'serie'} listacess={'no'}/>
 
         </div>
 )

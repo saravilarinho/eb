@@ -1,9 +1,9 @@
 import React from 'react';
-import './Styles.css';
-import IndividualEntertaiment from './Componentes/IndividualEntertaiment'
+import './Styles/Styles.css';
+import IndividualEntertaiment from './Components/IndividualEntertaiment'
 
 
-function Page_individual() {
+function IndividualEntertaimentPage() {
   return (
     <div className={'pads'}>
       <IndividualEntertaiment/>
@@ -14,4 +14,4 @@ function Page_individual() {
   );
 }
 
-export default Page_individual;
+export default IndividualEntertaimentPage;

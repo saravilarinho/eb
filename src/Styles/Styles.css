@@ -101,7 +101,7 @@ body {
 }
 
 .backgroundmusic {
-    background-image: url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
+    background-image: url("../Images/music_backdrop.jpg");
     position: relative;
     background-size: cover;
     text-align: center;
@@ -115,7 +115,7 @@ body {
     rgba(0, 0, 0, 0) 130%,
     rgba(0, 0, 0, 0) 80%,
     rgba(0, 0, 0, 0.9) 100%
-    ), url("IMGS/1292156-rock-concert-wallpaper-2880x1800-for-phone.jpg");
+    ), url("../Images/music_backdrop.jpg");
     height: 60vh;
 }
 
@@ -170,7 +170,7 @@ body {
 .Backdrop {
 
     color: #FFD015;
-    background-image: url("Backdrop.png");
+    background-image: url("../Images/backdrop.png");
     height: 35vw !important;
     background-color: black;
     background-size: 100% auto;

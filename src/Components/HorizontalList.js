@@ -1,7 +1,7 @@
 import React from 'react';
-import '../Styles.css';
-import ListEntertaiment from '../Componentes/ListEntertaiment'
-import arrowemblem from "../IMGS/arrow-emblem.svg"
+import '../Styles/Styles.css';
+import MiniatureEntertaiment from './MiniatureEntertaiment'
+import arrowemblem from "../Images/arrow_emblem.svg"
 import {Link} from 'react-router-dom'
 
 
@@ -65,7 +65,7 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview}
+                            {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                                         title={item.title} id={item.id}/>)}
 
                         </li>
@@ -75,7 +75,7 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <ListEntertaiment img={item.poster_path} text={item.overview}
+                            {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                                         title={item.name} id={item.id}/>)}
 
                         </li>

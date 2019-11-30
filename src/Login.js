@@ -1,5 +1,5 @@
 import React from 'react';
-import './Styles.css';
+import './Styles/Styles.css';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {Link} from "react-router-dom";
 

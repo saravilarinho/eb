@@ -1,7 +1,7 @@
 import React from 'react';
-import './Styles.css';
-import Backdrop from './Componentes/Backdrop'
-import RandomEntertaiment from './Componentes/RandomEntertaiment'
+import './Styles/Styles.css';
+import Backdrop from './Components/Backdrop'
+import RandomEntertaiment from './Components/RandomEntertaiment'
 
 function Homepage() {
   return (

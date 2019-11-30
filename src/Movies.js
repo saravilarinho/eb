@@ -1,6 +1,6 @@
 import React from 'react';
-import './Styles.css'
-import Line20 from './Componentes/Line_20'
+import './Styles/Styles.css'
+import HorizontalList from './Components/HorizontalList'
 
 
 
@@ -414,11 +414,11 @@ function Movies (){
         <div>
             <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
-            <Line20 titulo={'Upcoming ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Upcoming'}/>
+            <HorizontalList titulo={'Upcoming ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Upcoming'}/>
 
-            <Line20 titulo={'Top Rated ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'TopRated'}/>
+            <HorizontalList titulo={'Top Rated ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'TopRated'}/>
 
-            <Line20 titulo={'Popular ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Popular'}/>
+            <HorizontalList titulo={'Popular ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Popular'}/>
 
         </div>
 )

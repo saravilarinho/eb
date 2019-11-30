@@ -1,7 +1,7 @@
 import React from 'react';
-import '../Styles.css';
-import SearchBar from './SearchBar';
-import Logo from '../IMGS/Logo.png'
+import './Styles/Styles.css';
+import SearchBar from './Components/SearchBar';
+import Logo from './Images/Logo.png'
 import {Link} from 'react-router-dom'
 
 

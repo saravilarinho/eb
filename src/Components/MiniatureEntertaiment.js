@@ -1,13 +1,13 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import '../Styles.css';
-import img from "../IMGS/8b6b6ae81b05a817ac275d45fa09e18f10bf5c78_hq.jpg";
-import eyeicon from '../IMGS/eye_icon.png'
-import hearticon from '../IMGS/heart-regular.svg'
+import '../Styles/Styles.css';
+import img from "../Images/film.jpg";
+import eyeicon from '../Images/eye_icon.png'
+import hearticon from '../Images/heart_unfill.svg'
 import {Link} from 'react-router-dom'
 
 
-const ListEntertaiment = (props) => {
+const MiniatureEntertaiment = (props) => {
 
     const path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
     return (
@@ -37,4 +37,4 @@ const ListEntertaiment = (props) => {
     );
 }
 
-export default ListEntertaiment;
+export default MiniatureEntertaiment;

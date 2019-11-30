@@ -116,7 +116,11 @@ body {
     rgba(0, 0, 0, 0) 80%,
     rgba(0, 0, 0, 0.9) 100%
     ), url("../Images/music_backdrop.jpg");
-    height: 60vh;
+    height: 59vh;
+    margin-top: -4vh !important;
+
+
+
 }
 
 .comingsoon {

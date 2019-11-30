@@ -6,6 +6,8 @@ const Music = () =>{
     return (
         <div className={"background row"}>
 
+            <h1 className="titulos pt-3 pb-3">MUSIC</h1>
+
             <div className={"backgroundmusic align-items-center col-md-12"}>
                 <h3 className={"align-self-center comingsoon"}>COMING SOON...</h3>
                 <p>We are building something very cool. Stay tuned and be patient.</p>

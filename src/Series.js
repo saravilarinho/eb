@@ -6,6 +6,9 @@ function Series () {
     return(
         <div>
 
+            <p>
+                SERIES
+            </p>
         </div>
 
     )

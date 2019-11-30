@@ -11,6 +11,7 @@ import Page_individual from './Page_individual'
 import Music from "./Music";
 import Login from './Login'
 import Registo from './Registo'
+import Select_Movies from './Select_Movies'
 
 ReactDOM.render(
     <Router>
@@ -25,7 +26,9 @@ ReactDOM.render(
                 <Route path="/Login" component={Login}/>
                 <Route path="/Registo" component={Registo}/>
                 <Route path="/Favourites"/>
+                <Route path="/Select_Movies" component={Select_Movies}/>
                 <Route component={Homepage}/>
+
             </Switch>
 
     <Footer/>

@@ -100,6 +100,62 @@ body {
     margin-right: 4vw !important;
 }
 
+
+.dropdown .dropdown-item {
+    color: white !important;
+    font-size: 15px;
+
+}
+
+
+
+.dropdown-item:hover {
+    color: #FFD015 !important;
+    font-size: 20px;
+    opacity: 100% !important;
+    background-color: black !important;
+    transition: all .2s ease-in-out;
+
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    padding: 20px !important;
+    color: white !important;
+    margin-left: -3.5vw !important;
+    background: rgba(0, 0, 0, 1) !important;
+    margin-right: 3vw !important;
+}
+
+.dropdown-item .arrowemblem {
+
+    display: none;
+    width: 20px !important;
+    margin: 1vw !important;
+    height: auto;
+}
+
+.dropdown-item:hover .arrowemblem {
+
+    display: block;
+    animation: mysecond 1s 10 ease-in;
+    transition: all 1s ease-in;
+}
+
+.posicaolinks {
+    margin-right: -25vw !important;
+}
+
+links:hover .dropdown-menu{
+    color: #FFD015;
+    font-size: 25px !important;
+    transition: all .2s ease-in-out;
+    margin-right: 3vw !important;
+
+}
+
+
+
 .backgroundmusic {
     background-image: url("../Images/music_backdrop.jpg");
     position: relative;
@@ -555,9 +611,6 @@ opacity: 0}
     display: block;
     animation: myfirst 1s 1 ease-in-out;
     transition: all .2s ease-in-out;
-
-
-
 }
 
 
@@ -570,11 +623,18 @@ opacity: 0}
 
 
 @keyframes myfirst {
-    0%   {opacity: 0;left: 0px;}
-5%{opacity: 1}
+    0%   {opacity: 0; left: 0px;}
+    5%   {opacity: 1}
     50%  {left: 100px;}
-    100%   {left: 0px;}
+    100% {left: 0px;}
+}
 
+
+@keyframes mysecond {
+    0%   {opacity: 0; left: 0px;}
+    1%   {opacity: 1}
+    50%  {left: 10px;}
+    100% {left: 0px;}
 }
 
 a {

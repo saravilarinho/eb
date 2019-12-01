@@ -3,7 +3,7 @@ import './Styles/Styles.css'
 import Select_Individual_Movies from './Components/Select_Individual_Movie'
 
 
-function Select_Movies (){
+function SelectMovies (){
     return (
 
         <div>
@@ -18,4 +18,4 @@ function Select_Movies (){
 }
 
 
-export default Select_Movies;
+export default SelectMovies;

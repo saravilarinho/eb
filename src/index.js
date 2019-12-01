@@ -11,6 +11,8 @@ import IndividualEntertaimentPage from './IndividualEntertaimentPage'
 import Music from "./Music";
 import Login from './Login'
 import SignIn from './SignIn'
+import List from  './List'
+import  Books from './Books'
 
 ReactDOM.render(
     <Router>
@@ -19,8 +21,10 @@ ReactDOM.render(
                 <Route path="/Homepage" component={Homepage}/>
                 <Route path="/Movies/:id_entertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/Movies" component={Movies}/>
+                <Route path="/Series/:id_entertaiment" component={IndividualEntertaimentPage}/>
+                <Route path="/List" component={List}/>
                 <Route path="/Series" component={Series}/>
-                <Route path="/Books"/>
+                <Route path="/Books" component={Books}/>
                 <Route path="/Music" component={Music}/>
                 <Route path="/Login" component={Login}/>
                 <Route path="/Registo" component={SignIn}/>

@@ -21,7 +21,17 @@ const MiniatureEntertaiment = (props) => {
                         <p className={' text-adapt text-wrap'}>{props.text}
                         </p>
                         <div className={'row justify-content-between likeandview w-100 '}>
-                            <Link to={"/Movies/" + props.id} className={"col-5 col-lg-4 d-flex align-items-center"}>
+                            <Link to={() => {
+
+                                if (props.type==="movie"){
+
+                                    return "/Movies/" + props.id
+                                }
+                                if (props.type==="serie"){
+
+                                    return "/Series/" + props.id
+                                }
+                            }} className={"col-5 col-lg-4 d-flex align-items-center"}>
                                 <img className={'img-fluid '} src={eyeicon}/>
                             </Link>
                             <img className={"col-5 col-lg-4 img-fluid d-flex align-items-center"} src={hearticon}/>

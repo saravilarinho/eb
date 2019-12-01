@@ -28,7 +28,7 @@ const Line20 = (props) => {
         <section>{(() => {
             if (props.listacess === "yes") {
 
-                return<Link className={'titulos2'}  to={{pathname : '/List/'+props.content,state:{title: props.title, content:props.content,type:props.type,page:1}}}><div className={'titulos2 pt-5 pb-5'}>
+                return<Link className={'titulos2'}  to={{pathname : '/List/'+props.type+"/"+props.content,state:{title: props.title, content:props.content,type:props.type,page:1}}}><div className={'titulos2 pt-5 pb-5'}>
                     <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
 
@@ -61,7 +61,7 @@ const Line20 = (props) => {
             <ul className={'row justify-content-around pb-5'}>
 
                 {(() => {
-                    if (props.type === "movie") {
+                    if (props.type === "Movie") {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
@@ -71,12 +71,22 @@ const Line20 = (props) => {
                         </li>
                     }
 
-                    if (props.type === 'serie') {
+                    if (props.type === 'Serie') {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
                             {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                                         title={item.name} id={item.id}  type={props.type}/>)}
+
+                        </li>
+                    }
+
+                    if (props.type === 'Book') {
+
+                        return <li className="scroll-box col-12" id={props.titulo}>
+
+                            {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
+                                                                             title={item.title} id={item.id} type={props.type}/>)}
 
                         </li>
                     }

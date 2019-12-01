@@ -406,8 +406,6 @@ const info_movies =[
 ];
 
 
-var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
-
 
 
 
@@ -417,11 +415,14 @@ function Movies (){
         <div>
                 <h1 className="titulos pt-3 pb-3">BOOKS</h1>
 
-            <HorizontalList titulo={'Upcoming ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Upcoming'}/>
+            <HorizontalList titulo={'Upcoming ...'} info={info_movies} type={'Book'} listacess={'yes'} content={'Upcoming'}/>
 
-            <HorizontalList titulo={'Top Rated ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'TopRated'}/>
+            <HorizontalList titulo={'Top Rated ...'} info={info_movies} type={'Book'} listacess={'yes'} content={'TopRated'}/>
 
-            <HorizontalList titulo={'Popular ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Popular'}/>
+            <HorizontalList titulo={'Popular ...'} info={info_movies} type={'Book'} listacess={'yes'} content={'Popular'}/>
+
+            <HorizontalList titulo={'Favorites ...'} info={info_movies} type={'Book'} listacess={'no'}/>
+
 
         </div>
 )

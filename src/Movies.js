@@ -414,11 +414,14 @@ function Movies (){
         <div>
             <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
-            <HorizontalList titulo={'Upcoming ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Upcoming'}/>
+            <HorizontalList titulo={'Upcoming ...'} info={info_movies} type={'Movie'} listacess={'yes'} content={'Upcoming'}/>
 
-            <HorizontalList titulo={'Top Rated ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'TopRated'}/>
+            <HorizontalList titulo={'Top Rated ...'} info={info_movies} type={'Movie'} listacess={'yes'} content={'TopRated'}/>
 
-            <HorizontalList titulo={'Popular ...'} info={info_movies} type={'movie'} listacess={'yes'} content={'Popular'}/>
+            <HorizontalList titulo={'Popular ...'} info={info_movies} type={'Movie'} listacess={'yes'} content={'Popular'}/>
+
+            <HorizontalList titulo={'Favorites ...'} info={info_movies} type={'Movie'} listacess={'no'}/>
+
 
         </div>
 )

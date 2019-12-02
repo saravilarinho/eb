@@ -2457,9 +2457,18 @@ const initialState = {
 
     },
 
-    books: [
+    books: {
+        young_adult: [],
+        hardcover_fiction: [],
+        hardcover_nonfiction: [],
+        graphic_books_and_manga: [],
+        childrens_middle_grade:[],
+        all_bestsellers: [],
 
-    ]
+
+    }
+
+
 
 
 

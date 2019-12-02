@@ -45,6 +45,6 @@ const MiniatureEntertaiment = (props) => {
         </section>
 
     );
-}
+};
 
 export default MiniatureEntertaiment;

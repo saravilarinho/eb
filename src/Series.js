@@ -10,13 +10,15 @@ const Series = (props) => {
         <div>
             <h1 className="titulos pt-3 pb-3">SERIES</h1>
 
-            <HorizontalList titulo={'Upcoming ...'} info={props.info_series} type={'Serie'} listacess={'yes'} content={'Upcoming'}/>
+            <HorizontalList titulo={'Tv on The Air ...'} info={props.tv_on_the_air} type={'Serie'} listacess={'yes'} content={'TVOnTheAir'}/>
 
-            <HorizontalList titulo={'Top Rated ...'} info={props.info_series} type={'Serie'} listacess={'yes'} content={'TopRated'}/>
+            <HorizontalList titulo={'Top Rated ...'} info={props.top_rated} type={'Serie'} listacess={'yes'} content={'TopRated'}/>
 
-            <HorizontalList titulo={'Popular ...'} info={props.info_series} type={'Serie'} listacess={'yes'} content={'Popular'}/>
+            <HorizontalList titulo={'Popular ...'} info={props.popular} type={'Serie'} listacess={'yes'} content={'Popular'}/>
 
+{/*
             <HorizontalList titulo={'Favorites ...'} info={props.info_series} type={'Serie'} listacess={'no'}/>
+*/}
 
         </div>
 )
@@ -25,7 +27,7 @@ const Series = (props) => {
 
 const mapStateToProps = (state) => {
 
-    return {info_series: state.info_series}
+    return {tv_on_the_air: state.series.tv_on_the_air, top_rated: state.series.top_rated, popular: state.series.popular}
 
 };
 

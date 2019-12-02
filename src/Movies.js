@@ -9,23 +9,25 @@ const Movies = (props) =>{
         <div>
             <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
-            <HorizontalList titulo={'Upcoming ...'} info={props.info_movies} type={'Movie'} listacess={'yes'} content={'Upcoming'}/>
+            <HorizontalList titulo={'Upcoming ...'} info={props.upcoming} type={'Movie'} listacess={'yes'} content={'Upcoming'}/>
 
-            <HorizontalList titulo={'Top Rated ...'} info={props.info_movies} type={'Movie'} listacess={'yes'} content={'TopRated'}/>
+            <HorizontalList titulo={'Top Rated ...'} info={props.top_rated} type={'Movie'} listacess={'yes'} content={'TopRated'}/>
 
-            <HorizontalList titulo={'Popular ...'} info={props.info_movies} type={'Movie'} listacess={'yes'} content={'Popular'}/>
+            <HorizontalList titulo={'Popular ...'} info={props.popular} type={'Movie'} listacess={'yes'} content={'Popular'}/>
 
+{/*
             <HorizontalList titulo={'Favorites ...'} info={props.info_movies} type={'Movie'} listacess={'no'}/>
+*/}
 
 
         </div>
 )
 
 
-}
+};
 
 const mapStateToProps = (state) => {
-    return {info_movies: state.info_movies}
+    return {upcoming: state.movies.upcoming, top_rated: state.movies.top_rated, popular: state.movies.popular}
 };
 
 

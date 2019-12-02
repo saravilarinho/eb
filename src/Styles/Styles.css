@@ -185,6 +185,8 @@ links:hover .dropdown-menu{
 }
 
 .titulos {
+
+    text-transform: uppercase;
     text-align: start;
     font-size: 5vw!important;
     margin-left: 2.5vw !important;
@@ -315,6 +317,11 @@ links:hover .dropdown-menu{
 
 
 @media screen and (max-width: 576px) {
+
+    .EnterButton{
+        padding: 23vh 0 23vh 0!important
+    }
+
     .IndividualEntertaiment .entertaiment {
 
         height: 110vw !important;
@@ -325,12 +332,28 @@ links:hover .dropdown-menu{
         height: 110vw !important;
 
     }
+
+
+}
+
+
+@media screen and (min-width: 578px) {
+
+
+    .EnterButton{
+        padding: 20vh 0 20vh 0!important;
+    }
+
 
 
 }
 
 
 @media screen and (min-width: 768px) {
+
+
+
+
     .IndividualEntertaiment .entertaiment {
 
         height: 60vw !important;
@@ -346,7 +369,23 @@ links:hover .dropdown-menu{
 }
 
 
+
+@media screen and (min-width: 1360px) {
+
+    .EnterButton{
+        padding: 3vw!important;
+    }
+
+}
+
+
 @media screen and (min-width: 960px) {
+
+    .EnterButton button:hover {
+
+        font-weight: bolder;
+        transform: scale(1.05);
+    }
 
 
     .listentertaiment:hover .img-back {
@@ -435,22 +474,15 @@ links:hover .dropdown-menu{
 
     background-color: #FFD015;
     border: none;
-    padding: 1vh !important;
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
 
-.EnterButton button:hover {
-
-    font-weight: bolder;
-    font-size: 4vh;
-    transform: scale(1.05);
-}
 
 
 .EnterButton button {
 
-    margin: 6vh !important;
+    margin: 4.5vh !important;
 }
 
 

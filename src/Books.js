@@ -15,14 +15,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -120,14 +120,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -225,14 +225,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -330,14 +330,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -435,14 +435,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -540,14 +540,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -645,14 +645,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -750,14 +750,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -855,14 +855,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -960,14 +960,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1065,14 +1065,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1170,14 +1170,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1275,14 +1275,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1380,14 +1380,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1485,14 +1485,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1590,14 +1590,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1695,14 +1695,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1800,14 +1800,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -1905,14 +1905,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -2010,14 +2010,14 @@ const info_movies =[
                 etag: "o5vaKsHHfSU",
                 selfLink: "https://www.googleapis.com/books/v1/volumes/B81wDAAAQBAJ",
                 volumeInfo: {
-                    title: "\"I Give You My Body . . .\"",
+                    title: "I Give You My Body ",
                     subtitle: "How I Write Sex Scenes",
                     authors: [
                         "Diana Gabaldon"
                     ],
                     publisher: "Dell",
                     publishedDate: "2016-08-16",
-                    description: "NEW YORK TIMES BESTSELLER • For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
+                    description: "For writers looking to make sure their next physical interlude on the page inspires readers to share the moment rather than to laugh at it, bestselling author Diana Gabaldon divulges the writing secrets behind the sex scenes in her wildly popular Outlander novels. “Ask me to your bed,” he said. “I shall come to ye.” In this revealing compendium, acclaimed writer Diana Gabaldon shares her invaluable lessons for creating an immersive reading experience, from evoking a mood to using the power of emotions to communicate physical intimacy. You’ll learn the difference between gratuitous sex and genuine encounters that move the story forward, and how to handle less-than-savory acts that nevertheless serve a narrative purpose. Gabaldon also notes that sex can be conveyed instead of described. With such tips as “The Rule of Three” for involving the senses, handy lists of naughty euphemisms (with instructions for use), and Gabaldon’s own examples from the Outlander novels, “I Give You My Body . . .” is a master class in writing to draw readers in and keep them riveted to the page.",
                     industryIdentifiers: [
                         {
                             type: "ISBN_13",
@@ -2125,6 +2125,7 @@ function Books (){
 
             <HorizontalList titulo={'Graphic Novels & Manga ...'} info={info_movies} type={'Book'} listacess={'no'}/>
 
+            <HorizontalList titulo={'Middle Grade ...'} info={info_movies} type={'Book'} listacess={'no'}/>
 
         </div>
 )

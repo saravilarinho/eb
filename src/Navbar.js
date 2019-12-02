@@ -43,7 +43,29 @@ function Navbar() {
                                     Popular</a>
                             </span>
                     </span>
-                        <Link to={"/Books"} className={"links col-md-1"}>Books</Link>
+
+                    <span className="nav-item dropdown">
+                         <Link to={"/Books"} className={"links col-md-1"}>Books</Link>
+                        <span className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a className="dropdown-item" href="#">
+                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    Young Adult</a>
+                                <a className="dropdown-item" href="#">
+                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    Fiction</a>
+                                 <a className="dropdown-item" href="#">
+                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    Nonfiction</a>
+                                 <a className="dropdown-item" href="#">
+                                        <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                        Graphic Novels & Manga</a>
+                                <a className="dropdown-item" href="#">
+                                        <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                        Middle Grade</a>
+
+                            </span>
+                    </span>
+
                         <Link to={"/Music"} className={"links col-md-1"}>Music</Link>
                         <Link to={"/LogIn"} className={"links col-md-1"}>Login</Link>
                 </div>

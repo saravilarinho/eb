@@ -9,7 +9,12 @@ import {Link} from 'react-router-dom'
 
 const MiniatureEntertaiment = (props) => {
 
-    const path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
+    let path = props.img;
+
+
+    if (props.type ==='movie' && props.type === 'serie') {
+        path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
+    }
     return (
 
         <section className={'d-inline mb-5'}>

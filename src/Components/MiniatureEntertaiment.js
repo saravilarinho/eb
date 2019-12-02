@@ -12,8 +12,8 @@ const MiniatureEntertaiment = (props) => {
     const path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
     return (
 
-        <section className={'d-inline'}>
-            <div className={'col-10 col-md-5 col-lg-3 listentertaiment'}>
+        <section className={'d-inline mb-5'}>
+            <div className={'col-10 col-md-5 col-lg-3 listentertaiment mb-5'}>
                 <section className={'col-11 h-100'}>
                     <img src={path} className={'w-100 d-block img-back'}/>
                     <div className={'position-absolute above p-3'}>

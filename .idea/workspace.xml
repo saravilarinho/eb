@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d544ab74-b15a-4dfc-83b7-fdf4b0caa461" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HorizontalList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HorizontalList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/RootReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,16 +24,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Reducers/RootReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4151">
-              <caret line="2184" column="48" selection-start-line="2184" selection-start-column="48" selection-end-line="2184" selection-end-column="48" />
+            <state relative-caret-position="545">
+              <caret line="2464" selection-start-line="2464" selection-end-line="2464" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/List.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="918">
@@ -172,12 +165,12 @@
         <option value="$PROJECT_DIR$/src/Movies.js" />
         <option value="$PROJECT_DIR$/src/Components/RandomEntertaiment.js" />
         <option value="$PROJECT_DIR$/src/Styles/Styles.css" />
-        <option value="$PROJECT_DIR$/src/Reducers/RootReducer.js" />
         <option value="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" />
         <option value="$PROJECT_DIR$/src/Books.js" />
         <option value="$PROJECT_DIR$/src/Components/HorizontalList.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/List.js" />
+        <option value="$PROJECT_DIR$/src/Reducers/RootReducer.js" />
       </list>
     </option>
   </component>
@@ -293,7 +286,7 @@
       <workItem from="1575201186128" duration="5271000" />
       <workItem from="1575223737961" duration="1432000" />
       <workItem from="1575231288689" duration="6843000" />
-      <workItem from="1575280124815" duration="14789000" />
+      <workItem from="1575280124815" duration="15093000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/saravilarinho/eb&#10;&#10;# Conflicts:&#10;#&#9;src/Styles.css&#10;EU, RUTE PEREIRA TENHO DE FAZER PULL E PUSH MAIS VEZES NA MINHA VIDA. QUE SIRVA A PRESENTE MENSAGEM PARA EXEMPLIFICAR O PANICO DESNECESÁRIO COM O QUAL EU ASSOMBREI OS MEUS COLEGUINHAS, SARA E MARGARIDA, QUE NAO MERECIAM TAL AFRONTA. AMOR, RUTE.">
       <created>1574942506096</created>
@@ -306,10 +299,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125434000" />
+    <option name="totallyTimeSpent" value="125738000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39285713" />
@@ -669,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reducers/RootReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4151">
-          <caret line="2184" column="48" selection-start-line="2184" selection-start-column="48" selection-end-line="2184" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Books.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2369">
@@ -720,6 +706,13 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Reducers/RootReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="2464" selection-start-line="2464" selection-end-line="2464" />
         </state>
       </provider>
     </entry>

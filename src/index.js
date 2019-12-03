@@ -16,7 +16,9 @@ import Books from './Books'
 import RootReducer from './Reducers/RootReducer';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
+import Select_Individual_Movie from "./Components/Select_Individual_Movie";
 const  store = createStore(RootReducer);
+
 
 
 ReactDOM.render(
@@ -36,6 +38,7 @@ ReactDOM.render(
                 <Route path="/Music" component={Music}/>
                 <Route path="/Login" component={Login}/>
                 <Route path="/Registo" component={SignIn}/>
+                <Route path="/Select_Individual_Movies" component={Select_Individual_Movie}/>
                 <Route path="/Favourites"/>
                 <Route component={Homepage}/>
             </Switch>

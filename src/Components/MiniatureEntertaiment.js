@@ -12,7 +12,7 @@ const MiniatureEntertaiment = (props) => {
     let path = props.img;
 
 
-    if (props.type ==='movie' && props.type === 'serie') {
+    if (props.type ==='Movie' || props.type === 'Serie') {
         path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
     }
     return (
@@ -28,14 +28,21 @@ const MiniatureEntertaiment = (props) => {
                         <div className={'row justify-content-between likeandview w-100 '}>
                             <Link to={() => {
 
-                                if (props.type==="movie"){
+                                if (props.type==="Movie"){
 
                                     return "/Movies/" + props.id
                                 }
-                                if (props.type==="serie"){
+                                if (props.type==="Serie"){
 
                                     return "/Series/" + props.id
                                 }
+                                if (props.type==="Book"){
+
+
+
+                                    return "/Books/" + props.id
+                                }
+
                             }} className={"col-5 col-lg-4 d-flex align-items-center"}>
                                 <img className={'img-fluid '} src={eyeicon}/>
                             </Link>

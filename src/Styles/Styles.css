@@ -195,6 +195,17 @@ links:hover .dropdown-menu{
 }
 
 
+.titulos3 {
+
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 2vw!important;
+    margin-left: 2.5vw !important;
+    margin-top: 7vh !important;
+    color: #FFD015 !important;
+}
+
+
 .titulos2 h1 {
 
 

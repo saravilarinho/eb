@@ -1,6 +1,8 @@
 import React from 'react';
 import './Styles/Styles.css'
 import HorizontalList from './Components/HorizontalList'
+import {Link} from "react-router-dom";
+import arrowemblem from "./Images/arrow_emblem.svg";
 
 
 
@@ -2116,7 +2118,13 @@ function Books (){
 
         <div>
                 <h1 className="titulos pt-3 pb-3">BOOKS</h1>
-            <h2 className={'titulos'}> SEE ALL OF THE BEST ...</h2>
+
+
+            <Link className={'titulos2'} to={"/List/Book/AllBestSellers"} >
+                <h2 className={'titulos3 d-inline'}> SEE ALL OF THE BEST SELLERS ...</h2>
+                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+
+            </Link>
 
             <HorizontalList titulo={'Young Adult...'} info={info_movies} type={'Book'} listacess={'no'} content={'YoungAdult'}/>
 

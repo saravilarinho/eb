@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Styles/Styles.css" line="638" />
+    <bookmark url="file://$PROJECT_DIR$/src/Styles/Styles.css" line="649" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d544ab74-b15a-4dfc-83b7-fdf4b0caa461" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/Books.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Books.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HorizontalList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HorizontalList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/RootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,20 +17,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Books.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="933">
-              <caret line="2121" column="82" lean-forward="true" selection-start-line="2121" selection-start-column="76" selection-end-line="2121" selection-end-column="82" />
+            <state relative-caret-position="409">
+              <caret line="2122" column="47" selection-start-line="2122" selection-start-column="47" selection-end-line="2122" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Styles/Styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="201" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/HorizontalList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="40" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -44,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/List.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="663">
+              <caret line="66" column="43" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="43" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -56,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Navbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="59" column="78" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
+            <state relative-caret-position="289">
+              <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="48" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -68,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="544">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -112,8 +121,8 @@
       <find>ListEntertaiment</find>
       <find>Enterbutton</find>
       <find>Enterbutton but</find>
-      <find>titulos</find>
       <find>isbn</find>
+      <find>titulos</find>
     </findStrings>
     <replaceStrings>
       <replace>release_date</replace>
@@ -159,14 +168,14 @@
         <option value="$PROJECT_DIR$/src/Series.js" />
         <option value="$PROJECT_DIR$/src/Movies.js" />
         <option value="$PROJECT_DIR$/src/Components/RandomEntertaiment.js" />
-        <option value="$PROJECT_DIR$/src/Styles/Styles.css" />
         <option value="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" />
         <option value="$PROJECT_DIR$/src/Reducers/RootReducer.js" />
-        <option value="$PROJECT_DIR$/src/Books.js" />
         <option value="$PROJECT_DIR$/src/List.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/Components/HorizontalList.js" />
         <option value="$PROJECT_DIR$/src/Navbar.js" />
+        <option value="$PROJECT_DIR$/src/Styles/Styles.css" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/Books.js" />
       </list>
     </option>
   </component>
@@ -282,7 +291,7 @@
       <workItem from="1575201186128" duration="5271000" />
       <workItem from="1575223737961" duration="1432000" />
       <workItem from="1575231288689" duration="6843000" />
-      <workItem from="1575280124815" duration="20631000" />
+      <workItem from="1575280124815" duration="21293000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/saravilarinho/eb&#10;&#10;# Conflicts:&#10;#&#9;src/Styles.css&#10;EU, RUTE PEREIRA TENHO DE FAZER PULL E PUSH MAIS VEZES NA MINHA VIDA. QUE SIRVA A PRESENTE MENSAGEM PARA EXEMPLIFICAR O PANICO DESNECESÁRIO COM O QUAL EU ASSOMBREI OS MEUS COLEGUINHAS, SARA E MARGARIDA, QUE NAO MERECIAM TAL AFRONTA. AMOR, RUTE.">
       <created>1574942506096</created>
@@ -295,10 +304,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131276000" />
+    <option name="totallyTimeSpent" value="131938000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39285713" />
@@ -641,13 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Styles/Styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="188" column="29" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="507">
@@ -665,17 +667,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Books.js">
+    <entry file="file://$PROJECT_DIR$/src/Styles/Styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="2121" column="82" lean-forward="true" selection-start-line="2121" selection-start-column="76" selection-end-line="2121" selection-end-column="82" />
+        <state relative-caret-position="372">
+          <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="201" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/List.js">
+    <entry file="file://$PROJECT_DIR$/src/Navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="289">
+          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="48" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -684,18 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Navbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="78" selection-start-line="59" selection-start-column="78" selection-end-line="59" selection-end-column="78" />
+        <state relative-caret-position="544">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -704,8 +696,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/HorizontalList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="46" column="13" lean-forward="true" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="66" column="43" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Books.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="2122" column="47" selection-start-line="2122" selection-start-column="47" selection-end-line="2122" selection-end-column="47" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

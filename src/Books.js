@@ -17,9 +17,7 @@ const Books = (props) => {
                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
 
             </Link>
-            <h1 className="titulos pt-3 pb-3">BOOKS</h1>
-            <h2 className={'titulos'}> SEE ALL OF THE BEST ...</h2>
-
+            
             <HorizontalList titulo={'Young Adult...'} info={props.young_adult} type={'Book'} listacess={'no'}
                             content={'YoungAdult'}/>
 

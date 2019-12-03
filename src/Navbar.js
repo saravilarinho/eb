@@ -17,13 +17,13 @@ function Navbar() {
                     <span className="nav-item dropdown">
                             <Link to={"/Movies"} className={"links nav-link col-md-1"}  >Movies</Link>
                             <span className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="/List/Movie/Upcoming">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Upcoming</a>
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="/List/Movie/TopRated">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Top Rated</a>
-                                 <a className="dropdown-item" href="#">
+                                 <a className="dropdown-item" href="/List/Movie/Popular">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Popular</a>
                             </span>
@@ -32,13 +32,13 @@ function Navbar() {
                     <span className="nav-item dropdown">
                         <Link to={"/Series"} className={"links col-md-1"}>Series</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="/List/Serie/TVOnTheAir">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
-                                    Upcoming</a>
-                                <a className="dropdown-item" href="#">
+                                    TV On The Air</a>
+                                <a className="dropdown-item" href="/List/Serie/TopRated">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Top Rated</a>
-                                 <a className="dropdown-item" href="#">
+                                 <a className="dropdown-item" href="/List/Serie/Popular">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Popular</a>
                             </span>
@@ -47,19 +47,19 @@ function Navbar() {
                     <span className="nav-item dropdown">
                          <Link to={"/Books"} className={"links col-md-1"}>Books</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="/Books#YoungAdult">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Young Adult</a>
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="/Books#Fiction">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Fiction</a>
-                                 <a className="dropdown-item" href="#">
+                                 <a className="dropdown-item" href="/Books#NonFiction">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Nonfiction</a>
-                                 <a className="dropdown-item" href="#">
+                                 <a className="dropdown-item" href="/Books#GraphicNovels&Manga">
                                         <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                         Graphic Novels & Manga</a>
-                                <a className="dropdown-item" href="#">
+                                <a className="dropdown-item" href="/Books#MiddleGrade">
                                         <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                         Middle Grade</a>
 

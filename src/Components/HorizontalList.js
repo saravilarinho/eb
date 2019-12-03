@@ -22,21 +22,26 @@ const Line20 = (props) => {
         }, speed);
     }
 
+
     return (
 
 
         <section>{(() => {
             if (props.listacess === "yes") {
 
-                return<Link className={'titulos2'}  to={{pathname : '/List/'+props.type+"/"+props.content,state:{title: props.title, content:props.content,type:props.type,page:1}}}><div className={'titulos2 pt-5 pb-5'}>
-                    <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
-                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                return <Link className={'titulos2'} to={{
+                    pathname: '/List/' + props.type + "/" + props.content,
+                    state: {title: props.title, content: props.content, type: props.type, page: 1}
+                }}>
+                    <div className={'titulos2 pt-5 pb-5'} id={props.content}>
+                        <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
+                        <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
 
-                </div></Link>
+                    </div>
+                </Link>
 
-            }
-            else{
-                return <div className={'titulos1 pt-5 pb-5'}>
+            } else {
+                return <div className={'titulos1 pt-5 pb-5'} id={props.content}>
                     <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
                 </div>
             }
@@ -66,7 +71,8 @@ const Line20 = (props) => {
                         return <li className="scroll-box col-12" id={props.titulo}>
 
                             {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                        title={item.title} id={item.id} type={props.type}/>)}
+                                                                             title={item.title} id={item.id}
+                                                                             type={props.type}/>)}
 
                         </li>
                     }
@@ -76,7 +82,8 @@ const Line20 = (props) => {
                         return <li className="scroll-box col-12" id={props.titulo}>
 
                             {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                        title={item.name} id={item.id}  type={props.type}/>)}
+                                                                             title={item.name} id={item.id}
+                                                                             type={props.type}/>)}
 
                         </li>
                     }
@@ -85,8 +92,11 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <MiniatureEntertaiment img={item.items[0].volumeInfo.imageLinks.thumbnail} text={item.items[0].volumeInfo.description}
-                                                                             title={item.items[0].volumeInfo.title} id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={props.type}/>)}
+                            {props.info.map((item) => <MiniatureEntertaiment
+                                img={item.items[0].volumeInfo.imageLinks.thumbnail}
+                                text={item.items[0].volumeInfo.description}
+                                title={item.items[0].volumeInfo.title}
+                                id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={props.type}/>)}
 
                         </li>
 

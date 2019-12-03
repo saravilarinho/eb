@@ -2,7 +2,8 @@ import React from 'react';
 import './Styles/Styles.css'
 import MiniatureEntertaiment from "./Components/MiniatureEntertaiment";
 import {connect} from 'react-redux';
-import {Link} from "react-router-dom";
+import { Redirect } from 'react-router-dom'
+
 
 
 class List extends React.Component {
@@ -17,7 +18,6 @@ class List extends React.Component {
         const Content = this.props.match.params.content;
         let info = "";
 
-        console.log(Type + Content);
 
         if (Type === "Movie") {
 
@@ -59,6 +59,23 @@ class List extends React.Component {
             }
 
 
+
+        }
+
+        if (Type === "Book") {
+
+            if (Content === "AllBestSellers") {
+
+                info = this.props.books.all_bestsellers
+            }
+
+
+        }
+
+        if (info===""){
+
+            return <Redirect to='/Homepage' />
+
         }
 
         let WrittenContent = Content;
@@ -71,6 +88,11 @@ class List extends React.Component {
         if (WrittenContent==="TVOnTheAir"){
 
             WrittenContent = "TV On The Air"
+        }
+
+        if (WrittenContent==="AllBestSellers"){
+
+            WrittenContent = "All Best Sellers"
         }
 
 
@@ -96,8 +118,11 @@ class List extends React.Component {
                                                                     title={item.name} id={item.id}  type={'Serie'}/>)
                     }
 
+                    {Type==='Book' &&
 
-
+                    info.map((item) => <MiniatureEntertaiment img={item.items[0].volumeInfo.imageLinks.thumbnail} text={item.items[0].volumeInfo.description}
+                                                              title={item.items[0].volumeInfo.title} id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={'Book'}/>)
+                    }
 
                 </div>
 
@@ -125,6 +150,12 @@ const mapStateToProps = (state) => {
             top_rated: state.series.top_rated,
             popular: state.series.popular
         },
+
+        books:{
+
+            all_bestsellers: state.books.all_bestsellers
+
+        }
     }
 
 

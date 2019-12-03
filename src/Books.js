@@ -2116,16 +2116,17 @@ function Books (){
 
         <div>
                 <h1 className="titulos pt-3 pb-3">BOOKS</h1>
+            <h2 className={'titulos'}> SEE ALL OF THE BEST ...</h2>
 
-            <HorizontalList titulo={'Young Adult...'} info={info_movies} type={'Book'} listacess={'no'}/>
+            <HorizontalList titulo={'Young Adult...'} info={info_movies} type={'Book'} listacess={'no'} content={'YoungAdult'}/>
 
-            <HorizontalList titulo={'Fiction ...'} info={info_movies} type={'Book'} listacess={'no'}/>
+            <HorizontalList titulo={'Fiction ...'} info={info_movies} type={'Book'} listacess={'no'} content={'Fiction'}/>
 
-            <HorizontalList titulo={'NonFiction ...'} info={info_movies} type={'Book'} listacess={'no'} />
+            <HorizontalList titulo={'NonFiction ...'} info={info_movies} type={'Book'} listacess={'no'} content={'NonFiction'} />
 
-            <HorizontalList titulo={'Graphic Novels & Manga ...'} info={info_movies} type={'Book'} listacess={'no'}/>
+            <HorizontalList titulo={'Graphic Novels & Manga ...'} info={info_movies} type={'Book'} listacess={'no'} content={'GraphicNovels&Manga'}/>
 
-            <HorizontalList titulo={'Middle Grade ...'} info={info_movies} type={'Book'} listacess={'no'}/>
+            <HorizontalList titulo={'Middle Grade ...'} info={info_movies} type={'Book'} listacess={'no'} content={'MiddleGrade'}/>
 
         </div>
 )

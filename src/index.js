@@ -30,6 +30,7 @@ ReactDOM.render(
                 <Route path="/Series/:id_entertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/List/:type/:content" component={List}/>
                 <Route path="/Series" component={Series}/>
+                <Route path="/Books/See/:something" component={Books}/>
                 <Route path="/Books/:isbn" component={IndividualEntertaimentPage}/>
                 <Route path="/Books" component={Books}/>
                 <Route path="/Music" component={Music}/>

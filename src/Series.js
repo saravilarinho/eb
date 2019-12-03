@@ -2,9 +2,16 @@ import React from 'react';
 import './Styles/Styles.css'
 import {connect} from 'react-redux';
 import HorizontalList from './Components/HorizontalList'
+import {FetchAPI} from "./Actions/FetchAction";
 
 
 const Series = (props) => {
+
+    props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'tv_on_the_air', 'series');
+    props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'top_rated', 'series');
+    props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'popular', 'series');
+
+
     return (
 
         <div>
@@ -32,6 +39,14 @@ const mapStateToProps = (state) => {
 };
 
 
+const mapDispatchtoProps = (dispatch) => {
+    return{
+        FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content))
+    }
+
+};
 
 
-export default connect(mapStateToProps)(Series);
+
+
+export default connect(mapStateToProps, mapDispatchtoProps)(Series);

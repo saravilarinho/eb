@@ -15,9 +15,12 @@ import List from  './List'
 import Books from './Books'
 import RootReducer from './Reducers/RootReducer';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
-const  store = createStore(RootReducer);
+import thunk from 'redux-thunk';
+
+
+const store = createStore(RootReducer, applyMiddleware(thunk));
 
 
 

@@ -4,9 +4,6 @@ import {connect} from 'react-redux';
 import HorizontalList from './Components/HorizontalList'
 import {FetchAPI} from "./Actions/FetchAction";
 
-/*
-class ProductView extends Component*/
-
 class Movies extends React.Component {
 
     constructor(props) {

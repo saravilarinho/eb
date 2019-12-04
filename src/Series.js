@@ -36,24 +36,6 @@ class Series extends React.Component{
 
             </div>
 
-
-        /*
-                    <div>
-                        <h1 className="titulos pt-3 pb-3">SERIES</h1>
-
-                        <HorizontalList titulo={'Tv on The Air ...'} info={props.tv_on_the_air} type={'Serie'} listacess={'yes'} content={'TVOnTheAir'}/>
-
-                        <HorizontalList titulo={'Top Rated ...'} info={props.top_rated} type={'Serie'} listacess={'yes'} content={'TopRated'}/>
-
-                        <HorizontalList titulo={'Popular ...'} info={props.popular} type={'See'} listacess={'yes'} content={'Popular'}/>
-
-                        {/*
-                    <HorizontalList titulo={'Favorites ...'} info={props.info_series} type={'Serie'} listacess={'no'}/>
-        }
-
-            </div>*/
-
-
         )
 
 

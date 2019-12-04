@@ -34,7 +34,7 @@
 
 const api = "https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1";
     const request = new XMLHttpRequest();
-    request.open('GET', api);
+    reque  st.open('GET', api);
     request.onload = () => {
 
         if (request.status === 200) {

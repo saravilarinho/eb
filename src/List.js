@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom'
 import {Button} from "reactstrap";
 import {FetchAPI} from "./Actions/FetchAction";
 import arrowleft from './Images/arrow-circle-left-solid.svg';
+import arrowright from './Images/arrow-circle-right-solid.svg';
 import {Link} from 'react-router-dom';
 
 
@@ -14,6 +15,9 @@ class List extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            page_update: 1
+        }
     }
 
     componentDidMount() {
@@ -21,11 +25,9 @@ class List extends React.Component {
         const Content = this.props.match.params.content;
         let page = this.props.match.params.page;
 
-
-        if(page <= 0){
+        if(this.state.page_update <= 0){
             return <Redirect to='/Homepage' />
         }
-
 
         if(page !== this.props.movies.upcoming.page){
 
@@ -53,23 +55,17 @@ class List extends React.Component {
             if (Type === "Serie") {
 
                 if (Content === "TVOnTheAir") {
-
                     this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'tv_on_the_air', 'series');
                 }
 
                 if (Content === "TopRated") {
-
                     this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'series');
                 }
 
 
                 if (Content === "Popular") {
-
                     this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'series');
                 }
-
-
-
             }
 
             if (Type === "Book") {
@@ -81,9 +77,24 @@ class List extends React.Component {
 
     }
 
-        incrementa = (side) =>{
+        incrementa = () =>{
 
-            console.log("incrementa");
+            const Type = this.props.match.params.type;
+            const Content = this.props.match.params.content;
+            let Pagina = this.state.page_update;
+
+            this.setState({page_update: this.state.page_update + 1});
+
+            console.log(this.state.page_update);
+
+            console.log("isto é pagina" + Pagina);
+            console.log("isto é content" + Content);
+            console.log("isto é type" + Type);
+
+
+
+
+          /*  console.log("incrementa");
 
 
             const Type = this.props.match.params.type;
@@ -102,9 +113,12 @@ class List extends React.Component {
 
             return <Redirect to={'/Homepage'}  />
 
-        }
+        }*/
 
         };
+
+
+
 
         render() {
             let info = "";
@@ -223,23 +237,21 @@ class List extends React.Component {
                 </div>
 
 
-                <Button className={'col-md-2 mt-4 paginacao arrowleft pt-1'}>
+                <Button className={'col-md-2 mt-4 paginacao arrowleft pt-1'} >
                     <img className={"col-lg-4 img-fluid d-flex align-items-left"} name={"left"} src={arrowleft}/>
                 </Button>
 
 
-                <Link to={'/List/' + Type + '/' + Content +'/' + page_next}>
-                <Button className={'col-md-2 mt-4 paginacao arrowleft pt-1'}>
-                    <img className={"col-lg-4 img-fluid d-flex align-items-right"} name={"right"} src={arrowleft}/>
+
+                <Button className={'col-md-2 mt-4 paginacao arrowright pt-1'} type={'button'} onClick={this.incrementa}>
+                    <img className={"col-lg-4 img-fluid d-flex align-items-right"} name={"right"} src={arrowright}/>
                 </Button>
-                </Link>
+{/*
+                    <Link to={'/List/' + Type + '/' + Content +'/' + page_next}></Link>
+*/}
             </div>
-
-
         )
     }
-
-
 }
 
 

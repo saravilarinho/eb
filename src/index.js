@@ -38,7 +38,7 @@ ReactDOM.render(
                 <Route path="/Music" component={Music}/>
                 <Route path="/Login" component={Login}/>
                 <Route path="/Registo" component={SignIn}/>
-                <Route path="/Select_Individual_Movies" component={Select_Individual_Movie}/>
+                <Route path="/Select_Individual_Movie" component={Select_Individual_Movie}/>
                 <Route path="/Favourites"/>
                 <Route component={Homepage}/>
             </Switch>

@@ -32,7 +32,7 @@ class Movies extends React.Component {
                                 content={'TopRated'}/>
 
                 <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'} listacess={'yes'}
-                                content={'Popular'}/>*!/}
+                                content={'Popular'}/>
 
             </div>
         )

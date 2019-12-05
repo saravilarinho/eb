@@ -30,7 +30,7 @@ const Line20 = (props) => {
             if (props.listacess === "yes") {
 
                 return <Link className={'titulos2'} to={{
-                    pathname: '/List/' + props.type + "/" + props.content,
+                    pathname: '/List/' + props.type + "/" + props.content + "/1",
                     state: {title: props.title, content: props.content, type: props.type, page: 1}
                 }}>
                     <div className={'titulos2 pt-5 pb-5'} id={props.content}>

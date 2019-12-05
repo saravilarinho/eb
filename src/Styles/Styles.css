@@ -631,6 +631,21 @@ li {
     right: 0 !important;
 }
 
+
+.arrowleft{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 4vw 2vw 4vw !important;
+}
+
+.paginacao{
+    height: 5vh !important;
+    background-color: #FFD015;
+
+}
+
+
 .likeandview {
 
     position: absolute;

@@ -3,6 +3,10 @@ import './Styles/Styles.css'
 import MiniatureEntertaiment from "./Components/MiniatureEntertaiment";
 import {connect} from 'react-redux';
 import { Redirect } from 'react-router-dom'
+import {Button} from "reactstrap";
+import {FetchAPI} from "./Actions/FetchAction";
+import arrowleft from './Images/arrow-circle-left-solid.svg';
+import {Link} from 'react-router-dom';
 
 
 
@@ -12,14 +16,102 @@ class List extends React.Component {
         super(props);
     }
 
-    render() {
-
+    componentDidMount() {
         const Type = this.props.match.params.type;
         const Content = this.props.match.params.content;
-        let info = "";
+        let page = this.props.match.params.page;
 
 
-        if (Type === "Movie") {
+        if(page <= 0){
+            return <Redirect to='/Homepage' />
+        }
+
+
+        if(page !== this.props.movies.upcoming.page){
+
+            if (Type === "Movie") {
+
+
+                if (Content === "TopRated") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page , 'top_rated', 'movies');
+                }
+
+                if (Content === "Upcoming") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'upcoming', 'movies');
+                }
+
+
+                if (Content === "Popular") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'movies');
+                }
+
+            }
+
+            if (Type === "Serie") {
+
+                if (Content === "TVOnTheAir") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'tv_on_the_air', 'series');
+                }
+
+                if (Content === "TopRated") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'series');
+                }
+
+
+                if (Content === "Popular") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'series');
+                }
+
+
+
+            }
+
+            if (Type === "Book") {
+
+
+            }
+
+        }
+
+    }
+
+        incrementa = (side) =>{
+
+            console.log("incrementa");
+
+
+            const Type = this.props.match.params.type;
+            let page = this.props.match.params.page;
+            const Content = this.props.match.params.content;
+
+            if (side === 'left'){
+                console.log("left");
+
+            return <Redirect to={'List/' + Type + '/' + Content + '/' + (page - 1)}  />
+        }
+
+        if(side === 'right'){
+            console.log("right");
+
+
+            return <Redirect to={'/Homepage'}  />
+
+        }
+
+        };
+
+        render() {
+            let info = "";
+            const Type = this.props.match.params.type;
+            const Content = this.props.match.params.content;
+
+            if (Type === "Movie") {
 
 
             if (Content === "TopRated") {
@@ -78,6 +170,8 @@ class List extends React.Component {
 
         }
 
+
+
         let WrittenContent = Content;
 
         if (WrittenContent==="TopRated"){
@@ -97,6 +191,8 @@ class List extends React.Component {
 
 
 
+        let page_next = parseInt(this.props.match.params.page) + 1;
+
         return (
 
             <div>
@@ -107,14 +203,14 @@ class List extends React.Component {
 
                     {Type==='Movie' &&
 
-                    info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
+                    info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                              title={item.title} id={item.id} type={"Movie"}/>)
                     }
 
 
                     {Type==='Serie' &&
 
-                    info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
+                    info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                                     title={item.name} id={item.id}  type={'Serie'}/>)
                     }
 
@@ -127,6 +223,16 @@ class List extends React.Component {
                 </div>
 
 
+                <Button className={'col-md-2 mt-4 paginacao arrowleft pt-1'}>
+                    <img className={"col-lg-4 img-fluid d-flex align-items-left"} name={"left"} src={arrowleft}/>
+                </Button>
+
+
+                <Link to={'/List/' + Type + '/' + Content +'/' + page_next}>
+                <Button className={'col-md-2 mt-4 paginacao arrowleft pt-1'}>
+                    <img className={"col-lg-4 img-fluid d-flex align-items-right"} name={"right"} src={arrowleft}/>
+                </Button>
+                </Link>
             </div>
 
 
@@ -157,9 +263,14 @@ const mapStateToProps = (state) => {
 
         }
     }
-
-
 };
 
 
-export default connect(mapStateToProps)(List);
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content))
+    }
+
+};
+
+export default connect(mapStateToProps, mapDispatchtoProps)(List);

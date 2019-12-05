@@ -15,9 +15,12 @@ import List from  './List'
 import Books from './Books'
 import RootReducer from './Reducers/RootReducer';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
-const  store = createStore(RootReducer);
+import thunk from 'redux-thunk';
+
+
+const store = createStore(RootReducer, applyMiddleware(thunk));
 
 
 
@@ -27,12 +30,11 @@ ReactDOM.render(
         <Navbar/>
             <Switch>
                 <Route path="/Homepage" component={Homepage}/>
-                <Route path="/Movies/:id_entertaiment" component={IndividualEntertaimentPage}/>
+                <Route path="/Individual/:type/:identertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/Movies" component={Movies}/>
                 <Route path="/Series/:id_entertaiment" component={IndividualEntertaimentPage}/>
-                <Route path="/List/:type/:content" component={List}/>
+                <Route path="/List/:type/:content/:page" component={List}/>
                 <Route path="/Series" component={Series}/>
-                <Route path="/Books/See/:something" component={Books}/>
                 <Route path="/Books/:isbn" component={IndividualEntertaimentPage}/>
                 <Route path="/Books" component={Books}/>
                 <Route path="/Music" component={Music}/>

@@ -30,7 +30,7 @@ const Line20 = (props) => {
             if (props.listacess === "yes") {
 
                 return <Link className={'titulos2'} to={{
-                    pathname: '/List/' + props.type + "/" + props.content,
+                    pathname: '/List/' + props.type + "/" + props.content + "/1",
                     state: {title: props.title, content: props.content, type: props.type, page: 1}
                 }}>
                     <div className={'titulos2 pt-5 pb-5'} id={props.content}>
@@ -70,7 +70,7 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
+                            {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                                              title={item.title} id={item.id}
                                                                              type={props.type}/>)}
 
@@ -81,7 +81,7 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
+                            {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
                                                                              title={item.name} id={item.id}
                                                                              type={props.type}/>)}
 

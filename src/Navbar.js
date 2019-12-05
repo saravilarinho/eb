@@ -17,13 +17,13 @@ function Navbar() {
                     <span className="nav-item dropdown">
                             <Link to={"/Movies"} className={"links nav-link col-md-1"}  >Movies</Link>
                             <span className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="/List/Movie/Upcoming">
+                                <a className="dropdown-item" href="/List/Movie/Upcoming/1">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Upcoming</a>
-                                <a className="dropdown-item" href="/List/Movie/TopRated">
+                                <a className="dropdown-item" href="/List/Movie/TopRated/1">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Top Rated</a>
-                                 <a className="dropdown-item" href="/List/Movie/Popular">
+                                 <a className="dropdown-item" href="/List/Movie/Popular/1">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Popular</a>
                             </span>
@@ -32,13 +32,13 @@ function Navbar() {
                     <span className="nav-item dropdown">
                         <Link to={"/Series"} className={"links col-md-1"}>Series</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="/List/Serie/TVOnTheAir">
+                                <a className="dropdown-item" href="/List/Serie/TVOnTheAir/1">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     TV On The Air</a>
-                                <a className="dropdown-item" href="/List/Serie/TopRated">
+                                <a className="dropdown-item" href="/List/Serie/TopRated/1">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Top Rated</a>
-                                 <a className="dropdown-item" href="/List/Serie/Popular">
+                                 <a className="dropdown-item" href="/List/Serie/Popular/1">
                                     <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Popular</a>
                             </span>

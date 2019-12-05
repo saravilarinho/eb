@@ -30,17 +30,17 @@ const MiniatureEntertaiment = (props) => {
 
                                 if (props.type==="Movie"){
 
-                                    return "/Movies/" + props.id
+                                    return "Individual/Movies/" + props.id
                                 }
                                 if (props.type==="Serie"){
 
-                                    return "/Series/" + props.id
+                                    return "Individual/Series/" + props.id
                                 }
                                 if (props.type==="Book"){
 
 
 
-                                    return "/Books/" + props.id
+                                    return "Individual/Books/" + props.id
                                 }
 
                             }} className={"col-5 col-lg-4 d-flex align-items-center"}>

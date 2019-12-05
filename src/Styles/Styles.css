@@ -474,11 +474,20 @@ links:hover .dropdown-menu{
 
 }
 
-.DirectorContain h2 {
+.DirectorContain h5 {
 
     color: #FFD015;
+    font-weight: lighter;
 
 }
+
+.DirectorContain h5 {
+
+    color: #FFD015;
+    font-weight: lighter;
+
+}
+
 
 
 .EnterButton button {
@@ -682,4 +691,16 @@ opacity: 0}
 
 a {
     text-decoration: none!important;
+}
+
+.yourImage{
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+}
+
+
+.gen{
+    color: #FFD015;
+    font-size: smaller !important;
+    font-weight: lighter;
 }

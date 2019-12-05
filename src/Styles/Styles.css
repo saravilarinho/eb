@@ -443,8 +443,7 @@ links:hover .dropdown-menu{
 
         transform: scale(1.2) translate3d(0, 0, 0);
         object-fit: cover;
-        filter: grayscale(100%) contrast(100%) blur(1px);
-        opacity: 0.95;
+        filter: brightness(70%) grayscale(100%) contrast(100%);
 
     }
 

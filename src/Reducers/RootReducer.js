@@ -22,14 +22,14 @@ const initialState = {
             total_pages: ''
         },
 
-        top_rated:{
+        top_rated: {
             results: [],
             page: '',
             total_results: '',
             dates: {},
             total_pages: ''
         },
-        popular:{
+        popular: {
             results: [],
             page: '',
             total_results: '',
@@ -49,12 +49,12 @@ const initialState = {
         },
 
         top_rated: {
-                results: [],
-                page: '',
-                total_results: '',
-                dates: {},
-                total_pages: ''
-            },
+            results: [],
+            page: '',
+            total_results: '',
+            dates: {},
+            total_pages: ''
+        },
 
         popular: {
             results: [],
@@ -63,7 +63,6 @@ const initialState = {
             dates: {},
             total_pages: ''
         }
-
 
 
     },
@@ -12695,18 +12694,29 @@ const rootReducer = (state = initialState, action) => {
 
     if (action.type === 'FETCH_API') {
 
-        if(action.type_content === 'movies'){
 
-            if(action.content === 'upcoming'){
-                return{
+        if (action.type_content === 'individual') {
+
+
+            return {
+                ...state,
+                individual_entertaiment: action.result
+            }
+        }
+
+
+        if (action.type_content === 'movies') {
+
+            if (action.content === 'upcoming') {
+                return {
                     ...state,
 
 
                     movies: {...state.movies, upcoming: action.result}
                 }
             }
-            if(action.content === 'top_rated'){
-                return{
+            if (action.content === 'top_rated') {
+                return {
                     ...state,
 
 
@@ -12714,8 +12724,8 @@ const rootReducer = (state = initialState, action) => {
                 }
             }
 
-            if(action.content === 'popular'){
-                return{
+            if (action.content === 'popular') {
+                return {
                     ...state,
 
 
@@ -12726,10 +12736,10 @@ const rootReducer = (state = initialState, action) => {
         }
 
 
-        if(action.type_content === 'series'){
+        if (action.type_content === 'series') {
 
-            if(action.content === 'tv_on_the_air'){
-                return{
+            if (action.content === 'tv_on_the_air') {
+                return {
                     ...state,
 
 
@@ -12738,8 +12748,8 @@ const rootReducer = (state = initialState, action) => {
             }
 
 
-            if(action.content === 'top_rated'){
-                return{
+            if (action.content === 'top_rated') {
+                return {
                     ...state,
 
 
@@ -12747,8 +12757,8 @@ const rootReducer = (state = initialState, action) => {
                 }
             }
 
-            if(action.content === 'popular'){
-                return{
+            if (action.content === 'popular') {
+                return {
                     ...state,
 
 

@@ -30,7 +30,7 @@ ReactDOM.render(
         <Navbar/>
             <Switch>
                 <Route path="/Homepage" component={Homepage}/>
-                <Route path="/Movies/:id_entertaiment" component={IndividualEntertaimentPage}/>
+                <Route path="/Individual/:type/:identertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/Movies" component={Movies}/>
                 <Route path="/Series/:id_entertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/List/:type/:content/:page" component={List}/>

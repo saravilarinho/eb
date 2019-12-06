@@ -2,7 +2,7 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import '../Styles/Styles.css';
 import img from "../Images/film.jpg";
-import eyeicon from '../Images/eye_icon.png'
+import eyeicon from '../Images/plus-solid.svg'
 import hearticon from '../Images/heart_unfill.svg'
 import {Link} from 'react-router-dom'
 
@@ -10,6 +10,13 @@ import {Link} from 'react-router-dom'
 const MiniatureEntertaiment = (props) => {
 
     let path = props.img;
+
+    const readMore = (str, max = 40) => {
+        const array = str.trim().split(' ');
+        const ellipsis = array.length > max ? '...' : '';
+
+        return array.slice(0, max).join(' ') + ellipsis;
+    };
 
 
     if (props.type ==='Movie' || props.type === 'Serie') {
@@ -22,11 +29,11 @@ const MiniatureEntertaiment = (props) => {
                 <section className={'col-11 h-100'}>
                     <img src={path} className={'w-100 d-block img-back'}/>
                     <div className={'position-absolute above p-3'}>
-                        <h1 className={'text-wrap'}> {props.title} </h1>
-                        <p className={' text-adapt text-wrap'}>{props.text}
+                        <h1 className={'text-wrap'}> {readMore(props.title,6)} </h1>
+                        <p className={' text-adapt text-wrap'}>{readMore(props.text)}
                         </p>
                         <div className={'row justify-content-between likeandview w-100 '}>
-                            <Link to={'/Individual/'+props.type+'s/' + props.id} className={"col-5 col-lg-4 d-flex align-items-center"}>
+                            <Link to={'/Individual/'+props.type+'s/' + props.id} className={"col-4 col-lg-3 d-flex align-items-center"}>
                                 <img className={'img-fluid '} src={eyeicon}/>
                             </Link>
                             <img className={"col-5 col-lg-4 img-fluid d-flex align-items-center"} src={hearticon}/>

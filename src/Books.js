@@ -6,7 +6,6 @@ import arrowemblem from "./Images/arrow_emblem.svg";
 import './Styles/Styles.css';
 import {connect} from 'react-redux';
 import {FetchAPIBooks} from "./Actions/FetchActionBooks";
-import MiniatureEntertaiment from "./Components/MiniatureEntertaiment";
 
 class Books extends React.Component {
 
@@ -68,11 +67,7 @@ class Books extends React.Component {
                                                                                    listacess={'no'} content={'GraphicNovels&Manga'}/>
                 }
 
-                {this.props.graphic_books_and_manga.length > 0 &&
-                <HorizontalList titulo={'Middle Grade ...'} info={this.props.childrens_middle_grade} type={'Book'}
-                                listacess={'no'} content={'MiddleGrade'}/>
 
-                }
 
             </div>
         )

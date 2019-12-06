@@ -295,6 +295,11 @@ links:hover .dropdown-menu{
 
 }
 
+.IndividualEntertaiment{
+
+    margin-top: 10vh!important;
+}
+
 
 .IndividualEntertaiment .icon {
 
@@ -441,7 +446,7 @@ links:hover .dropdown-menu{
 
     .IndividualEntertaiment .img-enter:hover .entertaiment {
 
-        transform: scale(1.2) translate3d(0, 0, 0);
+        transform: scale(1.1) translate3d(0, 0, 0);
         object-fit: cover;
         filter: brightness(70%) grayscale(100%) contrast(100%);
 

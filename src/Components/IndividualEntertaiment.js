@@ -12,6 +12,9 @@ const IndividualEntertaiment = (props) => {
     let exam3 = Array.isArray(props.info.items);
 
 
+    console.log(props.info);
+
+
     return (<div className={"row IndividualEntertaiment justify-content-around m-5 "}>
         {props.type === 'Movies' &&
         <section className={'row justify-content-around mt-5'}>
@@ -41,10 +44,9 @@ const IndividualEntertaiment = (props) => {
                     }
                     <h2 className={'col-12 mt-5 mb-5'}> {props.info.tagline}</h2>
                     <p className={'col-12'}>{props.info.overview}</p>
-                    <h3 className={'col-4 mt-5'}>Revenue: {props.info.revenue !== 0 ? props.info.revenue + "$" : "Unknown"} </h3>
                     <h3 className={'col-4 mt-5'}>Release-Date : {props.info.release_date}</h3>
-                    <h3 className={'col-4 mt-5'}>Budget
-                        : {props.info.budget !== 0 ? props.info.budget : "Unknown"}</h3>
+                    <h3 className={'col-4 mt-5'}>Status
+                        : {props.info.status}</h3>
 
                 </div>
             </div>

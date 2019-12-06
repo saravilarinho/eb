@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Styles/Styles.css" line="678" />
+    <bookmark url="file://$PROJECT_DIR$/src/Styles/Styles.css" line="691" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d544ab74-b15a-4dfc-83b7-fdf4b0caa461" name="Default Changelist" comment="epa fds">
-      <change afterPath="$PROJECT_DIR$/src/Actions/FetchActionBooks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions/FetchActionBooks1by1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/FetchActionBooks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/FetchActionBooks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Books.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Books.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/HorizontalList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/HorizontalList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/IndividualEntertaiment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/IndividualEntertaiment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/RootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Images/plus-solid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Images/plus-solid.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Styles/Styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Books.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="680">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -36,19 +33,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Actions/FetchActionBooks1by1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Actions/FetchActionBooks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="765">
+              <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -56,10 +44,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Reducers/RootReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="70">
+              <caret line="2205" selection-start-line="2205" selection-end-line="2205" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#543605#678935#0" />
+                <element signature="e#679259#679388#0" />
+                <element signature="e#679437#680078#0" />
+                <element signature="e#680127#680780#0" />
               </folding>
             </state>
           </provider>
@@ -68,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="510">
+              <caret line="30" column="78" lean-forward="true" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -78,13 +70,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/IndividualEntertaiment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Styles/Styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="299" column="18" selection-start-line="299" selection-start-column="18" selection-end-line="299" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -92,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/HorizontalList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="525">
+              <caret line="96" column="76" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="76" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -113,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/List.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
+            <state relative-caret-position="1956">
+              <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
             </state>
           </provider>
         </entry>
@@ -143,7 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>icon</find>
       <find>img-enter</find>
       <find>entertaiment</find>
       <find>max</find>
@@ -173,6 +173,7 @@
       <find>filter</find>
       <find>VolumeInfo</find>
       <find>con</find>
+      <find>IndividualEntertaiment</find>
     </findStrings>
     <replaceStrings>
       <replace>release_date</replace>
@@ -223,14 +224,14 @@
         <option value="$PROJECT_DIR$/src/Series.js" />
         <option value="$PROJECT_DIR$/../Universidade 3º ano 1º semestre/LABV/aula_12_11/src/Produto_individual.js" />
         <option value="$PROJECT_DIR$/src/IndividualEntertaimentPage.js" />
-        <option value="$PROJECT_DIR$/src/Components/IndividualEntertaiment.js" />
-        <option value="$PROJECT_DIR$/src/Styles/Styles.css" />
-        <option value="$PROJECT_DIR$/src/Actions/FetchActionBooks.js" />
-        <option value="$PROJECT_DIR$/src/Actions/FetchActionBooks1by1.js" />
-        <option value="$PROJECT_DIR$/src/Reducers/RootReducer.js" />
-        <option value="$PROJECT_DIR$/src/Components/HorizontalList.js" />
-        <option value="$PROJECT_DIR$/src/Books.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/Actions/FetchActionBooks1by1.js" />
+        <option value="$PROJECT_DIR$/src/Components/HorizontalList.js" />
+        <option value="$PROJECT_DIR$/src/Reducers/RootReducer.js" />
+        <option value="$PROJECT_DIR$/src/Styles/Styles.css" />
+        <option value="$PROJECT_DIR$/src/Components/IndividualEntertaiment.js" />
+        <option value="$PROJECT_DIR$/src/Actions/FetchActionBooks.js" />
+        <option value="$PROJECT_DIR$/src/Books.js" />
         <option value="$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js" />
       </list>
     </option>
@@ -277,6 +278,12 @@
               <item name="eb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Reducers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -352,7 +359,7 @@
       <workItem from="1575560849279" duration="21383000" />
       <workItem from="1575623175105" duration="10000" />
       <workItem from="1575641702111" duration="601000" />
-      <workItem from="1575647011285" duration="1763000" />
+      <workItem from="1575647011285" duration="13250000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/saravilarinho/eb&#10;&#10;# Conflicts:&#10;#&#9;src/Styles.css&#10;EU, RUTE PEREIRA TENHO DE FAZER PULL E PUSH MAIS VEZES NA MINHA VIDA. QUE SIRVA A PRESENTE MENSAGEM PARA EXEMPLIFICAR O PANICO DESNECESÁRIO COM O QUAL EU ASSOMBREI OS MEUS COLEGUINHAS, SARA E MARGARIDA, QUE NAO MERECIAM TAL AFRONTA. AMOR, RUTE.">
       <created>1574942506096</created>
@@ -365,7 +372,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180644000" />
+    <option name="totallyTimeSpent" value="192131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -395,7 +402,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3336887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34488273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -432,7 +439,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Components/IndividualEntertaiment.js</url>
-          <line>8</line>
+          <line>7</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -708,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Styles/Styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="445" column="63" lean-forward="true" selection-start-line="445" selection-start-column="63" selection-end-line="445" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/IndividualEntertaimentPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -728,20 +728,41 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/IndividualEntertaiment.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="456">
+          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Books.js">
+    <entry file="file://$PROJECT_DIR$/src/Actions/FetchAction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actions/FetchActionBooks1by1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/List.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1956">
+          <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/HorizontalList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="96" column="76" selection-start-line="96" selection-start-column="55" selection-end-line="96" selection-end-column="76" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -758,58 +779,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actions/FetchActionBooks1by1.js">
+    <entry file="file://$PROJECT_DIR$/src/Reducers/RootReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="70">
+          <caret line="2205" selection-start-line="2205" selection-end-line="2205" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#543605#678935#0" />
+            <element signature="e#679259#679388#0" />
+            <element signature="e#679437#680078#0" />
+            <element signature="e#680127#680780#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Styles/Styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="299" column="18" selection-start-line="299" selection-start-column="18" selection-end-line="299" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/IndividualEntertaiment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Actions/FetchActionBooks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        <state relative-caret-position="765">
+          <caret line="45" column="10" lean-forward="true" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Reducers/RootReducer.js">
+    <entry file="file://$PROJECT_DIR$/src/Books.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/HorizontalList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actions/FetchAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/List.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="11" lean-forward="true" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        <state relative-caret-position="680">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -818,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/MiniatureEntertaiment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="18" lean-forward="true" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="510">
+          <caret line="30" column="78" lean-forward="true" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

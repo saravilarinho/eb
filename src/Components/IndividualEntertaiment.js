@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Styles/Styles.css';
-import eyeicon from '../Images/eye_icon.png'
 import hearticon from '../Images/heart_unfill.svg'
 import arrowemblem from "../Images/arrow_emblem.svg"
 
@@ -22,7 +21,6 @@ const IndividualEntertaiment = (props) => {
             <div className={'col-10 col-md-5 col-lg-3  img-enter d-flex align-items-center'}>
                 <img className={'col-12 entertaiment'}
                      src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + props.info.poster_path}/>
-                <img className={'col-4 icon'} src={eyeicon}/>
                 <img className={'col-3  icon'} src={hearticon}/>
 
             </div>
@@ -81,7 +79,6 @@ const IndividualEntertaiment = (props) => {
             <div className={'col-10 col-md-5 col-lg-3  img-enter d-flex align-items-center'}>
                 <img className={'col-12 entertaiment'}
                      src={'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + props.info.poster_path}/>
-                <img className={'col-4 icon'} src={eyeicon}/>
                 <img className={'col-3  icon'} src={hearticon}/>
 
             </div>
@@ -136,7 +133,6 @@ const IndividualEntertaiment = (props) => {
             <div className={'col-10 col-md-5 col-lg-3  img-enter d-flex align-items-center'}>
                 <img alt={'book'} className={'col-12 entertaiment'}
                      src={props.info.items[0].volumeInfo.imageLinks.thumbnail}/>
-                <img alt={'eye'} className={'col-4 icon'} src={eyeicon}/>
                 <img alt={'heart'} className={'col-3  icon'} src={hearticon}/>
 
             </div>

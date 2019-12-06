@@ -70,9 +70,10 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                             title={item.title} id={item.id}
-                                                                             type={props.type}/>)}
+                            {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path}
+                                                                                     text={item.overview}
+                                                                                     title={item.title} id={item.id}
+                                                                                     type={props.type}/>)}
 
                         </li>
                     }
@@ -81,9 +82,10 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                             title={item.name} id={item.id}
-                                                                             type={props.type}/>)}
+                            {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path}
+                                                                                     text={item.overview}
+                                                                                     title={item.name} id={item.id}
+                                                                                     type={props.type}/>)}
 
                         </li>
                     }
@@ -92,11 +94,13 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <MiniatureEntertaiment
+
+
+                            {/*{props.info.map((item) => <MiniatureEntertaiment
                                 img={item.items[0].volumeInfo.imageLinks.thumbnail}
                                 text={item.items[0].volumeInfo.description}
                                 title={item.items[0].volumeInfo.title}
-                                id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={props.type}/>)}
+                                id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={props.type}/>)}*/}
 
                         </li>
 

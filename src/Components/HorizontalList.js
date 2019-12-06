@@ -94,13 +94,12 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-
-
-                            {/*{props.info.map((item) => <MiniatureEntertaiment
-                                img={item.items[0].volumeInfo.imageLinks.thumbnail}
-                                text={item.items[0].volumeInfo.description}
-                                title={item.items[0].volumeInfo.title}
-                                id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={props.type}/>)}*/}
+                            {props.info.map((item) => <MiniatureEntertaiment
+                                img={item.imageLinks.thumbnail}
+                                text={item.description}
+                                title={item.title}
+                                id={item.industryIdentifiers[0].identifier} type={props.type}/>
+                            )}
 
                         </li>
 

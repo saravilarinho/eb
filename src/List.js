@@ -2,13 +2,11 @@ import React from 'react';
 import './Styles/Styles.css'
 import MiniatureEntertaiment from "./Components/MiniatureEntertaiment";
 import {connect} from 'react-redux';
-import { Redirect } from 'react-router-dom'
-import {Button} from "reactstrap";
+import {Redirect} from 'react-router-dom'
 import {FetchAPI} from "./Actions/FetchAction";
 import arrowleft from './Images/arrow-circle-left-solid.svg';
 import arrowright from './Images/arrow-circle-right-solid.svg';
 import {Link} from 'react-router-dom';
-
 
 
 class List extends React.Component {
@@ -16,7 +14,7 @@ class List extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            page_update: 1
+            page_update:  this.props.match.params.page
         }
     }
 
@@ -25,18 +23,17 @@ class List extends React.Component {
         const Content = this.props.match.params.content;
         let page = this.props.match.params.page;
 
-        if(this.state.page_update <= 0){
-            return <Redirect to='/Homepage' />
-        }
 
-        if(page !== this.props.movies.upcoming.page){
+        if (page !== this.props.movies.upcoming.page) {
+
+
 
             if (Type === "Movie") {
 
 
                 if (Content === "TopRated") {
 
-                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page , 'top_rated', 'movies');
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'movies');
                 }
 
                 if (Content === "Upcoming") {
@@ -77,55 +74,141 @@ class List extends React.Component {
 
     }
 
-        incrementa = () =>{
+    incrementamais = () => {
 
-            const Type = this.props.match.params.type;
-            const Content = this.props.match.params.content;
-            let Pagina = this.state.page_update;
+        const Type = this.props.match.params.type;
+        const Content = this.props.match.params.content;
 
-            this.setState({page_update: this.state.page_update + 1});
+        this.state.page_update = parseInt(this.state.page_update) + 1;
 
-            console.log(this.state.page_update);
-
-            console.log("isto é pagina" + Pagina);
-            console.log("isto é content" + Content);
-            console.log("isto é type" + Type);
+        if (Type === "Movie") {
 
 
+            if (Content === "TopRated") {
+
+                this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'movies');
+                this.setState({page_update: this.state.page_update})
+
+            }
+
+            if (Content === "Upcoming") {
+
+                this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'upcoming', 'movies');
+                this.setState({page_update: this.state.page_update})
+
+            }
 
 
-          /*  console.log("incrementa");
+            if (Content === "Popular") {
 
+                this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'movies');
+                this.setState({page_update: this.state.page_update})
 
-            const Type = this.props.match.params.type;
-            let page = this.props.match.params.page;
-            const Content = this.props.match.params.content;
+            }
 
-            if (side === 'left'){
-                console.log("left");
-
-            return <Redirect to={'List/' + Type + '/' + Content + '/' + (page - 1)}  />
         }
 
-        if(side === 'right'){
-            console.log("right");
+        if (Type === "Serie") {
+
+            if (Content === "TVOnTheAir") {
+                this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'tv_on_the_air', 'series');
+                this.setState({page_update: this.state.page_update})
+
+            }
+
+            if (Content === "TopRated") {
+                this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'series');
+                this.setState({page_update: this.state.page_update})
+
+            }
 
 
-            return <Redirect to={'/Homepage'}  />
+            if (Content === "Popular") {
+                this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'series');
+                this.setState({page_update: this.state.page_update})
 
-        }*/
+            }
+        }
 
-        };
+        if (Type === "Book") {
 
 
+        }
+
+    };
 
 
-        render() {
-            let info = "";
-            const Type = this.props.match.params.type;
-            const Content = this.props.match.params.content;
+    incrementamenos = () => {
+
+        const Type = this.props.match.params.type;
+        const Content = this.props.match.params.content;
+
+        if(this.state.page_update >= 1 ) {
+
+            this.state.page_update = parseInt(this.state.page_update) - 1;
 
             if (Type === "Movie") {
+
+
+                if (Content === "TopRated") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'movies');
+                    this.setState({page_update: this.state.page_update})
+
+                }
+
+                if (Content === "Upcoming") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'upcoming', 'movies');
+                    this.setState({page_update: this.state.page_update})
+                }
+
+
+                if (Content === "Popular") {
+
+                    this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'movies');
+                    this.setState({page_update: this.state.page_update})
+
+                }
+
+            }
+
+            if (Type === "Serie") {
+
+                if (Content === "TVOnTheAir") {
+                    this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'tv_on_the_air', 'series');
+                    this.setState({page_update: this.state.page_update})
+
+                }
+
+                if (Content === "TopRated") {
+                    this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'series');
+                    this.setState({page_update: this.state.page_update})
+
+                }
+
+
+                if (Content === "Popular") {
+                    this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'series');
+                    this.setState({page_update: this.state.page_update})
+
+                }
+            }
+
+            if (Type === "Book") {
+
+
+            }
+        }
+    };
+
+
+    render() {
+        let info = "";
+        const Type = this.props.match.params.type;
+        const Content = this.props.match.params.content;
+
+        if (Type === "Movie") {
 
 
             if (Content === "TopRated") {
@@ -165,7 +248,6 @@ class List extends React.Component {
             }
 
 
-
         }
 
         if (Type === "Book") {
@@ -178,31 +260,29 @@ class List extends React.Component {
 
         }
 
-        if (info===""){
+        if (info === "") {
 
-            return <Redirect to='/Homepage' />
+            return <Redirect to='/Homepage'/>
 
         }
-
 
 
         let WrittenContent = Content;
 
-        if (WrittenContent==="TopRated"){
+        if (WrittenContent === "TopRated") {
 
             WrittenContent = "Top Rated"
         }
 
-        if (WrittenContent==="TVOnTheAir"){
+        if (WrittenContent === "TVOnTheAir") {
 
             WrittenContent = "TV On The Air"
         }
 
-        if (WrittenContent==="AllBestSellers"){
+        if (WrittenContent === "AllBestSellers") {
 
             WrittenContent = "All Best Sellers"
         }
-
 
 
         let page_next = parseInt(this.props.match.params.page) + 1;
@@ -215,40 +295,44 @@ class List extends React.Component {
                 <div className={'ml-5'}>
 
 
-                    {Type==='Movie' &&
+                    {Type === 'Movie' &&
 
                     info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                             title={item.title} id={item.id} type={"Movie"}/>)
+                                                                      title={item.title} id={item.id} type={"Movie"}/>)
                     }
 
 
-                    {Type==='Serie' &&
+                    {Type === 'Serie' &&
 
                     info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                    title={item.name} id={item.id}  type={'Serie'}/>)
+                                                                      title={item.name} id={item.id} type={'Serie'}/>)
                     }
 
-                    {Type==='Book' &&
+                    {Type === 'Book' &&
 
-                    info.map((item) => <MiniatureEntertaiment img={item.items[0].volumeInfo.imageLinks.thumbnail} text={item.items[0].volumeInfo.description}
-                                                              title={item.items[0].volumeInfo.title} id={item.items[0].volumeInfo.industryIdentifiers[0].identifier} type={'Book'}/>)
+                    info.map((item) => <MiniatureEntertaiment img={item.items[0].volumeInfo.imageLinks.thumbnail}
+                                                              text={item.items[0].volumeInfo.description}
+                                                              title={item.items[0].volumeInfo.title}
+                                                              id={item.items[0].volumeInfo.industryIdentifiers[0].identifier}
+                                                              type={'Book'}/>)
                     }
 
                 </div>
 
 
-                <Button className={'col-md-2 mt-4 paginacao arrowleft pt-1'} >
-                    <img className={"col-lg-4 img-fluid d-flex align-items-left"} name={"left"} src={arrowleft}/>
-                </Button>
 
+                <div className={'row'}>
+                    <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={this.incrementamenos} className={'col-md-2  mt-4 arrowleft pt-1 mr-5'}>
+                        <img className={"img-fluid  arrowleft paginacaoleft align-items-right"} name={"left"}
+                             src={arrowleft}/>
+                    </Link>
 
+                    <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={this.incrementamais} className={'col-md-2 mt-4 arrowright pt-1 mr-5'}>
+                        <img className={"img-fluid  arrowright paginacaoright align-items-left"} name={"right"}
+                             src={arrowright}/>
+                    </Link>
+                </div>
 
-                <Button className={'col-md-2 mt-4 paginacao arrowright pt-1'} type={'button'} onClick={this.incrementa}>
-                    <img className={"col-lg-4 img-fluid d-flex align-items-right"} name={"right"} src={arrowright}/>
-                </Button>
-{/*
-                    <Link to={'/List/' + Type + '/' + Content +'/' + page_next}></Link>
-*/}
             </div>
         )
     }
@@ -269,7 +353,7 @@ const mapStateToProps = (state) => {
             popular: state.series.popular
         },
 
-        books:{
+        books: {
 
             all_bestsellers: state.books.all_bestsellers
 

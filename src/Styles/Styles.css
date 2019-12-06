@@ -625,7 +625,6 @@ li {
 
     background-color: rgba(0, 0, 0, 0.9);
 
-
 }
 
 
@@ -640,24 +639,33 @@ li {
 }
 
 
+
+
+
 .arrowleft{
     bottom: 0;
-    left: 40vw;
-    padding: 0 1vw 0vw 4vw !important;
+    margin: auto !important;
 }
 
 .arrowright{
     bottom: 0;
-    right: -32vw;
-    padding: 0 1vw 0vw 4vw !important;
-}
-
-.paginacao{
-    height: 5vh !important;
-    background-color: #FFD015;
-    margin-bottom: 1vh !important;
+    margin: auto !important;
 
 }
+
+.paginacaoright{
+    width: 5vw;
+
+}
+
+.paginacaoleft{
+    width: 5vw;
+
+}
+
+
+
+
 
 
 .likeandview {

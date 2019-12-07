@@ -5,7 +5,6 @@ import {Link, Redirect} from "react-router-dom";
 import {connect} from 'react-redux';
 import {auth} from './Config/fbConfig';
 import {SetCurrentUser} from "./Actions/SetCurrentUser";
-import Nav from "./Navbar";
 
 const SignIn = (props) => {
 

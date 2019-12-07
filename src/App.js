@@ -1,35 +1,51 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {useEffect} from 'react';
 import Homepage from './Homepage';
 import Navbar from './Navbar';
 import Footer from './Footer'
 import Movies from './Movies';
 import Series from "./Series";
+import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import * as serviceWorker from './serviceWorker';
 import IndividualEntertaimentPage from './IndividualEntertaimentPage'
 import Music from "./Music";
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import List from  './List'
 import Books from './Books'
-import RootReducer from './Reducers/RootReducer';
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
-import thunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-const store = createStore(RootReducer, applyMiddleware(thunk));
-
-
+import {auth} from "./Config/fbConfig";
+import {SetCurrentUser} from "./Actions/SetCurrentUser";
 
 
-const App = () => {
+
+
+function App(props){
+
+    useEffect(() => {
+
+        let unsuscribeFromAuth = null;
+
+        unsuscribeFromAuth = auth.onAuthStateChanged(user => {
+
+            if (user) {
+                //se o utilizador existir faz o set do currentUser
+                props.setCurrentUser(user);
+
+            }
+        });
+
+
+        return () => {
+            unsuscribeFromAuth()
+        }
+
+
+    }, [props.users, props.setCurrentUser, props.clearCurrentUser]);
+
 
 
     return(
-  <Provider store={store}>
       <Router>
           <Navbar/>
           <Switch>
@@ -51,9 +67,16 @@ const App = () => {
 
           <Footer/>
       </Router>
-  </Provider>  )
+   )
 
-};
+}
+const mapDispatchStateToProps = dispatch => ({
+    setCurrentUser: (user) => {
+        dispatch(SetCurrentUser(user));
+
+    },
+});
 
 
-export  default App
+
+export  default connect(null,mapDispatchStateToProps)(App);

@@ -83,36 +83,38 @@ function Navbar2(props) {
                         <Link to={"/Music"} className={"links col-md-1"}>Music</Link>
                     </span>
 
-                    <section className={"searcheuser"}>
+                    <section className={"searcheuser row justify-content-end d-flex align-items-center"}>
 
-                        <SearchBar />
 
-                    {props.users.login === false &&
+                        {props.users.login === false &&
 
-                    <span className="nav-item dropdown p-3 d-inline">
+                        <span className="nav-item dropdown p-3 d-inline col-12 col-lg-5">
                         <Link to={"/SignIn"} className={"links col-md-1"}>Sign In</Link>
                         </span>
-                    }
+                        }
 
-                    {props.users.login === true &&
+                        {props.users.login === true &&
 
-                    <span className="nav-item dropdown p-3 d-inline">
-                        <p className={"links col-md-1"}>{props.users.email}</p>
+                        <span className="nav-item dropdown p-3 col-12  col-lg-5 mb-2">
+                        <h6>{props.users.email}</h6>
 
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                            <a className="dropdown-item" >
+                            <a className="dropdown-item">
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Favourites</a>
 
 
-                            <a className="dropdown-item" >
+                            <a className="dropdown-item">
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Settings</a>
 
-                            <a className="dropdown-item" onClick={() =>{props.clearCurrentUser(); auth.signOut()} } >
+                            <a className="dropdown-item" onClick={() => {
+                                props.clearCurrentUser();
+                                auth.signOut()
+                            }}>
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Sign Out</a>
@@ -120,8 +122,8 @@ function Navbar2(props) {
                         </span>
                     </span>
 
-                    }
-
+                        }
+                        <SearchBar/>
                     </section>
 
 
@@ -145,5 +147,4 @@ const mapDispatchStateToProps = dispatch => ({
 });
 
 
-
-export default connect(mapStateToProps,mapDispatchStateToProps )(Navbar2);
+export default connect(mapStateToProps, mapDispatchStateToProps)(Navbar2);

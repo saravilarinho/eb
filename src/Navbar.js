@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Styles/Styles.css';
 // import SearchBar from './Components/SearchBar';
 import Logo from './Images/Logo.png';
@@ -11,7 +11,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
-function Navbar2() {
+import {auth} from './Config/fbConfig';
+
+import {connect} from 'react-redux';
+import {ClearCurrentUser} from "./Actions/ClearCurrentUser";
+
+
+function Navbar2(props) {
+
     return (
 
 
@@ -20,10 +27,10 @@ function Navbar2() {
                 <img className={'ml-3 mt-3'} src={Logo} width={70}/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className={'ml-5 mr-5 mt-3'}>
-                <img  src={Menu} width={40}/>
+                <img src={Menu} width={40}/>
 
             </Navbar.Toggle>
-            <Navbar.Collapse id="basic-navbar-nav" >
+            <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className=" w-100 mt-4 fff">
 
                     <span className="nav-item dropdown p-3">
@@ -54,7 +61,7 @@ function Navbar2() {
                                     Popular</a>
                             </span>
                     </span>
-                    <span className="nav-item dropdown p-3" >
+                    <span className="nav-item dropdown p-3">
                         <Link to={"/Books"} className={"links col-md-1"}>Books</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item" href="/Books#YoungAdult">
@@ -75,14 +82,49 @@ function Navbar2() {
                         <Link to={"/Music"} className={"links col-md-1"}>Music</Link>
                     </span>
 
+                    {props.users.login === false &&
 
+                    <span className="nav-item dropdown p-3">
+                        <Link to={"/SignIn"} className={"links col-md-1"}>Sign In</Link>
+                        </span>
+                    }
+
+                    {props.users.login === true &&
+
+                    <span className="nav-item dropdown p-3">
+                        <p className={"links col-md-1"}>{props.users.email}</p>
+
+                        <span onClick={() =>{props.clearCurrentUser(); auth.signOut()} } className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a className="dropdown-item" >
+
+                                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                        Sign Out</a>
+                        </span>
+                    </span>
+
+
+                    }
 
 
                 </Nav>
 
             </Navbar.Collapse>
         </Navbar>
-)
+    )
+
+
 }
 
-export default Navbar2;
+const mapStateToProps = (state) => {
+    return {users: state.users}
+};
+
+
+const mapDispatchStateToProps = dispatch => ({
+
+    clearCurrentUser: () => dispatch(ClearCurrentUser())
+});
+
+
+
+export default connect(mapStateToProps,mapDispatchStateToProps )(Navbar2);

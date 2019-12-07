@@ -1,12 +1,10 @@
 import React from 'react';
-import MiniatureEntertaiment from "../Components/MiniatureEntertaiment";
-
 
 const initialState = {
 
     users: {
         login: false,
-        name: null,
+        email: null,
         favorites: {
             movies: [],
             series: [],
@@ -2189,6 +2187,32 @@ const initialState = {
 
 
 const rootReducer = (state = initialState, action) => {
+
+    if(action.type === 'SIGN_IN'){
+        console.log("entrei na ação");
+
+        return {
+            ...state,
+            users: {
+                ...state.users,
+                login: true,
+                email: action.email
+            }
+        }
+    }
+
+    if(action.type === 'SIGN_OUT'){
+        console.log("sai ");
+
+        return {
+            ...state,
+            users: {
+                ...state.users,
+                login: false,
+                email: null
+            }
+        }
+    }
 
     if (action.type === 'FETCH_API') {
 

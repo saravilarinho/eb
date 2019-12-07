@@ -9,7 +9,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import IndividualEntertaimentPage from './IndividualEntertaimentPage'
 import Music from "./Music";
-import Login from './Login'
+import SignUp from './SignUp'
 import SignIn from './SignIn'
 import List from  './List'
 import Books from './Books'
@@ -17,6 +17,9 @@ import RootReducer from './Reducers/RootReducer';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
+
+//import store2 from './Store';
+
 import thunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -39,8 +42,8 @@ ReactDOM.render(
                 <Route path="/Books/:isbn" component={IndividualEntertaimentPage}/>
                 <Route path="/Books" component={Books}/>
                 <Route path="/Music" component={Music}/>
-                <Route path="/Login" component={Login}/>
-                <Route path="/Registo" component={SignIn}/>
+                <Route path="/SignUp" component={SignUp}/>
+                <Route path="/SignIn" component={SignIn}/>
                 <Route path="/Select_Individual_Movie" component={Select_Individual_Movie}/>
                 <Route path="/Favourites"/>
                 <Route component={Homepage}/>

@@ -52,4 +52,6 @@ const mapDispatchtoProps = (dispatch) => {
 };
 
 
+
+
 export default connect(mapStateToProps, mapDispatchtoProps)(Movies);

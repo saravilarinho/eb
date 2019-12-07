@@ -1,48 +1,101 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Styles/Styles.css';
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+import {connect} from 'react-redux';
+import {auth} from './Config/fbConfig';
+import {SetCurrentUser} from "./Actions/SetCurrentUser";
 
-function SignIn () {
-    return(
+const SignIn = (props) => {
+
+    const [email, setEmail] = useState('');
+
+    const [password, setPassword] = useState('');
 
 
+    const handleSignIn = (e) => {
 
-            <div className={'divform'}>
+        e.preventDefault();
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(user => console.log(user))
+            .catch(err => console.error(err));
 
-                <Form className={'formulario'}>
-                    <FormGroup className={'col-md-4 pt-4'} >
+
+    };
+
+    useEffect(() => {
+
+        let unsuscribeFromAuth = null;
+
+        unsuscribeFromAuth = auth.onAuthStateChanged(user => {
+
+            if (user) {
+                //se o utilizador existir faz o set do currentUser
+                props.setCurrentUser(user);
+
+            }
+        });
+
+
+        return () => {
+            unsuscribeFromAuth()
+        }
+
+
+    }, [props.users, props.setCurrentUser, props.clearCurrentUser]);
+
+
+    return (
+
+
+        <div className={'divform'}>
+
+            <Form className={'formulario'}>
+                {/*<FormGroup className={'col-md-4 pt-4'} >
                         <Label for="exampleUsername">Username</Label>
                         <Input type="username" name="username" id="exampleUsername" placeholder=" Username" />
-                    </FormGroup>
+                    </FormGroup>*/}
 
-                    <FormGroup className={'col-md-4 pt-4'} >
-                        <Label for="exampleEmail">E-mail</Label>
-                        <Input type="email" name="email" id="exampleEmail" placeholder=" E-mail" />
-                    </FormGroup>
+                <FormGroup className={'col-md-4 pt-4'}>
+                    <Label for="exampleEmail">E-mail</Label>
+                    <Input type="email" name="email" id="exampleEmail" value={email} onChange={(e) => {
+                        setEmail(e.target.value)
+                    }} placeholder="E-mail"/>
+                </FormGroup>
 
-                    <FormGroup  className={'col-md-4 pt-4'}>
-                        <Label for="examplePassword">Password</Label>
-                        <Input type="password" name="password" id="examplePassword" placeholder=" Password" />
-                    </FormGroup>
+                <FormGroup className={'col-md-4 pt-4'}>
+                    <Label for="examplePassword">Password</Label>
+                    <Input type="password" name="password" id="examplePassword" value={password} onChange={(e) => {
+                        setPassword(e.target.value)
+                    }} placeholder="Password"/>
+                </FormGroup>
 
-                    <FormGroup className={'col-md-4 pt-4'}>
+                {/*<FormGroup className={'col-md-4 pt-4'}>
                         <Label for="exampleFile">Profile Picture</Label>
                         <Input type="file" name="file" id="exampleFile"/>
-                    </FormGroup>
+                    </FormGroup>*/}
 
-                    <Button className={'col-md-2 mt-4 botao pt-1'}>SIGN UP</Button>
+                <Button className={'col-md-2 mt-4 botao pt-1'} onClick={handleSignIn}>SIGN IN</Button>
 
-                </Form>
+            </Form>
 
-                <div className={"aindanao mt-4"}>
-                    <p> Already have an account?
-                        <Link to={"/Login"} className={'registate'}>Login!</Link>
-                    </p>
-                </div>
-
+            <div className={"aindanao mt-4"}>
+                <p> Don't have an account?
+                    <Link to={"/SignUp"} className={'registate'}>Sign Up!</Link>
+                </p>
             </div>
-    )
-}
 
-export default SignIn;
+        </div>
+    )
+};
+
+
+const mapDispatchStateToProps = dispatch => ({
+    setCurrentUser: (user) => {
+        dispatch(SetCurrentUser(user));
+
+    },
+});
+
+export default connect(null, mapDispatchStateToProps)(SignIn);

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Styles/Styles.css';
-import SearchBar from './Components/SearchBar';
+// import SearchBar from './Components/SearchBar';
 import Logo from './Images/Logo.png';
 import Menu from './Images/bars-solid.svg';
 
@@ -69,9 +69,6 @@ function Navbar2() {
                                  <a className="dropdown-item" href="/Books#GraphicNovels&Manga">
                                         <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                         Graphic Novels & Manga</a>
-                                <a className="dropdown-item" href="/Books#MiddleGrade">
-                                        <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
-                                        Middle Grade</a>
                             </span>
                     </span>
                     <span className="nav-item dropdown p-3">

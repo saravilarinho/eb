@@ -18,6 +18,7 @@ import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
 import thunk from 'redux-thunk';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const store = createStore(RootReducer, applyMiddleware(thunk));

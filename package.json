@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://saravilarinho.github.io/eb/",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "gh-pages": "^2.1.1",
     "google-books-catalogue-search": "^0.1.4",
     "react": "^16.12.0",

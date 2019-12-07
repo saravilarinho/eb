@@ -42,8 +42,8 @@ const IndividualEntertaiment = (props) => {
                     }
                     <h2 className={'col-12 mt-5 mb-5'}> {props.info.tagline}</h2>
                     <p className={'col-12'}>{props.info.overview}</p>
-                    <h3 className={'col-4 mt-5'}>Release-Date : {props.info.release_date}</h3>
-                    <h3 className={'col-4 mt-5'}>Status
+                    <h3 className={'col-12 col-md-4 mt-5 text-center thing'}>Release-Date : {props.info.release_date}</h3>
+                    <h3 className={'col-12 col-md-4 mt-5 text-center thing'}>Status
                         : {props.info.status}</h3>
 
                 </div>
@@ -59,7 +59,7 @@ const IndividualEntertaiment = (props) => {
 
                         <img className={'yourImage m-4'} width={60}
                              src={'https://image.tmdb.org/t/p/h30/' + item.logo_path}/>
-                        <h5>{item.name}</h5>
+                        <h5 className={'text-center'}>{item.name}</h5>
                     </section>
                 )}
 

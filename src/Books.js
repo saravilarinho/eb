@@ -16,11 +16,11 @@ class Books extends React.Component {
 
     componentDidMount() {
 
-        this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=young-adult&api-key=6RBlK3mo9vCIv5tjnsBbGrx0hfrGTQxz", 'youngadult', 'books');
+        this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=young-adult&api-key=rRapa7ol5qNQBOJ7XrhjxovNu3907ulc", 'youngadult', 'books');
         this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=hardcover-fiction&api-key=6RBlK3mo9vCIv5tjnsBbGrx0hfrGTQxz", 'fiction', 'books');
         this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=hardcover-nonfiction&api-key=6RBlK3mo9vCIv5tjnsBbGrx0hfrGTQxz", 'nonFiction', 'books');
         this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=graphic-books-and-manga&api-key=6RBlK3mo9vCIv5tjnsBbGrx0hfrGTQxz", 'graphicnovelsmanga', 'books');
-        this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=children-middle-gradet&api-key=6RBlK3mo9vCIv5tjnsBbGrx0hfrGTQxz", 'middlegrade', 'books');
+       this.props.FetchAPIBooks("https://api.nytimes.com/svc/books/v3/lists.json?list=children-middle-gradet&api-key=6RBlK3mo9vCIv5tjnsBbGrx0hfrGTQxz", 'middlegrade', 'books');
     }
 
     render() {

@@ -28,9 +28,9 @@ const MiniatureEntertaiment = (props) => {
             <div className={'col-10 col-md-5 col-lg-3 listentertaiment mb-5'}>
                 <section className={'col-11 h-100'}>
                     <img src={path} className={'w-100 d-block img-back'}/>
-                    <div className={'position-absolute above p-3'}>
-                        <h1 className={'text-wrap'}> {readMore(props.title,6)} </h1>
-                        <p className={' text-adapt text-wrap'}>{readMore(props.text)}
+                    <div className={'position-absolute above p-3 w-100'}>
+                        <h1 className={'text-wrap'}> {props.title} </h1>
+                        <p className={' text-adapt text-wrap'}>{props.text ? readMore(props.text): console.log('nok') }
                         </p>
                         <div className={'row justify-content-between likeandview w-100 '}>
                             <Link to={'/Individual/'+props.type+'s/' + props.id} className={"col-4 col-lg-3 d-flex align-items-center"}>
@@ -41,7 +41,11 @@ const MiniatureEntertaiment = (props) => {
                     </div>
                 </section>
                 <section className={'col-12 text-center seemore'}>
+                    <Link to={'/Individual/'+props.type+'s/' + props.id}>
+
                     <button className={'buttonseemore'}>SEE MORE</button>
+                    </Link>
+
                 </section>
             </div>
         </section>

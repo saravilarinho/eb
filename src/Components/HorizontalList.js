@@ -33,7 +33,7 @@ const Line20 = (props) => {
                     pathname: '/List/' + props.type + "/" + props.content + "/1",
                     state: {title: props.title, content: props.content, type: props.type, page: 1}
                 }}>
-                    <div className={'titulos2 pt-5 pb-5'} id={props.content}>
+                    <div className={'titulos2 pt-3 pb-5'} id={props.content}>
                         <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
                         <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
 

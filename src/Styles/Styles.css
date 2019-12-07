@@ -23,9 +23,15 @@ body {
     margin-bottom: 18.3vh !important;
 }
 
-
 .defaultlettering {
+    background-color: black!important;
     color: white !important;
+}
+
+.fff{
+
+    background-color: black!important;
+    z-index: 300;
 }
 
 .navbar {
@@ -188,8 +194,7 @@ links:hover .dropdown-menu{
 
     text-transform: uppercase;
     text-align: start;
-    font-size: 5vw!important;
-    margin-left: 2.5vw !important;
+    font-size: 10vh!important;    margin-left: 2.5vw !important;
     margin-top: 7vh !important;
     color: #FFD015 !important;
 }
@@ -199,10 +204,16 @@ links:hover .dropdown-menu{
 
     text-transform: uppercase;
     text-align: start;
-    font-size: 2vw!important;
+    font-size: 3vh!important;
     margin-left: 2.5vw !important;
     margin-top: 7vh !important;
     color: #FFD015 !important;
+}
+
+.thing{
+
+    font-size: 2.7vh!important;
+
 }
 
 
@@ -740,6 +751,6 @@ a {
 
 .gen{
     color: #FFD015;
-    font-size: smaller !important;
+    font-size: small !important;
     font-weight: lighter;
 }

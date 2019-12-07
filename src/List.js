@@ -4,8 +4,8 @@ import MiniatureEntertaiment from "./Components/MiniatureEntertaiment";
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom'
 import {FetchAPI} from "./Actions/FetchAction";
-import arrowleft from './Images/arrow-circle-left-solid.svg';
-import arrowright from './Images/arrow-circle-right-solid.svg';
+import arrowleft from './Images/arrow_emblemleft-02.svg';
+import arrowright from './Images/arrow_emblem.svg';
 import {Link} from 'react-router-dom';
 
 
@@ -321,14 +321,14 @@ class List extends React.Component {
 
 
 
-                <div className={'row'}>
-                    <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={this.incrementamenos} className={'col-md-2  mt-4 arrowleft pt-1 mr-5'}>
-                        <img className={"img-fluid  arrowleft paginacaoleft align-items-right"} name={"left"}
+                <div className={'row rowpaginacao'}>
+                    <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={this.incrementamenos} className={'col-md-2 col-sm-6 mt-4 arrowleft pt-1 mr-5'}>
+                        <img className={"img-fluid pb-5 paginacaoleft align-items-right"} name={"left"}
                              src={arrowleft}/>
                     </Link>
 
-                    <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={this.incrementamais} className={'col-md-2 mt-4 arrowright pt-1 mr-5'}>
-                        <img className={"img-fluid  arrowright paginacaoright align-items-left"} name={"right"}
+                    <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={this.incrementamais} className={'col-md-2 mt-4 col-sm-6 arrowright pt-1 mr-5'}>
+                        <img className={"img-fluid pb-5 paginacaoright align-items-left"} name={"right"}
                              src={arrowright}/>
                     </Link>
                 </div>

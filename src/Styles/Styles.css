@@ -650,11 +650,13 @@ li {
 .arrowleft{
     bottom: 0;
     margin: auto !important;
+    margin-right: 0 !important;
 }
 
 .arrowright{
     bottom: 0;
     margin: auto !important;
+    margin-left: 0 !important;
 
 }
 
@@ -666,6 +668,10 @@ li {
 .paginacaoleft{
     width: 5vw;
 
+}
+
+.rowpaginacao {
+    text-align: center;
 }
 
 

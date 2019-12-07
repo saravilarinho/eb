@@ -15,6 +15,7 @@ import {auth} from './Config/fbConfig';
 
 import {connect} from 'react-redux';
 import {ClearCurrentUser} from "./Actions/ClearCurrentUser";
+import SearchBar from "./Components/SearchBar";
 
 
 function Navbar2(props) {
@@ -82,16 +83,20 @@ function Navbar2(props) {
                         <Link to={"/Music"} className={"links col-md-1"}>Music</Link>
                     </span>
 
+                    <section className={"searcheuser"}>
+
+                        <SearchBar />
+
                     {props.users.login === false &&
 
-                    <span className="nav-item dropdown p-3">
+                    <span className="nav-item dropdown p-3 d-inline">
                         <Link to={"/SignIn"} className={"links col-md-1"}>Sign In</Link>
                         </span>
                     }
 
                     {props.users.login === true &&
 
-                    <span className="nav-item dropdown p-3">
+                    <span className="nav-item dropdown p-3 d-inline">
                         <p className={"links col-md-1"}>{props.users.email}</p>
 
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -116,6 +121,8 @@ function Navbar2(props) {
                     </span>
 
                     }
+
+                    </section>
 
 
                 </Nav>

@@ -89,9 +89,10 @@ body {
 
 .barrapesquisa {
     border-radius: 5px;
+    border: none;
     padding: 10px;
-    margin: 1vw !important;
     width: 19vw;
+
 }
 
 .lupa {
@@ -104,7 +105,9 @@ body {
 
 .barra {
     margin-right: 4vw !important;
+    display: inline-block;
 }
+
 
 
 .dropdown .dropdown-item {
@@ -402,6 +405,23 @@ links:hover .dropdown-menu{
     .EnterButton{
         padding: 3vw!important;
     }
+
+}
+
+@media screen and (min-width: 991px){
+
+    .searcheuser {
+        position: absolute;
+        right: 0 !important;
+
+    }
+
+    .barra {
+        display: block;
+    }
+
+
+
 
 }
 

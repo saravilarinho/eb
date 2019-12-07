@@ -94,14 +94,26 @@ function Navbar2(props) {
                     <span className="nav-item dropdown p-3">
                         <p className={"links col-md-1"}>{props.users.email}</p>
 
-                        <span onClick={() =>{props.clearCurrentUser(); auth.signOut()} } className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <span className="dropdown-menu" aria-labelledby="navbarDropdown">
+
                             <a className="dropdown-item" >
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                        Favourites</a>
+
+
+                            <a className="dropdown-item" >
+
+                                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                        Settings</a>
+
+                            <a className="dropdown-item" onClick={() =>{props.clearCurrentUser(); auth.signOut()} } >
+
+                                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Sign Out</a>
+
                         </span>
                     </span>
-
 
                     }
 

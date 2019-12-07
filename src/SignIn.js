@@ -5,6 +5,7 @@ import {Link, Redirect} from "react-router-dom";
 import {connect} from 'react-redux';
 import {auth} from './Config/fbConfig';
 import {SetCurrentUser} from "./Actions/SetCurrentUser";
+import Nav from "./Navbar";
 
 const SignIn = (props) => {
 
@@ -51,45 +52,61 @@ const SignIn = (props) => {
 
         <div className={'divform'}>
 
-            <Form className={'formulario'}>
-                {/*<FormGroup className={'col-md-4 pt-4'} >
+
+            {props.users.login === false &&
+
+            <section>
+                <Form className={'formulario'}>
+                    {/*<FormGroup className={'col-md-4 pt-4'} >
                         <Label for="exampleUsername">Username</Label>
                         <Input type="username" name="username" id="exampleUsername" placeholder=" Username" />
                     </FormGroup>*/}
 
-                <FormGroup className={'col-md-4 pt-4'}>
-                    <Label for="exampleEmail">E-mail</Label>
-                    <Input type="email" name="email" id="exampleEmail" value={email} onChange={(e) => {
-                        setEmail(e.target.value)
-                    }} placeholder="E-mail"/>
-                </FormGroup>
+                    <FormGroup className={'col-md-4 pt-4'}>
+                        <Label for="exampleEmail">E-mail</Label>
+                        <Input type="email" name="email" id="exampleEmail" value={email} onChange={(e) => {
+                            setEmail(e.target.value)
+                        }} placeholder="E-mail"/>
+                    </FormGroup>
 
-                <FormGroup className={'col-md-4 pt-4'}>
-                    <Label for="examplePassword">Password</Label>
-                    <Input type="password" name="password" id="examplePassword" value={password} onChange={(e) => {
-                        setPassword(e.target.value)
-                    }} placeholder="Password"/>
-                </FormGroup>
+                    <FormGroup className={'col-md-4 pt-4'}>
+                        <Label for="examplePassword">Password</Label>
+                        <Input type="password" name="password" id="examplePassword" value={password} onChange={(e) => {
+                            setPassword(e.target.value)
+                        }} placeholder="Password"/>
+                    </FormGroup>
 
-                {/*<FormGroup className={'col-md-4 pt-4'}>
+                    {/*<FormGroup className={'col-md-4 pt-4'}>
                         <Label for="exampleFile">Profile Picture</Label>
                         <Input type="file" name="file" id="exampleFile"/>
                     </FormGroup>*/}
 
-                <Button className={'col-md-2 mt-4 botao pt-1'} onClick={handleSignIn}>SIGN IN</Button>
+                    <Button className={'col-md-2 mt-4 botao pt-1'} onClick={handleSignIn}>SIGN IN</Button>
 
-            </Form>
+                </Form>
 
-            <div className={"aindanao mt-4"}>
-                <p> Don't have an account?
-                    <Link to={"/SignUp"} className={'registate'}>Sign Up!</Link>
-                </p>
-            </div>
+                <div className={"aindanao mt-4"}>
+                    <p> Don't have an account?
+                        <Link to={"/SignUp"} className={'registate'}>Sign Up!</Link>
+                    </p>
+                </div>
+            </section>
+            }
 
-        </div>
+            {props.users.login !== false &&
+
+                <Redirect to={'./Homepage'}/>
+                
+            }
+
+                </div>
     )
 };
 
+
+const mapStateToProps = (state) => {
+    return {users: state.users}
+};
 
 const mapDispatchStateToProps = dispatch => ({
     setCurrentUser: (user) => {
@@ -98,4 +115,4 @@ const mapDispatchStateToProps = dispatch => ({
     },
 });
 
-export default connect(null, mapDispatchStateToProps)(SignIn);
+export default connect(mapStateToProps, mapDispatchStateToProps)(SignIn);

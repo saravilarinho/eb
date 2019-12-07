@@ -81,7 +81,6 @@ const mapStateToProps = (state) => {
         hardcover_fiction: state.books.hardcover_fiction,
         hardcover_nonfiction: state.books.hardcover_nonfiction,
         graphic_books_and_manga: state.books.graphic_books_and_manga,
-        childrens_middle_grade: state.books.childrens_middle_grade,
 
     })
 

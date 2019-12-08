@@ -33,9 +33,9 @@ const SignUp = () => {
 
 
     return(
-        <div className={'divform'}>
+        <div className={'divform pr-5 pl-5'}>
 
-            <Form className={'formulario'}>
+            <Form className={'formulario pr-5 pl-5'}>
                 <FormGroup className={'col-md-4 pt-4'} >
                     <Label for="exampleEmail">E-mail</Label>
                     <Input type="email" name="email" id="exampleEmail" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail" />
@@ -47,15 +47,15 @@ const SignUp = () => {
                 </FormGroup>
 
                 <FormGroup  className={'col-md-4 pt-4'}>
-                    <Label for="examplePassword">Password</Label>
+                    <Label for="examplePassword">Password Confirmation</Label>
                     <Input type="password" name="password" id="examplePassword" value={passwordConfirmation}  onChange={e => setPasswordConfirmation(e.target.value)}  placeholder="Password Confirmation" />
                 </FormGroup>
 
-                <Button className={'col-md-2 mt-4 botao pt-1'} onClick={handleSignUp} >SIGN UP</Button>
+                <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignUp} >SIGN UP</Button>
 
             </Form>
 
-            <div className={"aindanao  mt-4 "}>
+            <div className={"aindanao  mt-5  pr-5 pl-5"}>
                 <p> Already have an account?
                     <Link to={"/SignIn"} className={'registate '}>Sign In!</Link>
                 </p>
@@ -65,7 +65,7 @@ const SignUp = () => {
 
     )
 
-}
+};
 
 
 

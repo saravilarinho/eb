@@ -49,7 +49,7 @@ const SignIn = (props) => {
     return (
 
 
-        <div className={'divform'}>
+        <div className={'divform  pr-5 pl-5'}>
 
 
             {props.users.login === false &&

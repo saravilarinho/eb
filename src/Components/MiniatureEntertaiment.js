@@ -24,7 +24,7 @@ const MiniatureEntertaiment = (props) => {
     }
     return (
 
-        <section className={'d-inline mb-5'}>
+        <section className={'d-inline mb-5 w-100'}>
             <div className={'col-10 col-md-5 col-lg-3 listentertaiment mb-5'}>
                 <section className={'col-11 h-100'}>
                     <img src={path} className={'w-100 d-block img-back'}/>

@@ -18,9 +18,12 @@ import {auth} from "./Config/fbConfig";
 import {SetCurrentUser} from "./Actions/SetCurrentUser";
 
 
-
-
 function App(props){
+
+
+
+
+
 
     useEffect(() => {
 
@@ -70,6 +73,7 @@ function App(props){
    )
 
 }
+
 const mapDispatchStateToProps = dispatch => ({
     setCurrentUser: (user) => {
         dispatch(SetCurrentUser(user));

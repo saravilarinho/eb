@@ -127,19 +127,6 @@ body {
 
 }
 
-.dropdown:hover .dropdown-menu {
-    border-radius: 9px;
-    display: block;
-    padding: 20px 80px 20px 20px!important;
-    color: white !important;
-    margin-left: -40px !important;
-    background: rgb(28, 27, 27) !important;
-    margin-right: 3vw !important;
-    margin-top: 5px!important;
-    -webkit-box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.68);
-    -moz-box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.68);
-    box-shadow: 0px 0px 12px 3px rgba(0,0,0,0.68);
-}
 
 .dropdown-item .arrowemblem {
 
@@ -202,7 +189,8 @@ links:hover .dropdown-menu{
 
     text-transform: uppercase;
     text-align: start;
-    font-size: 10vh!important;    margin-left: 2.5vw !important;
+    font-size: 10vh !important;
+    margin-left: 2.5vw !important;
     margin-top: 7vh !important;
     color: #FFD015 !important;
 }
@@ -212,15 +200,15 @@ links:hover .dropdown-menu{
 
     text-transform: uppercase;
     text-align: start;
-    font-size: 3vh!important;
+    font-size: 3vh !important;
     margin-left: 2.5vw !important;
     margin-top: 7vh !important;
     color: #FFD015 !important;
 }
 
-.thing{
+.thing {
 
-    font-size: 2.7vh!important;
+    font-size: 2.7vh !important;
 
 }
 
@@ -313,9 +301,9 @@ links:hover .dropdown-menu{
 
 }
 
-.IndividualEntertaiment{
+.IndividualEntertaiment {
 
-    margin-top: 10vh!important;
+    margin-top: 10vh !important;
 }
 
 
@@ -352,8 +340,8 @@ links:hover .dropdown-menu{
 
 @media screen and (max-width: 576px) {
 
-    .EnterButton{
-        padding: 23vh 0 23vh 0!important
+    .EnterButton {
+        padding: 23vh 0 23vh 0 !important
     }
 
     .IndividualEntertaiment .entertaiment {
@@ -374,18 +362,15 @@ links:hover .dropdown-menu{
 @media screen and (min-width: 578px) {
 
 
-    .EnterButton{
-        padding: 20vh 0 20vh 0!important;
+    .EnterButton {
+        padding: 20vh 0 20vh 0 !important;
     }
-
 
 
 }
 
 
 @media screen and (min-width: 768px) {
-
-
 
 
     .IndividualEntertaiment .entertaiment {
@@ -403,16 +388,15 @@ links:hover .dropdown-menu{
 }
 
 
+@media screen and (max-width: 1360px) {
 
-@media screen and (min-width: 1360px) {
-
-    .EnterButton{
-        padding: 3vw!important;
+    .EnterButton {
+        padding: 3vw !important;
     }
 
 }
 
-@media screen and (min-width: 991px){
+@media screen and (min-width: 991px) {
 
     .searcheuser {
         position: absolute;
@@ -420,8 +404,41 @@ links:hover .dropdown-menu{
 
     }
 
+    .dropdown:hover .dropdown-menu {
+        border-radius: 9px;
+        display: block;
+        padding: 20px 80px 20px 20px !important;
+        color: white !important;
+        margin-left: -40px !important;
+        background: rgb(28, 27, 27) !important;
+        margin-right: 3vw !important;
+        margin-top: 5px !important;
+        -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);
+        -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);
+        box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);
+    }
 
 
+}
+
+.loading {
+    width: 10rem;
+    height: 10rem;
+    display: none;
+}
+
+.randomtitle {
+
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #FFD015;
+}
+
+
+.stylebrandom {
+    background-color: #FFD015;
+    border: none;
+    border-radius: 15px;
 
 }
 
@@ -524,7 +541,6 @@ links:hover .dropdown-menu{
 }
 
 
-
 .EnterButton button {
 
     background-color: #FFD015;
@@ -532,7 +548,6 @@ links:hover .dropdown-menu{
     border-radius: 10px;
     transition: all .2s ease-in-out;
 }
-
 
 
 .EnterButton button {
@@ -675,28 +690,29 @@ li {
 }
 
 
+.items-nav {
+    margin-left: 4vw !important;
+}
 
-
-
-.arrowleft{
+.arrowleft {
     bottom: 0;
     margin: auto !important;
     margin-right: 0 !important;
 }
 
-.arrowright{
+.arrowright {
     bottom: 0;
     margin: auto !important;
     margin-left: 0 !important;
 
 }
 
-.paginacaoright{
+.paginacaoright {
     width: 3vw;
 
 }
 
-.paginacaoleft{
+.paginacaoleft {
     width: 3vw;
 
 }
@@ -704,9 +720,6 @@ li {
 .rowpaginacao {
     text-align: center;
 }
-
-
-
 
 
 .likeandview {
@@ -723,7 +736,8 @@ li {
     position: relative;
     top: -0.7vh !important;
     left: 0;
-opacity: 0}
+    opacity: 0
+}
 
 
 .titulos2:hover .arrowemblem {
@@ -735,7 +749,7 @@ opacity: 0}
 }
 
 
-.titulos2:hover h1{
+.titulos2:hover h1 {
 
     color: #FFD015;
     font-weight: bold;
@@ -744,31 +758,49 @@ opacity: 0}
 
 
 @keyframes myfirst {
-    0%   {opacity: 0; left: 0px;}
-    5%   {opacity: 1}
-    50%  {left: 100px;}
-    100% {left: 0px;}
+    0% {
+        opacity: 0;
+        left: 0px;
+    }
+    5% {
+        opacity: 1
+    }
+    50% {
+        left: 100px;
+    }
+    100% {
+        left: 0px;
+    }
 }
 
 
 @keyframes mysecond {
-    0%   {opacity: 0; left: 0px;}
-    1%   {opacity: 1}
-    50%  {left: 10px;}
-    100% {left: 0px;}
+    0% {
+        opacity: 0;
+        left: 0px;
+    }
+    1% {
+        opacity: 1
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0px;
+    }
 }
 
 a {
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
-.yourImage{
+.yourImage {
     -webkit-filter: invert(100%); /* Safari/Chrome */
     filter: invert(100%);
 }
 
 
-.gen{
+.gen {
     color: #FFD015;
     font-size: small !important;
     font-weight: lighter;

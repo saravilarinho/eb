@@ -2181,6 +2181,13 @@ const initialState = {
 
 
     individual_entertaiment: [],
+    random: {
+
+        ony: false,
+        random_content: [],
+        type:"",
+
+    }
 
 
 };
@@ -2188,7 +2195,7 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
 
-    if(action.type === 'SIGN_IN'){
+    if (action.type === 'SIGN_IN') {
         console.log("entrei na ação");
 
         return {
@@ -2201,7 +2208,7 @@ const rootReducer = (state = initialState, action) => {
         }
     }
 
-    if(action.type === 'SIGN_OUT'){
+    if (action.type === 'SIGN_OUT') {
         console.log("sai ");
 
         return {
@@ -2215,6 +2222,59 @@ const rootReducer = (state = initialState, action) => {
     }
 
     if (action.type === 'FETCH_API') {
+
+        if (action.content === 'random') {
+
+
+            if (action.type_content === 'movies') {
+
+
+                let randomnr = Math.floor(Math.random() * ((action.result.results.length - 1) - 0 + 1)) + 0;
+
+                return {
+                    ...state,
+                    random: {
+                        ony: true,
+                        random_content: action.result.results[randomnr],
+                        type:"movies"
+                    }
+                }
+
+
+            }
+
+            if (action.type_content === 'series') {
+
+
+                let randomnr = Math.floor(Math.random() * ((action.result.results.length - 1) - 0 + 1)) + 0;
+
+                return {
+                    ...state,
+                    random: {
+                        ony: true,
+                        random_content: action.result.results[randomnr],
+                        type:"series"
+                    }
+                }
+
+
+            }
+
+            if (action.type_content === 'books') {
+
+                return {
+                    ...state,
+                    random: {
+                        ony: true,
+                        random_content: action.result,
+                        type:"books"
+                    }
+                }
+
+
+            }
+
+        }
 
 
         if (action.type_content === 'individual') {
@@ -2300,7 +2360,7 @@ const rootReducer = (state = initialState, action) => {
                     ...state,
 
 
-                    books: {...state.books, young_adult: [...state.books.young_adult,action.result]}
+                    books: {...state.books, young_adult: [...state.books.young_adult, action.result]}
                 }
 
             }
@@ -2312,7 +2372,7 @@ const rootReducer = (state = initialState, action) => {
                     ...state,
 
 
-                    books: {...state.books, hardcover_fiction: [...state.books.hardcover_fiction,action.result]}
+                    books: {...state.books, hardcover_fiction: [...state.books.hardcover_fiction, action.result]}
                 }
             }
 
@@ -2323,7 +2383,7 @@ const rootReducer = (state = initialState, action) => {
                     ...state,
 
 
-                    books: {...state.books, hardcover_nonfiction: [...state.books.hardcover_nonfiction,action.result]}
+                    books: {...state.books, hardcover_nonfiction: [...state.books.hardcover_nonfiction, action.result]}
                 }
 
             }
@@ -2334,7 +2394,10 @@ const rootReducer = (state = initialState, action) => {
                     ...state,
 
 
-                    books: {...state.books, graphic_books_and_manga: [...state.books.graphic_books_and_manga,action.result]}
+                    books: {
+                        ...state.books,
+                        graphic_books_and_manga: [...state.books.graphic_books_and_manga, action.result]
+                    }
                 }
 
             }
@@ -2345,7 +2408,10 @@ const rootReducer = (state = initialState, action) => {
                     ...state,
 
 
-                    books: {...state.books, childrens_middle_grade: [...state.books.childrens_middle_grade,action.result]}
+                    books: {
+                        ...state.books,
+                        childrens_middle_grade: [...state.books.childrens_middle_grade, action.result]
+                    }
                 }
 
             }

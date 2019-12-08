@@ -34,6 +34,9 @@ const SignIn = (props) => {
                 //se o utilizador existir faz o set do currentUser
                 props.setCurrentUser(user);
 
+                props.setCurrentUser(user.uid);
+
+
             }
         });
 

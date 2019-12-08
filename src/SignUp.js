@@ -4,7 +4,15 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import {Link} from "react-router-dom";
 import {auth} from './Config/fbConfig';
 
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+
+
 const SignUp = () => {
+
+    let db = firebase.firestore();
+
 
     const [email, setEmail] = useState('');
 
@@ -19,7 +27,25 @@ const SignUp = () => {
 
             auth
                 .createUserWithEmailAndPassword(email, password)
-                .then(user => console.log(user))
+                .then(user => {console.log(user.user.uid);
+
+                  /*  db.collection("users").add({
+                        id: user.uid,
+                        first: "Estou so a ver",
+                        last: "Já nao sei nada",
+                        born: 3333
+                    })
+                        .then(function(docRef) {
+                            console.log("Document written with ID: ", docRef.id);
+                        })
+                        .catch(function(error) {
+                            console.error("Error adding document: ", error);
+                        });
+*/
+
+
+
+                })
                 .catch(err => console.error(err))
 
         }

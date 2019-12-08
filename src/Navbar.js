@@ -34,7 +34,7 @@ function Navbar2(props) {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className=" w-100 mt-4 fff">
 
-                    <span className="nav-item dropdown p-3">
+                    <span className="nav-item dropdown text-center p-4">
                         <Link to={"/Movies"} className={"links col-md-1"}>Movies</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                <a className="dropdown-item" href="/List/Movie/Upcoming/1">
@@ -48,7 +48,7 @@ function Navbar2(props) {
                                     Popular</a>
                             </span>
                     </span>
-                    <span className="nav-item dropdown p-3">
+                    <span className="nav-item dropdown text-center p-4">
                         <Link to={"/Series"} className={"links col-md-1"}>Series</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item" href="/List/Serie/TVOnTheAir/1">
@@ -62,7 +62,7 @@ function Navbar2(props) {
                                     Popular</a>
                             </span>
                     </span>
-                    <span className="nav-item dropdown p-3">
+                    <span className="nav-item dropdown text-center p-4">
                         <Link to={"/Books"} className={"links col-md-1"}>Books</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item" href="/Books#YoungAdult">
@@ -79,42 +79,40 @@ function Navbar2(props) {
                                         Graphic Novels & Manga</a>
                             </span>
                     </span>
-                    <span className="nav-item dropdown p-3">
+                    <span className="nav-item dropdown text-center p-4">
                         <Link to={"/Music"} className={"links col-md-1"}>Music</Link>
                     </span>
 
-                    <section className={"searcheuser row justify-content-end d-flex align-items-center"}>
+                    <section className={"searcheuser row justify-content-end"}>
 
+                        <SearchBar />
 
-                        {props.users.login === false &&
+                    {props.users.login === false &&
 
-                        <span className="nav-item dropdown p-3 d-inline col-12 col-lg-5">
+                    <span className="nav-item dropdown p-3 d-inline col-12 col-lg-6">
                         <Link to={"/SignIn"} className={"links col-md-1"}>Sign In</Link>
                         </span>
-                        }
+                    }
 
-                        {props.users.login === true &&
+                    {props.users.login === true &&
 
-                        <span className="nav-item dropdown p-3 col-12  col-lg-5 mb-2">
-                        <h6>{props.users.email}</h6>
+                    <span className="nav-item dropdown p-3 col-12  col-lg-6">
+                        <p className={"links col-md-1"}>{props.users.email}</p>
 
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-                            <a className="dropdown-item">
+                            <a className="dropdown-item" >
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Favourites</a>
 
 
-                            <a className="dropdown-item">
+                            <a className="dropdown-item" >
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Settings</a>
 
-                            <a className="dropdown-item" onClick={() => {
-                                props.clearCurrentUser();
-                                auth.signOut()
-                            }}>
+                            <a className="dropdown-item" onClick={() =>{props.clearCurrentUser(); auth.signOut()} } >
 
                                 <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Sign Out</a>
@@ -122,8 +120,8 @@ function Navbar2(props) {
                         </span>
                     </span>
 
-                        }
-                        <SearchBar/>
+                    }
+
                     </section>
 
 
@@ -147,4 +145,5 @@ const mapDispatchStateToProps = dispatch => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchStateToProps)(Navbar2);
+
+export default connect(mapStateToProps,mapDispatchStateToProps )(Navbar2);

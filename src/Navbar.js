@@ -79,19 +79,25 @@ function Navbar2(props) {
                                         Graphic Novels & Manga</a>
                             </span>
                     </span>
+
                     <span className="nav-item dropdown text-center p-4">
                         <Link to={"/Music"} className={"links col-md-1"}>Music</Link>
                     </span>
 
-                    <section className={"searcheuser row justify-content-end"}>
+                    <section className={"searcheuser col-md-5 p-4"}>
 
-                        <SearchBar />
+
+                        <SearchBar className={"nav-item col-sm-10 col-md-3 dropdown text-center p-4"}/>
+
 
                     {props.users.login === false &&
 
-                    <span className="nav-item dropdown p-3 d-inline col-12 col-lg-6">
+                    <span className="nav-item dropdown text-left p-4">
                         <Link to={"/SignIn"} className={"links col-md-1"}>Sign In</Link>
-                        </span>
+
+
+                    </span>
+
                     }
 
                     {props.users.login === true &&
@@ -121,8 +127,9 @@ function Navbar2(props) {
                     </span>
 
                     }
-
                     </section>
+
+
 
 
                 </Nav>

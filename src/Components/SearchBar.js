@@ -14,8 +14,8 @@ class SearchBar extends React.Component{
         render() {
             return (
 
-                <div className={'barra  col-12  col-lg-4 col-xl-7 w-100 px-3'}>
-                    <input className={'barrapesquisa w-100'} onChange={this.atualizar_pai}/>
+                <div className={'nav-item barra  col-12  col-lg-4 col-xl-7 w-100 p-3 d-inline px-3'}>
+                    <input className={'barrapesquisa col-sm-8 col-md-4 w-100'} onChange={this.atualizar_pai}/>
                         <a onClick={this.at} className={'lupa '}>
                             <img src={Lupa} style={{width: '20px', height: '20px'}}/>
                         </a>

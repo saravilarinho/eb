@@ -92,7 +92,7 @@ function Navbar2(props) {
 
                     {props.users.login === false &&
 
-                    <span className="nav-item dropdown text-left p-4">
+                    <span className="nav-item dropdown text-left p-4 opa">
                         <Link to={"/SignIn"} className={"links col-md-1"}>Sign In</Link>
 
 
@@ -102,10 +102,10 @@ function Navbar2(props) {
 
                     {props.users.login === true &&
 
-                    <span className="nav-item dropdown p-3 col-12  col-lg-6">
+                    <span className="nav-item dropdown p-3 col-12 col-lg-6 ">
                         <p className={"links col-md-1"}>{props.users.email}</p>
 
-                        <span className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <span className="dropdown-menu opa " aria-labelledby="navbarDropdown">
 
                             <a className="dropdown-item" >
 

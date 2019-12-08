@@ -21,21 +21,50 @@ class Movies extends React.Component {
 
     }
 
+
+    Loading = (typebook) => {
+
+        return <section className={'row justify-content-center my-5'}>
+
+            <div className="spinner-border text-warning loadingsmall d-inline-block" id={'loading'}
+                 role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
+            <div className={'col-12 my-3'}>
+                <section className={'row loadingtitle justify-content-center'}>
+                    <small className={'col-4 col-md-2 pl-3'}>Loading {typebook} Books</small>
+                </section>
+            </div>
+        </section>
+
+    };
+
     render() {
 
         return (
 
             <div>
+
+
+
                 <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
-                <HorizontalList titulo={'Upcoming ...'} info={this.props.upcoming} type={'Movie'} listacess={'yes'}
-                                content={'Upcoming'}/>
 
-                <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Movie'} listacess={'yes'}
-                                content={'TopRated'}/>
+               {this.props.upcoming !==null ?
 
-                <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'} listacess={'yes'}
-                                content={'Popular'}/>
+                    <HorizontalList titulo={'Upcoming ...'} info={this.props.upcoming} type={'Movie'} listacess={'yes'}
+                                    content={'Upcoming'}/> : this.Loading('Upcoming')}
+                                    
+                {this.props.top_rated !==null ?
+
+                    <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Movie'} listacess={'yes'}
+                                    content={'TopRated'}/>: this.Loading('Upcoming')}
+
+                {this.props.popular !==null ?
+
+                    <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'} listacess={'yes'}
+                                    content={'Popular'}/>: this.Loading('Upcoming')}
+
 
             </div>
         )

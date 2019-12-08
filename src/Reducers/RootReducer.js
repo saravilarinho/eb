@@ -13,28 +13,9 @@ const initialState = {
     },
 
     movies: {
-        upcoming: {
-            results: [],
-            page: '',
-            total_results: '',
-            dates: {},
-            total_pages: ''
-        },
-
-        top_rated: {
-            results: [],
-            page: '',
-            total_results: '',
-            dates: {},
-            total_pages: ''
-        },
-        popular: {
-            results: [],
-            page: '',
-            total_results: '',
-            dates: {},
-            total_pages: ''
-        },
+        upcoming:null,
+        top_rated: null,
+        popular: null,
     },
 
 
@@ -2196,8 +2177,6 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
 
     if (action.type === 'SIGN_IN') {
-        console.log("entrei na ação");
-
         return {
             ...state,
             users: {
@@ -2209,7 +2188,6 @@ const rootReducer = (state = initialState, action) => {
     }
 
     if (action.type === 'SIGN_OUT') {
-        console.log("sai ");
 
         return {
             ...state,
@@ -2397,6 +2375,78 @@ const rootReducer = (state = initialState, action) => {
                     books: {
                         ...state.books,
                         graphic_books_and_manga: [...state.books.graphic_books_and_manga, action.result]
+                    }
+                }
+
+            }
+
+            if (action.content === 'middlegrade') {
+
+                return {
+                    ...state,
+
+
+                    books: {
+                        ...state.books,
+                        childrens_middle_grade: [...state.books.childrens_middle_grade, action.result]
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+
+    if (action.type === 'FETCH_API_FAIL') {
+
+        if (action.type_content === 'books') {
+
+
+            if (action.content === 'youngadult') {
+
+
+                return {
+                    ...state,
+
+
+                    books: {...state.books, young_adult: false}
+                }
+
+            }
+
+
+            if (action.content === 'fiction') {
+
+                return {
+                    ...state,
+
+
+                    books: {...state.books, hardcover_fiction: false}
+                }
+            }
+
+            if (action.content === 'nonFiction') {
+
+
+                return {
+                    ...state,
+
+
+                    books: {...state.books, hardcover_nonfiction: false}
+                }
+
+            }
+
+            if (action.content === 'graphicnovelsmanga') {
+
+                return {
+                    ...state,
+
+
+                    books: {
+                        ...state.books, graphic_books_and_manga: false
                     }
                 }
 

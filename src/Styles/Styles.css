@@ -442,6 +442,21 @@ links:hover .dropdown-menu{
     display: none;
 }
 
+.loadingtitle{
+
+    font-size: smaller;
+    text-transform: uppercase;
+    color: #FFD015;
+    font-weight: 800;
+}
+
+
+.loadingsmall {
+    width: 4rem;
+    height: 4rem;
+    display: none;
+}
+
 .randomtitle {
 
     text-transform: uppercase;

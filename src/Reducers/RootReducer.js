@@ -2254,7 +2254,6 @@ const rootReducer = (state = initialState, action) => {
 
         }
 
-
         if (action.type_content === 'individual') {
 
 
@@ -2263,7 +2262,6 @@ const rootReducer = (state = initialState, action) => {
                 individual_entertaiment: action.result
             }
         }
-
 
         if (action.type_content === 'movies') {
 
@@ -2294,7 +2292,6 @@ const rootReducer = (state = initialState, action) => {
             }
 
         }
-
 
         if (action.type_content === 'series') {
 
@@ -2395,11 +2392,42 @@ const rootReducer = (state = initialState, action) => {
             }
         }
 
-
     }
 
 
     if (action.type === 'FETCH_API_FAIL') {
+
+        if (action.type_content === 'series') {
+
+            if (action.content === 'tv_on_the_air') {
+                return {
+                    ...state,
+
+
+                    series: {...state.series, tv_on_the_air: false}
+                }
+            }
+
+
+            if (action.content === 'top_rated') {
+                return {
+                    ...state,
+
+
+                    series: {...state.series, top_rated: false}
+                }
+            }
+
+            if (action.content === 'popular') {
+                return {
+                    ...state,
+
+
+                    series: {...state.series, popular: false}
+                }
+            }
+
+        }
 
         if (action.type_content === 'books') {
 

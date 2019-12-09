@@ -13,8 +13,6 @@ class Movies extends React.Component {
     componentDidMount() {
 
 
-
-
         this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'upcoming', 'movies');
         this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'top_rated', 'movies');
         this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'popular', 'movies');
@@ -45,28 +43,41 @@ class Movies extends React.Component {
 
             <div>
 
+                {console.log(this.props.upcoming)}
+
+                {this.props.upcoming !== false &&
 
 
-                <h1 className="titulos pt-3 pb-3">MOVIES</h1>
+                <section>
+
+                    <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
 
-               {this.props.upcoming !==null ?
+                    {this.props.upcoming !== null ?
 
-                    <HorizontalList titulo={'Upcoming ...'} info={this.props.upcoming} type={'Movie'} listacess={'yes'}
-                                    content={'Upcoming'}/> : this.Loading('Upcoming')}
-                                    
-                {this.props.top_rated !==null ?
+                        <HorizontalList titulo={'Upcoming ...'} info={this.props.upcoming} type={'Movie'}
+                                        listacess={'yes'}
+                                        content={'Upcoming'}/> : this.Loading('Upcoming')}
 
-                    <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Movie'} listacess={'yes'}
-                                    content={'TopRated'}/>: this.Loading('Upcoming')}
+                    {this.props.top_rated !== null ?
 
-                {this.props.popular !==null ?
+                        <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Movie'}
+                                        listacess={'yes'}
+                                        content={'TopRated'}/> : this.Loading('Upcoming')}
 
-                    <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'} listacess={'yes'}
-                                    content={'Popular'}/>: this.Loading('Upcoming')}
+                    {this.props.popular !== null ?
 
+                        <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'}
+                                        listacess={'yes'}
+                                        content={'Popular'}/> : this.Loading('Upcoming')}
 
-            </div>
+                </section>}
+
+                {this.props.upcoming === false &&
+
+                <div>ERROR</div>
+                }
+                    </div>
         )
 
     }
@@ -82,8 +93,6 @@ const mapDispatchtoProps = (dispatch) => {
     }
 
 };
-
-
 
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Movies);

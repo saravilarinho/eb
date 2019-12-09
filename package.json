@@ -8,6 +8,7 @@
     "firebase": "^7.5.2",
     "gh-pages": "^2.1.1",
     "google-books-catalogue-search": "^0.1.4",
+    "random-words": "^1.1.0",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",

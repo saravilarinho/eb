@@ -25,7 +25,7 @@ function RandomEntertaiment(props) {
             {props.state !== false &&
             <section>
 
-                {props.content !== undefined ? props.onclickfunction : true}
+                {props.content === undefined ? props.onclickfunction : console.log('hello')}
 
                 {props.type === 'books' &&
 

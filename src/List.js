@@ -64,7 +64,7 @@ class List extends React.Component {
 
     }
 
-    pagemove = (direction) => {
+    PageMove = (direction) => {
 
         const Type = this.props.match.params.type;
         const Content = this.props.match.params.content;
@@ -138,7 +138,6 @@ class List extends React.Component {
 
     };
 
-
     CheckContentOfLisit = () => {
 
         let info = null;
@@ -173,17 +172,12 @@ class List extends React.Component {
                         break;
                 }
                 break;
-            case 'Book':
 
-                info = null;
-
-                break;
         }
 
         return info
 
     };
-
 
     CheckIfTitleNeedsSpace = (WrittenContent) => {
 
@@ -208,7 +202,6 @@ class List extends React.Component {
 
     };
 
-
     render() {
 
         const Type = this.props.match.params.type;
@@ -220,6 +213,7 @@ class List extends React.Component {
         let WrittenContent = this.CheckIfTitleNeedsSpace(Content);
 
         let page_next = parseInt(this.props.match.params.page) + 1;
+
         let page_prev = parseInt(this.props.match.params.page) - 1;
 
 
@@ -245,14 +239,6 @@ class List extends React.Component {
                                                                       title={item.name} id={item.id} type={'Serie'}/>)
                     }
 
-                    {Type === 'Book' && info !== null &&
-
-                    info.map((item) => <MiniatureEntertaiment img={item.items[0].volumeInfo.imageLinks.thumbnail}
-                                                              text={item.items[0].volumeInfo.description}
-                                                              title={item.items[0].volumeInfo.title}
-                                                              id={item.items[0].volumeInfo.industryIdentifiers[0].identifier}
-                                                              type={'Book'}/>)
-                    }
 
                 </div>
 
@@ -261,7 +247,7 @@ class List extends React.Component {
                     {this.props.match.params.page > 1 ?
 
                         <Link to={'/List/' + Type + '/' + Content + '/' + page_prev} onClick={() => {
-                            this.pagemove("menos");
+                            this.PageMove("menos");
                             window.scrollTo({top: 0, behavior: 'smooth'});
                         }}
                               className={'arrowleft '}>
@@ -276,7 +262,7 @@ class List extends React.Component {
 
                     <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={() => {
                         window.scrollTo({top: 0, behavior: 'smooth'});
-                        this.pagemove("mais")
+                        this.PageMove("mais")
                     }}
                           className={' arrowright'}>
                         <img width={100}  className={"img-fluid pb-5 my-5 mx-3 paginacaoright align-items-left"} name={"right"}

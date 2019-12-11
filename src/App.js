@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import IndividualEntertaimentPage from './IndividualEntertaimentPage'
 import Music from "./Music";
+import Search from"./Search"
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import List from './List'
@@ -90,6 +91,7 @@ function App(props) {
                 <Route path="/Music" component={Music}/>
                 <Route path="/SignUp" component={SignUp}/>
                 <Route path="/SignIn" component={SignIn}/>
+                <Route path="/Search/:word_search" component={Search}/>
                 <Route path="/Select_Individual_Movie" component={Select_Individual_Movie}/>
                 <Route path="/Favourites"/>
                 <Route component={Homepage}/>

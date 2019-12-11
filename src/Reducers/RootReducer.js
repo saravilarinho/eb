@@ -13,7 +13,7 @@ const initialState = {
     },
 
     movies: {
-        upcoming:null,
+        upcoming: null,
         top_rated: null,
         popular: null,
     },
@@ -40,12 +40,12 @@ const initialState = {
     },
 
 
-    individual_entertaiment: [],
+    individual_entertaiment: false,
     random: {
 
         ony: false,
         random_content: [],
-        type:"",
+        type: "",
 
     }
 
@@ -55,224 +55,243 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
 
-    if (action.type === 'SIGN_IN') {
-        return {
-            ...state,
-            users: {
-                ...state.users,
-                login: true,
-                email: action.email
+        if (action.type === 'SIGN_IN') {
+            return {
+                ...state,
+                users: {
+                    ...state.users,
+                    login: true,
+                    email: action.email
+                }
             }
         }
+
+    //INDIVIDUAL_BACK_0
+
+    if (action.type === 'INDIVIDUAL_BACK_0') {
+
+        console.log('hello');
+
+        return {
+            ...state,
+            individual_entertaiment: false
+
+
+        }
     }
+
+
+
 
     if (action.type === 'SIGN_OUT') {
 
-        return {
-            ...state,
-            users: {
-                ...state.users,
-                login: false,
-                email: null
+            return {
+                ...state,
+                users: {
+                    ...state.users,
+                    login: false,
+                    email: null
+                }
             }
         }
-    }
 
-    if (action.type === 'FETCH_API') {
+        if (action.type === 'FETCH_API') {
 
-
-        if (action.content === 'random') {
+            if (action.content === 'random') {
 
 
-            if (action.type_content === 'movies') {
+                if (action.type_content === 'movies') {
 
 
-                let randomnr = Math.floor(Math.random() * ((action.result.results.length - 1) - 0 + 1)) + 0;
+                    let randomnr = Math.floor(Math.random() * ((action.result.results.length - 1) - 0 + 1)) + 0;
+
+                    return {
+                        ...state,
+                        random: {
+                            ony: true,
+                            random_content: action.result.results[randomnr],
+                            type: "movies"
+                        }
+                    }
+
+
+                }
+
+                if (action.type_content === 'series') {
+
+
+                    let randomnr = Math.floor(Math.random() * ((action.result.results.length - 1) - 0 + 1)) + 0;
+
+                    return {
+                        ...state,
+                        random: {
+                            ony: true,
+                            random_content: action.result.results[randomnr],
+                            type: "series"
+                        }
+                    }
+
+
+                }
+
+                if (action.type_content === 'books') {
+
+                    return {
+                        ...state,
+                        random: {
+                            ony: true,
+                            random_content: action.result,
+                            type: "books"
+                        }
+                    }
+
+
+                }
+
+            }
+
+            if (action.type_content === 'individual') {
+
 
                 return {
                     ...state,
-                    random: {
-                        ony: true,
-                        random_content: action.result.results[randomnr],
-                        type:"movies"
+                    individual_entertaiment: action.result
+                }
+            }
+
+            if (action.type_content === 'movies') {
+
+                if (action.content === 'upcoming') {
+                    return {
+                        ...state,
+
+
+                        movies: {...state.movies, upcoming: action.result}
+                    }
+                }
+                if (action.content === 'top_rated') {
+                    return {
+                        ...state,
+
+
+                        movies: {...state.movies, top_rated: action.result}
                     }
                 }
 
+                if (action.content === 'popular') {
+                    return {
+                        ...state,
+
+
+                        movies: {...state.movies, popular: action.result}
+                    }
+                }
 
             }
 
             if (action.type_content === 'series') {
 
+                if (action.content === 'tv_on_the_air') {
+                    return {
+                        ...state,
 
-                let randomnr = Math.floor(Math.random() * ((action.result.results.length - 1) - 0 + 1)) + 0;
 
-                return {
-                    ...state,
-                    random: {
-                        ony: true,
-                        random_content: action.result.results[randomnr],
-                        type:"series"
+                        series: {...state.series, tv_on_the_air: action.result}
                     }
                 }
 
+
+                if (action.content === 'top_rated') {
+                    return {
+                        ...state,
+
+
+                        series: {...state.series, top_rated: action.result}
+                    }
+                }
+
+                if (action.content === 'popular') {
+                    return {
+                        ...state,
+
+
+                        series: {...state.series, popular: action.result}
+                    }
+                }
 
             }
 
             if (action.type_content === 'books') {
 
-                return {
-                    ...state,
-                    random: {
-                        ony: true,
-                        random_content: action.result,
-                        type:"books"
+
+                if (action.content === 'youngadult') {
+
+
+                    return {
+                        ...state,
+
+
+                        books: {...state.books, young_adult: [...state.books.young_adult, action.result]}
+                    }
+
+                }
+
+
+                if (action.content === 'fiction') {
+
+                    return {
+                        ...state,
+
+
+                        books: {...state.books, hardcover_fiction: [...state.books.hardcover_fiction, action.result]}
                     }
                 }
 
-
-            }
-
-        }
-
-        if (action.type_content === 'individual') {
+                if (action.content === 'nonFiction') {
 
 
-            return {
-                ...state,
-                individual_entertaiment: action.result
-            }
-        }
-
-        if (action.type_content === 'movies') {
-
-            if (action.content === 'upcoming') {
-                return {
-                    ...state,
+                    return {
+                        ...state,
 
 
-                    movies: {...state.movies, upcoming: action.result}
-                }
-            }
-            if (action.content === 'top_rated') {
-                return {
-                    ...state,
-
-
-                    movies: {...state.movies, top_rated: action.result}
-                }
-            }
-
-            if (action.content === 'popular') {
-                return {
-                    ...state,
-
-
-                    movies: {...state.movies, popular: action.result}
-                }
-            }
-
-        }
-
-        if (action.type_content === 'series') {
-
-            if (action.content === 'tv_on_the_air') {
-                return {
-                    ...state,
-
-
-                    series: {...state.series, tv_on_the_air: action.result}
-                }
-            }
-
-
-            if (action.content === 'top_rated') {
-                return {
-                    ...state,
-
-
-                    series: {...state.series, top_rated: action.result}
-                }
-            }
-
-            if (action.content === 'popular') {
-                return {
-                    ...state,
-
-
-                    series: {...state.series, popular: action.result}
-                }
-            }
-
-        }
-
-        if (action.type_content === 'books') {
-
-
-            if (action.content === 'youngadult') {
-
-
-                return {
-                    ...state,
-
-
-                    books: {...state.books, young_adult: [...state.books.young_adult, action.result]}
-                }
-
-            }
-
-
-            if (action.content === 'fiction') {
-
-                return {
-                    ...state,
-
-
-                    books: {...state.books, hardcover_fiction: [...state.books.hardcover_fiction, action.result]}
-                }
-            }
-
-            if (action.content === 'nonFiction') {
-
-
-                return {
-                    ...state,
-
-
-                    books: {...state.books, hardcover_nonfiction: [...state.books.hardcover_nonfiction, action.result]}
-                }
-
-            }
-
-            if (action.content === 'graphicnovelsmanga') {
-
-                return {
-                    ...state,
-
-
-                    books: {
-                        ...state.books,
-                        graphic_books_and_manga: [...state.books.graphic_books_and_manga, action.result]
+                        books: {
+                            ...state.books,
+                            hardcover_nonfiction: [...state.books.hardcover_nonfiction, action.result]
+                        }
                     }
+
                 }
 
-            }
+                if (action.content === 'graphicnovelsmanga') {
 
-            if (action.content === 'middlegrade') {
-
-                return {
-                    ...state,
+                    return {
+                        ...state,
 
 
-                    books: {
-                        ...state.books,
-                        childrens_middle_grade: [...state.books.childrens_middle_grade, action.result]
+                        books: {
+                            ...state.books,
+                            graphic_books_and_manga: [...state.books.graphic_books_and_manga, action.result]
+                        }
                     }
+
                 }
 
-            }
-        }
+                if (action.content === 'middlegrade') {
 
-    }
+                    return {
+                        ...state,
+
+
+                        books: {
+                            ...state.books,
+                            childrens_middle_grade: [...state.books.childrens_middle_grade, action.result]
+                        }
+                    }
+
+                }
+            }
+
+        }
 
     if(action.type === 'ADD_FAVOURITE'){
 

@@ -102,10 +102,7 @@ function App(props) {
 }
 
 const mapDispatchStateToProps = dispatch => ({
-    setCurrentUser: (user) => {
-        dispatch(SetCurrentUser(user));
-
-    },
+    setCurrentUser: (user) => { dispatch(SetCurrentUser(user))},
 });
 
 

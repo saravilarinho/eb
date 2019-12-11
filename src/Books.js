@@ -59,7 +59,7 @@ class Books extends React.Component {
                 </Link>
 
 
-                {this.props.young_adult !== false &&
+
 
                 <section>
                     {this.props.young_adult.length > 0 ?
@@ -70,9 +70,9 @@ class Books extends React.Component {
 
                     {this.props.hardcover_fiction.length > 0 ?
 
-                        <HorizontalList titulo={'NonFiction ...'} info={this.props.hardcover_nonfiction} type={'Book'}
+                        <HorizontalList titulo={'Fiction ...'} info={this.props.hardcover_fiction} type={'Book'}
                                         listacess={'no'}
-                                        content={'NonFiction'}/> : this.Loading('Fiction')}
+                                        content={'Fiction'}/> : this.Loading('Fiction')}
 
                     {this.props.hardcover_nonfiction.length > 0 ?
 
@@ -88,15 +88,6 @@ class Books extends React.Component {
                                         content={'GraphicNovels&Manga'}/> : this.Loading('Graphic Novels & Manga')}
 
                 </section>
-                }
-
-                {this.props.young_adult === false &&
-
-                <div className={'row px-5 justify-content-center' }>
-                    ERROR
-                </div>
-                }
-
             </div>
         )
     }

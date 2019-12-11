@@ -20,7 +20,7 @@ class Movies extends React.Component {
     }
 
 
-    Loading = (typebook) => {
+    Loading = (typemovie) => {
 
         return <section className={'row justify-content-center my-5'}>
 
@@ -30,7 +30,7 @@ class Movies extends React.Component {
             </div>
             <div className={'col-12 my-3'}>
                 <section className={'row loadingtitle justify-content-center'}>
-                    <small className={'col-4 col-md-2 pl-3'}>Loading {typebook} Books</small>
+                    <small className={'col-4 col-md-2 pl-3'}>Loading {typemovie} Movies</small>
                 </section>
             </div>
         </section>
@@ -43,7 +43,6 @@ class Movies extends React.Component {
 
             <div>
 
-                {console.log(this.props.upcoming)}
 
                 {this.props.upcoming !== false &&
 
@@ -63,13 +62,13 @@ class Movies extends React.Component {
 
                         <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Movie'}
                                         listacess={'yes'}
-                                        content={'TopRated'}/> : this.Loading('Upcoming')}
+                                        content={'TopRated'}/> : this.Loading('Top Rated')}
 
                     {this.props.popular !== null ?
 
                         <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'}
                                         listacess={'yes'}
-                                        content={'Popular'}/> : this.Loading('Upcoming')}
+                                        content={'Popular'}/> : this.Loading('Popular')}
 
                 </section>}
 

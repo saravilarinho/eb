@@ -12,9 +12,9 @@ export const FetchAPIBooks = (API, content, type_content) => {
                 response.results.map(book => {
 
 
-                        if (Array.isArray(book.book_details)=== true) {
+                        if (Array.isArray(book.book_details) === true) {
 
-                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' +  book.book_details[0].primary_isbn13 + '&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY').then((response) => {
+                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY').then((response) => {
 
                                 if (response.totalItems > 0) {
 
@@ -28,21 +28,28 @@ export const FetchAPIBooks = (API, content, type_content) => {
                                 }
 
 
-                            })
+                            }).catch(
+                                dispatch({
+                                    type: 'FETCH_API_FAIL',
+                                    result: false,
+                                    content: content,
+                                    type_content: type_content
+                                }))
 
                         }
                     }
-
-
-
-
-
-                    /* */
                 )
                 ;
 
 
             }
+        ).catch(
+            dispatch({
+                type: 'FETCH_API_FAIL',
+                result: false,
+                content: content,
+                type_content: type_content
+            })
         );
 
 

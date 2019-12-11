@@ -15,14 +15,31 @@ const SignIn = (props) => {
 
     const handleSignIn = (e) => {
 
+
         e.preventDefault();
         auth
             .signInWithEmailAndPassword(email, password)
-            .then(user => console.log(user))
-            .catch(err => console.error(err));
+            .then(user => {onFullfilled(user)})
+            .catch(err => {onRejected(err)});
 
 
     };
+
+
+    const onFullfilled = (user) => {
+
+        console.log('Bem-vindo de volta', props.users.email);
+
+    };
+
+    const onRejected = (err) => {
+
+        console.log(err.message);
+
+        return alert(err.message)
+    };
+
+
 
     useEffect(() => {
 
@@ -31,10 +48,8 @@ const SignIn = (props) => {
         unsuscribeFromAuth = auth.onAuthStateChanged(user => {
 
             if (user) {
-                //se o utilizador existir faz o set do currentUser
                 props.setCurrentUser(user);
 
-                props.setCurrentUser(user.uid);
 
 
             }
@@ -97,9 +112,13 @@ const SignIn = (props) => {
 
             {props.users.login !== false &&
 
-                <Redirect to={'./Homepage'}/>
+                <Redirect to={'./Homepage'} />
                 
             }
+
+
+
+
 
                 </div>
     )

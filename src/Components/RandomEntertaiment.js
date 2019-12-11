@@ -3,6 +3,14 @@ import '../Styles/Styles.css';
 import poster_default from  '../Images/dafaul_poster.png'
 
 function RandomEntertaiment(props) {
+
+    const readMore = (str, max = 130) => {
+        const array = str.trim().split(' ');
+        const ellipsis = array.length > max ? ' ...' : '';
+
+        return array.slice(0, max).join(' ') + ellipsis;
+    };
+
     return (
         <div>
 
@@ -25,8 +33,6 @@ function RandomEntertaiment(props) {
             {props.state !== false &&
             <section>
 
-                {props.content !== undefined ? props.onclickfunction : true}
-
                 {props.type === 'books' &&
 
                 <div className={'row justify-content-around pb-5 d-flex align-items-center pt-5 mt-5'}>
@@ -35,8 +41,7 @@ function RandomEntertaiment(props) {
                         <img className={'img-fluid w-100'} src={props.content.imageLinks.thumbnail}/>
                     </div>
                     <div className={'col-10 col-md-6'}>
-                        {console.log(props.content.description)}
-                        <p className={'col-12 my-4'}>{props.content.description}</p>
+                        <p className={'col-12 my-4'}>{readMore(props.content.description,100)}</p>
                         <div className={'row justify-content-between my-4 px-5'}>
                             <button className={'col-4 p-2 stylebrandom'}>SEE MORE</button>
                             <button className={'col-4 p-2 stylebrandom'} onClick={props.onclickfunction}>ANOTHER ONE!
@@ -59,7 +64,7 @@ function RandomEntertaiment(props) {
                         <div className={'col-10 col-md-6'}>
                             {console.log(props.content.overview)}
 
-                            <p className={'col-12 my-4'}>{props.content.overview}</p>
+                            <p className={'col-12 my-4'}>{readMore(props.content.overview,100)}</p>
                             <div className={'row justify-content-between my-4 px-5'}>
                                 <button className={'col-4 p-2 stylebrandom'}>SEE MORE</button>
                                 <button className={'col-4 p-2 stylebrandom'} onClick={props.onclickfunction}>ANOTHER ONE!
@@ -83,7 +88,7 @@ function RandomEntertaiment(props) {
                     <div className={'col-10 col-md-6'}>
                         {console.log(props.content.overview)}
 
-                        <p className={'col-12 my-4'}>{props.content.overview}</p>
+                        <p className={'col-12 my-4'}>{readMore(props.content.overview,100)}</p>
                         <div className={'row justify-content-between my-4 px-5'}>
                             <button className={'col-4 p-2 stylebrandom'}>SEE MORE</button>
                             <button className={'col-4 p-2 stylebrandom'} onClick={props.onclickfunction}>ANOTHER ONE!

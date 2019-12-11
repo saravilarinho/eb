@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Styles/Styles.css';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import {Link} from "react-router-dom";
 import {auth} from './Config/fbConfig';
 
@@ -20,36 +20,36 @@ const SignUp = () => {
 
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
-    const handleSignUp =  (e) => {
+    const handleSignUp = (e) => {
         e.preventDefault();
 
-        if(password === passwordConfirmation){
+        if (password === passwordConfirmation) {
 
             auth
                 .createUserWithEmailAndPassword(email, password)
-                .then(user => {console.log(user.user.uid);
+                .then(user => {
 
-                  /*  db.collection("users").add({
-                        id: user.uid,
-                        first: "Estou so a ver",
-                        last: "Já nao sei nada",
-                        born: 3333
-                    })
-                        .then(function(docRef) {
-                            console.log("Document written with ID: ", docRef.id);
-                        })
-                        .catch(function(error) {
-                            console.error("Error adding document: ", error);
-                        });
-*/
+                    console.log('utilizador criado');
+
+                    db.collection("favorites").add({
+                          id: user.user.uid,
+                         movies:[],
+                         series:[],
+                         books:[]
+                      })
+                          .then(function(docRef) {
+                              console.log("lista feita");
+                          })
+                          .catch(function(error) {
+                              console.error("Error adding document: ", error);
+                          });
 
 
 
                 })
                 .catch(err => console.error(err))
 
-        }
-        else {
+        } else {
             console.log("password does not match")
         }
 
@@ -57,27 +57,29 @@ const SignUp = () => {
     };
 
 
-
-    return(
+    return (
         <div className={'divform pr-5 pl-5'}>
 
             <Form className={'formulario pr-5 pl-5'}>
-                <FormGroup className={'col-md-4 pt-4'} >
+                <FormGroup className={'col-md-4 pt-4'}>
                     <Label for="exampleEmail">E-mail</Label>
-                    <Input type="email" name="email" id="exampleEmail" value={email} onChange={e => setEmail(e.target.value)} placeholder="E-mail" />
+                    <Input type="email" name="email" id="exampleEmail" value={email}
+                           onChange={e => setEmail(e.target.value)} placeholder="E-mail"/>
                 </FormGroup>
 
-                <FormGroup  className={'col-md-4 pt-4'}>
+                <FormGroup className={'col-md-4 pt-4'}>
                     <Label for="examplePassword">Password</Label>
-                    <Input type="password" name="password" id="examplePassword" value={password}  onChange={e => setPassword(e.target.value)}  placeholder="Password" />
+                    <Input type="password" name="password" id="examplePassword" value={password}
+                           onChange={e => setPassword(e.target.value)} placeholder="Password"/>
                 </FormGroup>
 
-                <FormGroup  className={'col-md-4 pt-4'}>
+                <FormGroup className={'col-md-4 pt-4'}>
                     <Label for="examplePassword">Password Confirmation</Label>
-                    <Input type="password" name="password" id="examplePassword" value={passwordConfirmation}  onChange={e => setPasswordConfirmation(e.target.value)}  placeholder="Password Confirmation" />
+                    <Input type="password" name="password" id="examplePassword" value={passwordConfirmation}
+                           onChange={e => setPasswordConfirmation(e.target.value)} placeholder="Password Confirmation"/>
                 </FormGroup>
 
-                <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignUp} >SIGN UP</Button>
+                <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignUp}>SIGN UP</Button>
 
             </Form>
 
@@ -92,7 +94,6 @@ const SignUp = () => {
     )
 
 };
-
 
 
 export default SignUp;

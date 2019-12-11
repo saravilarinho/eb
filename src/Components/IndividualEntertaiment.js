@@ -15,6 +15,7 @@ const IndividualEntertaiment = (props) => {
 
 
     return (<div className={"row IndividualEntertaiment justify-content-around m-5 "}>
+
         {props.type === 'Movies' &&
         <section className={'row justify-content-around mt-5'}>
 

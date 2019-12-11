@@ -240,6 +240,12 @@ class List extends React.Component {
                     }
 
 
+
+                    {
+                        Type === 'Favourite' && info !== null
+                    }
+
+
                 </div>
 
                 <div className={'row rowpaginacao justify-content-center'}>

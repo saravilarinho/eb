@@ -37,6 +37,7 @@ const initialState = {
         graphic_books_and_manga: [],
         childrens_middle_grade: [],
 
+
     },
 
 
@@ -73,19 +74,24 @@ const rootReducer = (state = initialState, action) => {
             }
         }
 
-        if (action.type === 'INDIVIDUAL_BACK_0') {
-
-            console.log('hello');
-
-            return {
-                ...state,
-                individual_entertaiment: false
 
 
-            }
+    if (action.type === 'INDIVIDUAL_BACK_0') {
+
+        console.log('hello');
+
+        return {
+            ...state,
+            individual_entertaiment: false
+
+
         }
+    }
 
-        if (action.type === 'SIGN_OUT') {
+
+
+
+    if (action.type === 'SIGN_OUT') {
 
             return {
                 ...state,
@@ -327,9 +333,27 @@ const rootReducer = (state = initialState, action) => {
 
         }
 
-        return state;
+    if(action.type === 'ADD_FAVOURITE'){
+
+        console.log(action.movies);
+        console.log('entrei nA ACAO DO ROOTREDUCER')
+
+      /*  return {
+            ...state,
+            users: {
+                movies: [action.movies],
+                series: [action.series],
+                books: [action.books]
+            }
+        }*/
+
+
+
+
     }
-;
+
+    return state;
+};
 
 
 export default rootReducer;

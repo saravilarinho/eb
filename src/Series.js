@@ -7,9 +7,6 @@ import {FetchAPI} from "./Actions/FetchAction";
 
 class Series extends React.Component{
 
-    constructor(props){
-        super(props);
-    }
 
     componentDidMount(){
 

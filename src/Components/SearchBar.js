@@ -19,7 +19,6 @@ class SearchBar extends React.Component {
     };
 
     render() {
-        {console.log(this.state.term)}
         return (
 
             <div className={'nav-item barra  col-12  col-lg-4 col-xl-7 w-100 p-3 d-inline px-3'}>

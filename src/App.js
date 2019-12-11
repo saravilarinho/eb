@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import IndividualEntertaimentPage from './IndividualEntertaimentPage'
 import Music from "./Music";
-import Search from"./Search"
+import Search from "./Search"
 import SignUp from './SignUp'
 import SignIn from './SignIn'
 import Favourites from './Favourites'
@@ -27,7 +27,7 @@ function App(props) {
 
     //R: explicar a existencia da componente App
 
-    const GetAndCheckUserFavorites = (user)=>{
+    const GetAndCheckUserFavorites = (user) => {
 
         const db = firebase.firestore();
 
@@ -35,27 +35,25 @@ function App(props) {
             .get()
             .then((querySnapshot) => {
 
-                if (querySnapshot.docs.length>0) {
+                if (querySnapshot.docs.length > 0) {
                     //verifica se existem documentos na base de dados
 
                     querySnapshot.forEach(function (doc) {
-                        console.log('entrei aqui');
-
-                     let data = doc.data();
-                     props.SetFavourites(data.movies, data.series, data.books)
+                        let data = doc.data();
+                        props.SetFavourites(data.movies, data.series, data.books)
                     });
-                }else{
+                } else {
                     //se nao existir uma coleção já criada, cria uma:
                     db.collection("favorites").add({
                         id: user.uid,
-                        movies:[],
-                        series:[],
-                        books:[]
+                        movies: [],
+                        series: [],
+                        books: []
                     })
-                        .then(function(docRef) {
+                        .then(function (docRef) {
                             //console.log("lista feita");
                         })
-                        .catch(function(error) {
+                        .catch(function (error) {
                             //console.error("Error adding document: ", error);
                         });
                 }
@@ -72,14 +70,18 @@ function App(props) {
 
         let CheckUserAuth = null;
 
-        CheckUserAuth = auth.onAuthStateChanged(user => {if (user) {
+        CheckUserAuth = auth.onAuthStateChanged(user => {
+            if (user) {
 
-            props.setCurrentUser(user);
-            GetAndCheckUserFavorites();
+                props.setCurrentUser(user);
+                GetAndCheckUserFavorites(user);
 
-            }});
+            }
+        });
 
-        return () => {CheckUserAuth()}
+        return () => {
+            CheckUserAuth()
+        }
 
     }, [props.users, props.setCurrentUser]);
 
@@ -93,6 +95,7 @@ function App(props) {
             <Switch>
 
                 <Route path="/Homepage" component={Homepage}/>
+                {console.log(props.user_select)}
                 <Route path="/Individual/:type/:identertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/Movies" component={Movies}/>
                 <Route path="/Series/:id_entertaiment" component={IndividualEntertaimentPage}/>
@@ -120,8 +123,12 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchStateToProps = dispatch => ({
-    SetFavourites: (movies, series, books) => {dispatch(SetFavourites(movies, series, books))},
-    setCurrentUser: (user) => { dispatch(SetCurrentUser(user))},
+    SetFavourites: (movies, series, books) => {
+        dispatch(SetFavourites(movies, series, books))
+    },
+    setCurrentUser: (user) => {
+        dispatch(SetCurrentUser(user))
+    },
 
 });
 

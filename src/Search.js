@@ -9,10 +9,6 @@ const books = require('google-books-catalogue-search');
 
 class Movies extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     componentDidMount() {
 
 

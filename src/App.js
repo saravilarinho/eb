@@ -35,7 +35,8 @@ function App(props) {
                 if (querySnapshot.docs.length>0) {
 
                     querySnapshot.forEach(function (doc) {
-                       // console.log(doc.id, " => ", doc.data());
+                        console.log(doc.id, " => ", doc.data());
+
                     });
                 }else{
 

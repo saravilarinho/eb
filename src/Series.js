@@ -18,6 +18,24 @@ class Series extends React.Component{
         this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=1", 'popular', 'series');
     }
 
+
+    Loading = (typebook) => {
+
+        return <section className={'row justify-content-center my-5'}>
+
+            <div className="spinner-border text-warning loadingsmall d-inline-block" id={'loading'}
+                 role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
+            <div className={'col-12 my-3'}>
+                <section className={'row loadingtitle justify-content-center'}>
+                    <small className={'col-4 col-md-2 pl-3'}>Loading {typebook} Books</small>
+                </section>
+            </div>
+        </section>
+
+    };
+
     render(){
 
 
@@ -28,11 +46,26 @@ class Series extends React.Component{
                 <h1 className="titulos pt-3 pb-3">SERIES</h1>
 
 
-                <HorizontalList titulo={'Tv on The Air ...'} info={this.props.tv_on_the_air} type={'Serie'} listacess={'yes'} content={'TVOnTheAir'}/>
+                <section>
 
-                <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Serie'} listacess={'yes'} content={'TopRated'}/>
+                    {console.log(this.props.tv_on_the_air)}
 
-                <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Serie'} listacess={'yes'} content={'Popular'}/>
+                    {this.props.tv_on_the_air !== null ?
+
+                        <HorizontalList titulo={'Tv on The Air ...'} info={this.props.tv_on_the_air} type={'Serie'} listacess={'yes'} content={'TVOnTheAir'}/>
+                        : this.Loading('Upcoming')}
+
+                    {this.props.top_rated !== null ?
+
+                        <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Serie'} listacess={'yes'} content={'TopRated'}/>
+                        : this.Loading('Upcoming')}
+
+                    {this.props.popular !== null ?
+
+                        <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Serie'} listacess={'yes'} content={'Popular'}/> : this.Loading('Upcoming')}
+
+                </section>
+
 
             </div>
 

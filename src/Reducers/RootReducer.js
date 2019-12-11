@@ -20,29 +20,11 @@ const initialState = {
 
 
     series: {
-        tv_on_the_air: {
-            results: [],
-            page: '',
-            total_results: '',
-            dates: {},
-            total_pages: ''
-        },
+        tv_on_the_air: null,
 
-        top_rated: {
-            results: [],
-            page: '',
-            total_results: '',
-            dates: {},
-            total_pages: ''
-        },
+        top_rated: null,
 
-        popular: {
-            results: [],
-            page: '',
-            total_results: '',
-            dates: {},
-            total_pages: ''
-        }
+        popular: null,
 
 
     },
@@ -2391,110 +2373,6 @@ const rootReducer = (state = initialState, action) => {
 
             }
         }
-
-    }
-
-
-    if (action.type === 'FETCH_API_FAIL') {
-
-        if (action.type_content === 'series') {
-
-            if (action.content === 'tv_on_the_air') {
-                return {
-                    ...state,
-
-
-                    series: {...state.series, tv_on_the_air: false}
-                }
-            }
-
-
-            if (action.content === 'top_rated') {
-                return {
-                    ...state,
-
-
-                    series: {...state.series, top_rated: false}
-                }
-            }
-
-            if (action.content === 'popular') {
-                return {
-                    ...state,
-
-
-                    series: {...state.series, popular: false}
-                }
-            }
-
-        }
-
-        if (action.type_content === 'books') {
-
-
-            if (action.content === 'youngadult') {
-
-
-                return {
-                    ...state,
-
-
-                    books: {...state.books, young_adult: false}
-                }
-
-            }
-
-
-            if (action.content === 'fiction') {
-
-                return {
-                    ...state,
-
-
-                    books: {...state.books, hardcover_fiction: false}
-                }
-            }
-
-            if (action.content === 'nonFiction') {
-
-
-                return {
-                    ...state,
-
-
-                    books: {...state.books, hardcover_nonfiction: false}
-                }
-
-            }
-
-            if (action.content === 'graphicnovelsmanga') {
-
-                return {
-                    ...state,
-
-
-                    books: {
-                        ...state.books, graphic_books_and_manga: false
-                    }
-                }
-
-            }
-
-            if (action.content === 'middlegrade') {
-
-                return {
-                    ...state,
-
-
-                    books: {
-                        ...state.books,
-                        childrens_middle_grade: [...state.books.childrens_middle_grade, action.result]
-                    }
-                }
-
-            }
-        }
-
 
     }
 

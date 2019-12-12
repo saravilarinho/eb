@@ -110,21 +110,6 @@ const Line20 = (props) => {
                     }
 
 
-                    if (props.type === "Favourite_Movie") {
-
-                        console.log("ESTA NOS FAVES MOVIES");
-                        console.log(props.movies);
-                        return <li className="scroll-box col-12" id={props.titulo}>
-
-
-                           {/* {props.movies.map((item) => <MiniatureEntertaiment img={item.poster_path}
-                                                                                     text={item.overview}
-                                                                                     title={item.title} id={item.id}
-                                                                                     type={props.type}/>)}*/}
-
-                        </li>
-
-                    }
 
                 })()}
 

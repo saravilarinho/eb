@@ -11,7 +11,7 @@ import Music from "./Music";
 import Search from "./Search"
 import SignUp from './SignUp'
 import SignIn from './SignIn'
-import Favourites from './Favourites'
+import Favorites from './Favorites'
 import List from './List'
 import Books from './Books'
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
@@ -95,7 +95,6 @@ function App(props) {
             <Switch>
 
                 <Route path="/Homepage" component={Homepage}/>
-                {console.log(props.user_select)}
                 <Route path="/Individual/:type/:identertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/Movies" component={Movies}/>
                 <Route path="/Series/:id_entertaiment" component={IndividualEntertaimentPage}/>
@@ -108,7 +107,7 @@ function App(props) {
                 <Route path="/SignIn" component={SignIn}/>
                 <Route path="/Search/:word_search" component={Search}/>
                 <Route path="/Select_Individual_Movie" component={Select_Individual_Movie}/>
-                <Route path="/Favourites" component={Favourites}/>
+                <Route path="/Favorites" component={Favorites}/>
                 <Route component={Homepage}/>
             </Switch>
 

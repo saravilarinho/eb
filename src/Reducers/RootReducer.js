@@ -8,6 +8,9 @@ const initialState = {
             movies: [],
             series: [],
             books: [],
+            movies_content: {
+                results: []
+            }
         }
     },
 
@@ -354,14 +357,14 @@ const rootReducer = (state = initialState, action) => {
                 ...state.users,
                 favorites: {
                     ...state.users.favorites,
-                    movies: [action.movies],
+                    movies: action.movies,
                     movies_content:{
                         total_pages: Math.round(action.movies.length/20),
                         page:1,
                         total_results: action.movies.length,
                         results:[]
                     },
-                    series: [action.series],
+                    series: action.series,
                     series_content:{
                         page:1,
                         total_pages: Math.round(action.series.length/20),
@@ -369,7 +372,7 @@ const rootReducer = (state = initialState, action) => {
                         results:[]
 
                     },
-                    books: [action.books],
+                    books: action.books,
                     books_content:[]
                 }
 
@@ -378,6 +381,30 @@ const rootReducer = (state = initialState, action) => {
 
 
     }
+
+    if(action.type === 'FETCH_FAVORITES'){
+        if(action.type_content === 'Movies'){
+            return {
+                ...state,
+                users: {
+                    ...state.users,
+                    favorites: {
+                        ...state.users.favorites,
+                        movies_content:{
+                            ...state.users.favorites.movies_content,
+                            results: [...state.users.favorites.movies_content.results,action.result]
+                        }
+
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+
 
     return state;
 };

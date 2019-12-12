@@ -107,7 +107,7 @@ function Navbar2(props) {
 
                         <span className="dropdown-menu opa " aria-labelledby="navbarDropdown">
 
-                            <a className="dropdown-item" >
+                            <a className="dropdown-item" href="/Favorites" >
 
                                 <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Favourites</a>

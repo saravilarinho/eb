@@ -36,14 +36,8 @@ class Movies extends React.Component {
         this.state.term = word;
         this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
         this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
+        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
 
-        books.search(word, options, (error, results) => {
-            if (!error) {
-
-                console.log(results.totalItems)
-                this.props.FetchBook(results, 'search', 'books')
-            }
-        });
 
     }
 
@@ -55,12 +49,20 @@ class Movies extends React.Component {
 
             this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
             this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
-            this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q='+ word +'&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY','search','books');
+            this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
             this.setState({term: word})
         }
 
     }
 
+
+    BooksArray = (p) => {
+
+        let array = [];
+        p.map(item => array.push(item.volumeInfo));
+        return array
+
+    };
 
     Loading = () => {
 
@@ -81,6 +83,14 @@ class Movies extends React.Component {
 
     render() {
 
+
+        let arraybooks = [];
+
+        if (this.props.search.books !== null && this.props.search.books.totalItems) {
+
+            arraybooks = this.BooksArray(this.props.search.books.items);
+
+        }
         return (
 
             <div>
@@ -94,7 +104,8 @@ class Movies extends React.Component {
 
                         {this.props.search.movies.results.length !== 0 &&
                         <div>
-                            <small className={'px-5'}>{this.props.search.movies.total_results} resultado{this.props.search.movies.total_results>1 ? 's': ''}</small>
+                            <small
+                                className={'px-5'}>{this.props.search.movies.total_results} resultado{this.props.search.movies.total_results > 1 ? 's' : ''}</small>
                             <HorizontalList titulo={'View More ...'} info={this.props.search.movies} type={'Movie'}
                                             listacess={'yes'} content={this.props.match.params.word_search}
                             /></div>
@@ -119,7 +130,7 @@ class Movies extends React.Component {
 
                         {this.props.search.series.results.length !== 0 &&
                         <div>
-                            <small className={'p-5'}>{this.props.search.series.total_results} resultado{this.props.search.series.total_results>1 ? 's': ''}</small>
+                            <small className={'p-5'}>{this.props.search.series.total_results} resultado{this.props.search.series.total_results > 1 ? 's' : ''}</small>
                             <HorizontalList titulo={'View More ...'} info={this.props.search.series} type={'Serie'}
                                             listacess={'yes'} content={this.props.match.params.word_search}
                             />
@@ -141,15 +152,19 @@ class Movies extends React.Component {
                         <h1 className="titulos pt-3 pb-3">BOOKS</h1>
 
 
-                        {console.log(this.props.search.books)}
+                        {this.props.search.books.totalItems !== 0 &&
 
-                        {this.props.search.books.length !== 0 &&
+                        <di>
+                            <small className={'p-5'}>{this.props.search.books.totalItems} resultado{this.props.search.books.totalItems > 1 ? 's' : ''}</small>
 
-                        <HorizontalList titulo={'View More ...'} info={this.props.search.books} type={'Book'}
-                                        listacess={'yes'} content={this.props.match.params.word_search}
-                        />}
+                            <HorizontalList titulo={'View More ...'} info={arraybooks} type={'Book'}
+                                            listacess={'yes'} content={this.props.match.params.word_search}
+                            />
 
-                        {this.props.search.books.length === 0 &&
+                        </di>
+                        }
+
+                        {this.props.search.books.totalItems === 0 &&
 
                         <p className={'p-5 font-weight-light text-uppercase'}>No Books Found...</p>
 
@@ -171,9 +186,6 @@ const mapStateToProps = (state) => {
 const mapDispatchtoProps = (dispatch) => {
     return {
         FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content)),
-        FetchBook: (results, content, type_content) => {
-            dispatch({type: 'FETCH_API', result: results, content: content, type_content: type_content})
-        }
     }
 
 };

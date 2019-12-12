@@ -133,6 +133,9 @@ const rootReducer = (state = initialState, action) => {
             if (action.type_content === 'books') {
 
 
+                console.log('action');
+                console.log(action.result);
+
                 return {
                     ...state,
                     search: {

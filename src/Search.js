@@ -3,28 +3,61 @@ import './Styles/Styles.css'
 import {connect} from 'react-redux';
 import HorizontalList from './Components/HorizontalList'
 import {FetchAPI} from "./Actions/FetchAction";
+import MiniatureEntertaiment from "./Components/MiniatureEntertaiment";
+import {ConnectAPI} from "./Actions/ConnectAPI";
 
-const books = require('google-books-catalogue-search');
+let books = require('google-books-catalogue-search');
+
+let options = {
+
+    field: 'title',
+    offset: 0,
+    limit: 20,
+    type: 'books',
+    order: 'relevance',
+    lang: 'en'
+};
 
 
 class Movies extends React.Component {
+
+
+    constructor(props) {
+
+        super(props);
+        this.state = {term: ''}
+
+    }
 
     componentDidMount() {
 
 
         let word = this.props.match.params.word_search;
-
-
+        this.state.term = word;
         this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
         this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
 
-        books.search(word, function (error, results) {
+        books.search(word, options, (error, results) => {
             if (!error) {
 
-
-                console.log(results);
+                console.log(results.totalItems)
+                this.props.FetchBook(results, 'search', 'books')
             }
         });
+
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
+        let word = this.props.match.params.word_search;
+
+        if (word !== this.state.term) {
+
+            this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
+            this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
+            this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q='+ word +'&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY','search','books');
+            this.setState({term: word})
+        }
 
     }
 
@@ -59,9 +92,21 @@ class Movies extends React.Component {
                     <section>
                         <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
-                        <HorizontalList titulo={'View More ...'} info={this.props.search.movies} type={'Movie'}
-                                        listacess={'yes'} content={this.props.match.params.word_search}
-                        />
+                        {this.props.search.movies.results.length !== 0 &&
+                        <div>
+                            <small className={'px-5'}>{this.props.search.movies.total_results} resultado{this.props.search.movies.total_results>1 ? 's': ''}</small>
+                            <HorizontalList titulo={'View More ...'} info={this.props.search.movies} type={'Movie'}
+                                            listacess={'yes'} content={this.props.match.params.word_search}
+                            /></div>
+                        }
+
+                        {this.props.search.movies.results.length === 0 &&
+
+                        <p className={'p-5 font-weight-light text-uppercase'}>No Movies Found...</p>
+
+                        }
+
+
                     </section> : this.Loading
                 }
 
@@ -71,44 +116,48 @@ class Movies extends React.Component {
                     <section>
                         <h1 className="titulos pt-3 pb-3">SERIES</h1>
 
-                        <HorizontalList titulo={'View More ...'} info={this.props.search.series} type={'Serie'}
+
+                        {this.props.search.series.results.length !== 0 &&
+                        <div>
+                            <small className={'p-5'}>{this.props.search.series.total_results} resultado{this.props.search.series.total_results>1 ? 's': ''}</small>
+                            <HorizontalList titulo={'View More ...'} info={this.props.search.series} type={'Serie'}
+                                            listacess={'yes'} content={this.props.match.params.word_search}
+                            />
+                        </div>}
+
+
+                        {this.props.search.series.results.length === 0 &&
+
+                        <p className={'p-5 font-weight-light text-uppercase'}>No Series Found...</p>
+
+                        }
+
+                    </section> : this.Loading
+                }
+
+                {this.props.search.books !== null ?
+
+                    <section>
+                        <h1 className="titulos pt-3 pb-3">BOOKS</h1>
+
+
+                        {console.log(this.props.search.books)}
+
+                        {this.props.search.books.length !== 0 &&
+
+                        <HorizontalList titulo={'View More ...'} info={this.props.search.books} type={'Book'}
                                         listacess={'yes'} content={this.props.match.params.word_search}
-                        />
+                        />}
+
+                        {this.props.search.books.length === 0 &&
+
+                        <p className={'p-5 font-weight-light text-uppercase'}>No Books Found...</p>
+
+                        }
                     </section> : this.Loading
                 }
 
 
-                {/*
-                {this.props.upcoming !== false &&
-
-
-                <section>
-
-
-
-
-                    {this.props.upcoming !== null ?
-
-
-
-                    {this.props.top_rated !== null ?
-
-                        <HorizontalList titulo={'Top Rated ...'} info={this.props.top_rated} type={'Movie'}
-                                        listacess={'yes'}
-                                        content={'TopRated'}/> : this.Loading('Top Rated')}
-
-                    {this.props.popular !== null ?
-
-                        <HorizontalList titulo={'Popular ...'} info={this.props.popular} type={'Movie'}
-                                        listacess={'yes'}
-                                        content={'Popular'}/> : this.Loading('Popular')}
-
-                </section>}
-
-                {this.props.upcoming === false &&
-
-                <div>ERROR</div>
-                }*/}
             </div>
         )
 
@@ -122,8 +171,8 @@ const mapStateToProps = (state) => {
 const mapDispatchtoProps = (dispatch) => {
     return {
         FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content)),
-        FetchBook: (results,content, type_content) => {
-            dispatch({type: 'FETCH_API',result:results,content: content, type_content: type_content})
+        FetchBook: (results, content, type_content) => {
+            dispatch({type: 'FETCH_API', result: results, content: content, type_content: type_content})
         }
     }
 

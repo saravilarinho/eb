@@ -1,4 +1,3 @@
-import React from 'react';
 
 const initialState = {
 
@@ -76,7 +75,6 @@ const rootReducer = (state = initialState, action) => {
 
     if (action.type === 'INDIVIDUAL_BACK_0') {
 
-        console.log('hello');
 
         return {
             ...state,
@@ -130,6 +128,22 @@ const rootReducer = (state = initialState, action) => {
                 }
 
             }
+
+
+            if (action.type_content === 'books') {
+
+
+                return {
+                    ...state,
+                    search: {
+                        ...state.search,
+                        books: action.result
+
+                    }
+                }
+
+            }
+
 
 
         }
@@ -338,8 +352,22 @@ const rootReducer = (state = initialState, action) => {
                 favorites: {
                     ...state.users.favorites,
                     movies: [action.movies],
+                    movies_content:{
+                        total_pages: Math.round(action.movies.length/20),
+                        page:1,
+                        total_results: action.movies.length,
+                        results:[]
+                    },
                     series: [action.series],
-                    books: [action.books]
+                    series_content:{
+                        page:1,
+                        total_pages: Math.round(action.series.length/20),
+                        total_results: action.series.length,
+                        results:[]
+
+                    },
+                    books: [action.books],
+                    books_content:[]
                 }
 
             }

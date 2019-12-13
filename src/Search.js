@@ -155,6 +155,7 @@ class Movies extends React.Component {
                         {this.props.search.books.totalItems !== 0 &&
 
                         <div>
+
                             <small className={'p-5'}>{this.props.search.books.totalItems} resultado{this.props.search.books.totalItems > 1 ? 's' : ''}</small>
 
                             <HorizontalList titulo={'View More ...'} info={arraybooks} type={'Book'}

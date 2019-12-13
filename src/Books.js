@@ -51,12 +51,7 @@ class Books extends React.Component {
 
             <div>
                 <h1 className="titulos pt-3 pb-3">BOOKS</h1>
-
-                <Link className={'titulos2'} to={"/List/Book/AllBestSellers"}>
-                    <h2 className={'titulos3 d-inline'}> SEE ALL OF THE BEST SELLERS ...</h2>
-                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
-
-                </Link>
+                 <h2 className={'titulos3 d-inline'}> ALL OF THE BEST SELLERS ACCORDING TO NEW YORK TIMES...</h2>
 
 
 

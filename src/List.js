@@ -6,6 +6,7 @@ import {FetchAPI} from "./Actions/FetchAction";
 import arrowleft from './Images/arrow_emblemleft-02.svg';
 import arrowright from './Images/arrow_emblem.svg';
 import {Link} from 'react-router-dom';
+import poster_default from  './Images/dafaul_poster.png'
 
 
 class List extends React.Component {
@@ -298,7 +299,9 @@ class List extends React.Component {
 
                     info.items.map((item) => {
                         console.log(item);
-                        return <MiniatureEntertaiment img={item.volumeInfo.imageLinks.thumbnail} text={item.volumeInfo.description}
+                        return <MiniatureEntertaiment img={item.volumeInfo.imageLinks === undefined ? poster_default : item.volumeInfo.imageLinks.thumbnail}
+
+                                                      text={item.volumeInfo.description}
                                                                      title={item.volumeInfo.title} id={Array.isArray(item.volumeInfo.industryIdentifiers) === true?
                             item.volumeInfo.industryIdentifiers[0].identifier : 0} type={'Book'}/>
                     })

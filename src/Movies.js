@@ -47,8 +47,9 @@ class Movies extends React.Component {
                 {this.props.upcoming !== false &&
 
 
-                <section>
 
+                <section>
+                    
                     <h1 className="titulos pt-3 pb-3">MOVIES</h1>
 
 

@@ -429,7 +429,8 @@ margin-left: 2rem !important;
         padding: 20px 80px 20px 20px !important;
         color: white !important;
         margin-left: -40px !important;
-        background: rgb(28, 27, 27) !important;
+        background: rgb(8, 6, 6) !important;
+        /* rgb(28, 27, 27) !important*/
         margin-right: 3vw !important;
         margin-top: 5px !important;
         -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);

@@ -28,7 +28,7 @@ function Navbar2(props) {
                 <img className={'ml-3 mt-3'} src={Logo} width={70}/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className={'ml-5 mr-5 mt-3'}>
-                <img src={Menu} width={40}/>
+                <img src={Menu} width={40} alt={'menu'}/>
 
             </Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
@@ -38,13 +38,13 @@ function Navbar2(props) {
                         <Link to={"/Movies"} className={"links col-md-1"}>Movies</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                <a className="dropdown-item" href="/List/Movie/Upcoming/1">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'} src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Upcoming</a>
                                 <a className="dropdown-item" href="/List/Movie/TopRated/1">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Top Rated</a>
                                  <a className="dropdown-item" href="/List/Movie/Popular/1">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Popular</a>
                             </span>
                     </span>
@@ -52,13 +52,13 @@ function Navbar2(props) {
                         <Link to={"/Series"} className={"links col-md-1"}>Series</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item" href="/List/Serie/TVOnTheAir/1">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     TV On The Air</a>
                                 <a className="dropdown-item" href="/List/Serie/TopRated/1">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Top Rated</a>
                                  <a className="dropdown-item" href="/List/Serie/Popular/1">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Popular</a>
                             </span>
                     </span>
@@ -66,16 +66,16 @@ function Navbar2(props) {
                         <Link to={"/Books"} className={"links col-md-1"}>Books</Link>
                         <span className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a className="dropdown-item" href="/Books#YoungAdult">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Young Adult</a>
                                 <a className="dropdown-item" href="/Books#Fiction">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Fiction</a>
                                  <a className="dropdown-item" href="/Books#NonFiction">
-                                    <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                    <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                     Nonfiction</a>
                                  <a className="dropdown-item" href="/Books#GraphicNovels&Manga">
-                                        <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                        <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                                         Graphic Novels & Manga</a>
                             </span>
                     </span>
@@ -107,20 +107,20 @@ function Navbar2(props) {
 
                         <span className="dropdown-menu opa " aria-labelledby="navbarDropdown">
 
-                            <a className="dropdown-item" >
+                            <a className="dropdown-item" href="/Favorites" >
 
-                                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Favourites</a>
 
 
                             <a className="dropdown-item" >
 
-                                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Settings</a>
 
                             <a className="dropdown-item" onClick={() =>{props.clearCurrentUser(); auth.signOut()} } >
 
-                                <img src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
+                                <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Sign Out</a>
 
                         </span>

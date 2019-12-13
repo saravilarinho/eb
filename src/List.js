@@ -24,47 +24,68 @@ class List extends React.Component {
         const Content = this.props.match.params.content;
         let page = this.props.match.params.page;
 
-        if (Type === "Movie") {
+        switch (Type) {
+            case 'Movie':
+                switch (Content) {
+                    case 'TopRated':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'movies');
+                        break;
+                    case 'Upcoming':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'upcoming', 'movies');
+                        break;
+                    case 'Popular':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'movies');
+                        break;
+                    default:
 
+                        this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + Content + "%&page="+page+"&include_adult=false", 'search', 'movies');
 
-            if (Content === "TopRated") {
+                        break
+                }
 
-                this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'movies');
-            }
+                break;
+            case 'Serie':
+                switch (Content) {
+                    case 'TVOnTheAir':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'tv_on_the_air', 'series');
+                        break;
+                    case 'TopRated':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'series');
+                        break;
+                    case 'Popular':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'series');
+                        break;
 
-            if (Content === "Upcoming") {
+                    default:
+                        this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + Content + "&page=" + page, 'search', 'series');
+                        break
+                }
 
-                this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'upcoming', 'movies');
-            }
+                break;
 
+            case 'Book':
 
-            if (Content === "Popular") {
+                switch (Content) {
 
-                this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'movies');
-            }
+                    case 'Fiction':
+                        console.log('hi');
+                        break;
+                    case 'NonFiction':
+                        console.log('hi');
+                        break;
 
-        }
+                    default:
+                        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + Content + '&maxResults=20&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
+                        break
+                }
+                break
 
-        if (Type === "Serie") {
-
-            if (Content === "TVOnTheAir") {
-                this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'tv_on_the_air', 'series');
-            }
-
-            if (Content === "TopRated") {
-                this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'top_rated', 'series');
-            }
-
-
-            if (Content === "Popular") {
-                this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'series');
-            }
         }
 
 
     }
 
-    pagemove = (direction) => {
+    PageMove = (direction) => {
 
         const Type = this.props.match.params.type;
         const Content = this.props.match.params.content;
@@ -81,63 +102,72 @@ class List extends React.Component {
 
         }
 
+        switch (Type) {
+            case 'Movie':
+                switch (Content) {
+                    case 'TopRated':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'movies');
+                        this.setState({page_update: this.state.page_update});
+                        break;
+                    case 'Upcoming':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'upcoming', 'movies');
+                        this.setState({page_update: this.state.page_update});
+                        break;
+                    case 'Popular':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'movies');
+                        this.setState({page_update: this.state.page_update});
+                        break;
 
-        if (Type === "Movie") {
+                    default:
+                        this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + Content + "%&page="+this.state.page_update+"&include_adult=false", 'search', 'movies');
+                        this.setState({page_update: this.state.page_update});
+                        break
+                }
 
+                break;
+            case 'Serie':
+                switch (Content) {
+                    case 'TVOnTheAir':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'tv_on_the_air', 'series');
+                        this.setState({page_update: this.state.page_update});
+                        break;
+                    case 'TopRated':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'series');
+                        this.setState({page_update: this.state.page_update});
+                        break;
+                    case 'Popular':
+                        this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'series');
+                        this.setState({page_update: this.state.page_update});
+                        break;
 
-            if (Content === "TopRated") {
+                    default:
+                        this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + Content + "&page=" + this.state.page_update, 'search', 'series');
+                        this.setState({page_update: this.state.page_update});
+                        break
+                }
+                break;
+            case 'Book':
 
-                this.props.FetchAPI("https://api.themoviedb.org/3/movie/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'movies');
-                this.setState({page_update: this.state.page_update})
+                switch (Content) {
 
-            }
+                    case 'Fiction':
+                        console.log('hi');
+                        break;
+                    case 'NonFiction':
+                        console.log('hi');
+                        break;
 
-            if (Content === "Upcoming") {
-
-                this.props.FetchAPI("https://api.themoviedb.org/3/movie/upcoming?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'upcoming', 'movies');
-                this.setState({page_update: this.state.page_update})
-
-            }
-
-
-            if (Content === "Popular") {
-
-                this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'movies');
-                this.setState({page_update: this.state.page_update})
-
-            }
+                    default:
+                        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + Content + '&startIndex='+(this.state.page_update -1)*19+'&maxResults=20&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
+                        this.setState({page_update: this.state.page_update});
+                        break
+                }
+                    break
 
         }
 
-        if (Type === "Serie") {
-
-            if (Content === "TVOnTheAir") {
-                this.props.FetchAPI("https://api.themoviedb.org/3/tv/on_the_air?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'tv_on_the_air', 'series');
-                this.setState({page_update: this.state.page_update})
-
-            }
-
-            if (Content === "TopRated") {
-                this.props.FetchAPI("https://api.themoviedb.org/3/tv/top_rated?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'top_rated', 'series');
-                this.setState({page_update: this.state.page_update})
-
-            }
-
-
-            if (Content === "Popular") {
-                this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'series');
-                this.setState({page_update: this.state.page_update})
-
-            }
-        }
-
-        if (Type === "Book") {
-
-
-        }
 
     };
-
 
     CheckContentOfLisit = () => {
 
@@ -157,6 +187,10 @@ class List extends React.Component {
                     case 'Popular':
                         info = this.props.movies.popular;
                         break;
+
+                    default:
+                        info = this.props.search.movies;
+                        break
                 }
 
                 break;
@@ -171,19 +205,34 @@ class List extends React.Component {
                     case 'Popular':
                         info = this.props.series.popular;
                         break;
+                    default:
+                        info = this.props.search.series;
+                        break
                 }
                 break;
+
             case 'Book':
 
-                info = null;
+                switch (Content) {
 
-                break;
+                    case 'Fiction':
+                        console.log('hi');
+                        break;
+                    case 'NonFiction':
+                        console.log('hi');
+                        break;
+
+                    default:
+                        info = this.props.search.books;
+                        break
+                }
+                break
+
         }
 
         return info
 
     };
-
 
     CheckIfTitleNeedsSpace = (WrittenContent) => {
 
@@ -208,7 +257,6 @@ class List extends React.Component {
 
     };
 
-
     render() {
 
         const Type = this.props.match.params.type;
@@ -220,8 +268,8 @@ class List extends React.Component {
         let WrittenContent = this.CheckIfTitleNeedsSpace(Content);
 
         let page_next = parseInt(this.props.match.params.page) + 1;
-        let page_prev = parseInt(this.props.match.params.page) - 1;
 
+        let page_prev = parseInt(this.props.match.params.page) - 1;
 
 
         return (
@@ -245,14 +293,20 @@ class List extends React.Component {
                                                                       title={item.name} id={item.id} type={'Serie'}/>)
                     }
 
+
                     {Type === 'Book' && info !== null &&
 
-                    info.map((item) => <MiniatureEntertaiment img={item.items[0].volumeInfo.imageLinks.thumbnail}
-                                                              text={item.items[0].volumeInfo.description}
-                                                              title={item.items[0].volumeInfo.title}
-                                                              id={item.items[0].volumeInfo.industryIdentifiers[0].identifier}
-                                                              type={'Book'}/>)
+                    info.items.map((item) => {
+                        console.log(item);
+                        return <MiniatureEntertaiment img={item.volumeInfo.imageLinks.thumbnail} text={item.volumeInfo.description}
+                                                                     title={item.volumeInfo.title} id={Array.isArray(item.volumeInfo.industryIdentifiers) === true?
+                            item.volumeInfo.industryIdentifiers[0].identifier : 0} type={'Book'}/>
+                    })
+
+
+
                     }
+
 
                 </div>
 
@@ -261,14 +315,15 @@ class List extends React.Component {
                     {this.props.match.params.page > 1 ?
 
                         <Link to={'/List/' + Type + '/' + Content + '/' + page_prev} onClick={() => {
-                            this.pagemove("menos");
+                            this.PageMove("menos");
                             window.scrollTo({top: 0, behavior: 'smooth'});
                         }}
                               className={'arrowleft '}>
                             <img className={"img-fluid pb-5 paginacaoleft align-items-right m-5"} name={"left"}
                                  src={arrowleft}/>
                         </Link> :
-                        <img width={100} className={"img-fluid pb-5 paginacaoleft align-items-right m-5"} style={{opacity:0.3}} name={"left"}
+                        <img width={100} className={"img-fluid pb-5 paginacaoleft align-items-right m-5"}
+                             style={{opacity: 0.3}} name={"left"}
                              src={arrowleft}/>
 
                     }
@@ -276,10 +331,11 @@ class List extends React.Component {
 
                     <Link to={'/List/' + Type + '/' + Content + '/' + page_next} onClick={() => {
                         window.scrollTo({top: 0, behavior: 'smooth'});
-                        this.pagemove("mais")
+                        this.PageMove("mais")
                     }}
                           className={' arrowright'}>
-                        <img width={100}  className={"img-fluid pb-5 my-5 mx-3 paginacaoright align-items-left"} name={"right"}
+                        <img width={100} className={"img-fluid pb-5 my-5 mx-3 paginacaoright align-items-left"}
+                             name={"right"}
                              src={arrowright}/>
                     </Link>
                 </div>
@@ -308,7 +364,9 @@ const mapStateToProps = (state) => {
 
             all_bestsellers: state.books.all_bestsellers
 
-        }
+        },
+
+        search: state.search
     }
 };
 

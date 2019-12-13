@@ -9,9 +9,6 @@ import {Redirect} from "react-router";
 class IndividualEntertaimentPage extends React.Component {
 
 
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount() {
 

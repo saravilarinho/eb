@@ -67,6 +67,9 @@ const Line20 = (props) => {
 
             <ul className={'row justify-content-around pb-5'}>
 
+
+
+
                 {(() => {
                     if (props.type === "Movie") {
 
@@ -96,17 +99,24 @@ const Line20 = (props) => {
 
                         return <li className="scroll-box col-12" id={props.titulo}>
 
-                            {props.info.map((item) => <MiniatureEntertaiment
-                                img={item.imageLinks.thumbnail}
-                                text={item.description}
-                                title={item.title}
-                                id={item.industryIdentifiers[0].identifier} type={props.type}/>
+                            {props.info.map((item) =>
+
+
+                                <MiniatureEntertaiment
+                                    img={item.imageLinks.thumbnail}
+                                    text={item.description}
+                                    title={item.title}
+                                    id={item.industryIdentifiers !== undefined ? item.industryIdentifiers[0].identifier : 'not found'}
+                                    type={props.type}/>
                             )}
 
                         </li>
 
 
                     }
+
+
+
                 })()}
 
 

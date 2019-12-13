@@ -8,14 +8,17 @@ import {connect} from 'react-redux';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import IndividualEntertaimentPage from './IndividualEntertaimentPage'
 import Music from "./Music";
+import Search from "./Search"
 import SignUp from './SignUp'
 import SignIn from './SignIn'
+import Favorites from './Favorites'
 import List from './List'
 import Books from './Books'
 import Select_Individual_Movie from "./Components/Select_Individual_Movie";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {auth} from "./Config/fbConfig";
 import {SetCurrentUser} from "./Actions/SetCurrentUser";
+import {SetFavourites} from "./Actions/SetFavourites";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -24,7 +27,7 @@ function App(props) {
 
     //R: explicar a existencia da componente App
 
-    const GetAndCheckUserFavorites = (user)=>{
+    const GetAndCheckUserFavorites = (user) => {
 
         const db = firebase.firestore();
 
@@ -32,23 +35,25 @@ function App(props) {
             .get()
             .then((querySnapshot) => {
 
-                if (querySnapshot.docs.length>0) {
+                if (querySnapshot.docs.length > 0) {
+                    //verifica se existem documentos na base de dados
 
                     querySnapshot.forEach(function (doc) {
-                      // console.log(doc.id, " => ", doc.data());
+                        let data = doc.data();
+                        props.SetFavourites(data.movies, data.series, data.books)
                     });
-                }else{
-
+                } else {
+                    //se nao existir uma coleção já criada, cria uma:
                     db.collection("favorites").add({
                         id: user.uid,
-                        movies:[],
-                        series:[],
-                        books:[]
+                        movies: [],
+                        series: [],
+                        books: []
                     })
-                        .then(function(docRef) {
+                        .then(function (docRef) {
                             //console.log("lista feita");
                         })
-                        .catch(function(error) {
+                        .catch(function (error) {
                             //console.error("Error adding document: ", error);
                         });
                 }
@@ -65,9 +70,18 @@ function App(props) {
 
         let CheckUserAuth = null;
 
-        CheckUserAuth = auth.onAuthStateChanged(user => {if (user) { props.setCurrentUser(user);GetAndCheckUserFavorites(user);}});
+        CheckUserAuth = auth.onAuthStateChanged(user => {
+            if (user) {
 
-        return () => {CheckUserAuth()}
+                props.setCurrentUser(user);
+                GetAndCheckUserFavorites(user);
+
+            }
+        });
+
+        return () => {
+            CheckUserAuth()
+        }
 
     }, [props.users, props.setCurrentUser]);
 
@@ -79,6 +93,7 @@ function App(props) {
         <Router>
             <Navbar/>
             <Switch>
+
                 <Route path="/Homepage" component={Homepage}/>
                 <Route path="/Individual/:type/:identertaiment" component={IndividualEntertaimentPage}/>
                 <Route path="/Movies" component={Movies}/>
@@ -90,8 +105,9 @@ function App(props) {
                 <Route path="/Music" component={Music}/>
                 <Route path="/SignUp" component={SignUp}/>
                 <Route path="/SignIn" component={SignIn}/>
+                <Route path="/Search/:word_search" component={Search}/>
                 <Route path="/Select_Individual_Movie" component={Select_Individual_Movie}/>
-                <Route path="/Favourites"/>
+                <Route path="/Favorites" component={Favorites}/>
                 <Route component={Homepage}/>
             </Switch>
 
@@ -101,9 +117,19 @@ function App(props) {
 
 }
 
+const mapStateToProps = (state) => {
+    return {user_select: state.users}
+};
+
 const mapDispatchStateToProps = dispatch => ({
-    setCurrentUser: (user) => { dispatch(SetCurrentUser(user))},
+    SetFavourites: (movies, series, books) => {
+        dispatch(SetFavourites(movies, series, books))
+    },
+    setCurrentUser: (user) => {
+        dispatch(SetCurrentUser(user))
+    },
+
 });
 
 
-export default connect(null, mapDispatchStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchStateToProps)(App);

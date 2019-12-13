@@ -7,9 +7,6 @@ import {FetchAPI} from "./Actions/FetchAction";
 
 class Series extends React.Component{
 
-    constructor(props){
-        super(props);
-    }
 
     componentDidMount(){
 
@@ -45,14 +42,12 @@ class Series extends React.Component{
             <div>
                 <h1 className="titulos pt-3 pb-3">SERIES</h1>
 
-
                 <section>
 
-                    {console.log(this.props.tv_on_the_air)}
 
                     {this.props.tv_on_the_air !== null ?
 
-                        <HorizontalList titulo={'Tv on The Air ...'} info={this.props.tv_on_the_air} type={'Serie'} listacess={'yes'} content={'TVOnTheAir'}/>
+                        <HorizontalList titulo={'Tv on The Air ...'}  info={this.props.tv_on_the_air} type={'Serie'} listacess={'yes'} content={'TVOnTheAir'}/>
                         : this.Loading('Upcoming')}
 
                     {this.props.top_rated !== null ?

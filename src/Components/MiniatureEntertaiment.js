@@ -20,7 +20,7 @@ const MiniatureEntertaiment = (props) => {
     };
 
 
-    if (props.type ==='Movie' || props.type === 'Serie') {
+    if (props.type ==='Movie' || props.type === 'Serie' || props.type === 'Favourite_Movie') {
         path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
     }
     return (

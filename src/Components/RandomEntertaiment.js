@@ -91,7 +91,12 @@ function RandomEntertaiment(props) {
                         <p className={'col-12 my-4'}>{readMore(props.content.overview,100)}</p>
                         <div className={'row justify-content-between my-4 px-5'}>
                             <button className={'col-4 p-2 stylebrandom'}>SEE MORE</button>
-                            <button className={'col-4 p-2 stylebrandom'} onClick={props.onclickfunction}>ANOTHER ONE!
+                            <button id={'thisbtn'} className={'col-4 p-2 stylebrandom'} onClick={()=>{
+
+document.getElementById('thisbtn').disabled=true;
+document.getElementById('thisbtn').style.display = 'none';
+props.onclickfunction()
+                            }}>ANOTHER ONE!
                             </button>
                         </div>
                         <div/>

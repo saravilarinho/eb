@@ -36,7 +36,7 @@ class Movies extends React.Component {
         this.state.term = word;
         this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
         this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
-        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
+        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&maxResults=20&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
 
 
     }
@@ -154,14 +154,13 @@ class Movies extends React.Component {
 
                         {this.props.search.books.totalItems !== 0 &&
 
-                        <di>
+                        <div>
                             <small className={'p-5'}>{this.props.search.books.totalItems} resultado{this.props.search.books.totalItems > 1 ? 's' : ''}</small>
 
                             <HorizontalList titulo={'View More ...'} info={arraybooks} type={'Book'}
-                                            listacess={'yes'} content={this.props.match.params.word_search}
-                            />
+                                            listacess={'yes'} content={this.props.match.params.word_search} />
 
-                        </di>
+                        </div>
                         }
 
                         {this.props.search.books.totalItems === 0 &&

@@ -42,9 +42,11 @@ const Line20 = (props) => {
                 </Link>
 
             } else {
+
+                if (props.content !== 'none') {
                 return <div className={'titulos1 pt-5 pb-5'} id={props.content}>
                     <h1 className={'d-inline pt-2'}>{props.titulo}</h1>
-                </div>
+                </div>}
             }
         })()}
 

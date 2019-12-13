@@ -10,6 +10,9 @@ const initialState = {
             books: [],
             movies_content: {
                 results: []
+            },
+            series_content: {
+                results: []
             }
         }
     },
@@ -394,10 +397,29 @@ const rootReducer = (state = initialState, action) => {
                             ...state.users.favorites.movies_content,
                             results: [...state.users.favorites.movies_content.results,action.result]
                         }
-
                     }
                 }
             }
+        }
+
+        if(action.type_content === 'Series'){
+            return{
+                ...state,
+                users:{
+                    ...state.users,
+                    favorites:{
+                        ...state.users.favorites,
+                        series_content:{
+                            ...state.users.favorites.series_content,
+                            results: [...state.users.favorites.series_content.results, action.result]
+                        }
+                    }
+                }
+            }
+
+
+
+
         }
 
 

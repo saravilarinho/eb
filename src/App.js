@@ -14,7 +14,6 @@ import SignIn from './SignIn'
 import Favorites from './Favorites'
 import List from './List'
 import Books from './Books'
-import Select_Individual_Movie from "./Components/Select_Individual_Movie";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {auth} from "./Config/fbConfig";
 import {SetCurrentUser} from "./Actions/SetCurrentUser";
@@ -106,7 +105,6 @@ function App(props) {
                 <Route path="/SignUp" component={SignUp}/>
                 <Route path="/SignIn" component={SignIn}/>
                 <Route path="/Search/:word_search" component={Search}/>
-                <Route path="/Select_Individual_Movie" component={Select_Individual_Movie}/>
                 <Route path="/Favorites" component={Favorites}/>
                 <Route component={Homepage}/>
             </Switch>

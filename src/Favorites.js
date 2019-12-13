@@ -11,6 +11,7 @@ class Favorites extends React.Component {
         super(props);
         this.state = {
             movies: 0,
+            series: 0,
         }
     }
 
@@ -25,7 +26,7 @@ class Favorites extends React.Component {
             </div>
             <div className={'col-12 my-3'}>
                 <section className={'row loadingtitle justify-content-center'}>
-                    <small className={'col-4 col-md-2 pl-3'}>Loading Movies</small>
+                    <small className={'col-4 col-md-2 pl-3'}>Loading Content</small>
                 </section>
             </div>
         </section>
@@ -36,10 +37,16 @@ class Favorites extends React.Component {
 
         if (this.props.user.favorites.movies.length > 0 && this.state.movies === 0) {
             this.props.FetchActionFavorites(this.props.user.favorites.movies, 'Movies' );
-            this.setState({movies: 1})
+            this.setState({movies: 1});
 
         }
 
+
+        if (this.props.user.favorites.series.length > 0 && this.state.series === 0) {
+            this.props.FetchActionFavorites(this.props.user.favorites.series, 'Series' );
+            this.setState({series: 1});
+
+        }
 
         return (
 
@@ -55,6 +62,15 @@ class Favorites extends React.Component {
                   : this.Loading()
               }
 
+
+              {this.state.series !== 0 && this.props.user.favorites.series.length === this.props.user.favorites.series_content.results.length ?
+
+                  <HorizontalList titulo={'Favorite Series'} info={this.props.user.favorites.series_content} type={'Serie'}
+                                  listacess={'yes'}
+                                  content={'Favorites'}/>
+
+                  : this.Loading()
+              }
 
 
 
@@ -75,7 +91,6 @@ const mapStateToProps = (state) => {
 
     return {
         user: state.users,
-        upcoming: state.movies.upcoming, top_rated: state.movies.top_rated, popular: state.movies.popular
     }
 };
 

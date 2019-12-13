@@ -5,6 +5,7 @@ import img from "../Images/film.jpg";
 import eyeicon from '../Images/plus-solid.svg'
 import hearticon from '../Images/heart_unfill.svg'
 import {Link} from 'react-router-dom'
+import poster_default from  '../Images/dafaul_poster.png'
 
 
 const MiniatureEntertaiment = (props) => {
@@ -27,7 +28,7 @@ const MiniatureEntertaiment = (props) => {
         <section className={'d-inline mb-5 w-100'}>
             <div className={'col-10 col-md-5 col-lg-3 listentertaiment mb-5'}>
                 <section className={'col-11 h-100'}>
-                    <img src={path} className={'w-100 d-block img-back'}/>
+                    <img src={props.img === null ? poster_default : path} className={'w-100 d-block img-back'}/>
                     <div className={'position-absolute above p-3 w-100'}>
                         <h1 className={'text-wrap'}> {props.title} </h1>
                         <p className={' text-adapt text-wrap'}>{props.text ? readMore(props.text): console.log('nok') }

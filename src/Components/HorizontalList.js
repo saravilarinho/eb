@@ -3,6 +3,7 @@ import '../Styles/Styles.css';
 import MiniatureEntertaiment from './MiniatureEntertaiment'
 import arrowemblem from "../Images/arrow_emblem.svg"
 import {Link} from 'react-router-dom'
+import poster_default from  '../Images/dafaul_poster.png'
 
 
 const Line20 = (props) => {
@@ -50,14 +51,14 @@ const Line20 = (props) => {
 
             <div className={'row justify-content-between controls w-100'}>
                 <button className={'listentertaiment back'} id={"slideBack"} onClick={() => {
-                    let container = document.getElementById(props.titulo);
+                    let container = document.getElementById(props.titulo + props.type);
                     sideScroll(container, 'left', 8, 400, 15);
                 }}><img src={arrowemblem} className={'arrow'}/>
                 </button>
 
 
                 <button className={'listentertaiment front'} id={"slide"} onClick={() => {
-                    let container = document.getElementById(props.titulo);
+                    let container = document.getElementById(props.titulo + props.type);
                     sideScroll(container, 'right', 8, 400, 15);
                 }}><img src={arrowemblem} className={'arrow'}/>
                 </button>
@@ -71,7 +72,7 @@ const Line20 = (props) => {
                 {(() => {
                     if (props.type === "Movie") {
 
-                        return <li className="scroll-box col-12" id={props.titulo}>
+                        return <li className="scroll-box col-12" id={props.titulo + props.type}>
 
                             {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path}
                                                                                      text={item.overview}
@@ -83,7 +84,7 @@ const Line20 = (props) => {
 
                     if (props.type === 'Serie') {
 
-                        return <li className="scroll-box col-12" id={props.titulo}>
+                        return <li className="scroll-box col-12" id={props.titulo + props.type}>
 
                             {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path}
                                                                                      text={item.overview}
@@ -95,13 +96,15 @@ const Line20 = (props) => {
 
                     if (props.type === 'Book') {
 
-                        return <li className="scroll-box col-12" id={props.titulo}>
+
+
+                        return <li className="scroll-box col-12" id={props.titulo + props.type}>
 
                             {props.info.map((item) =>
 
 
                                 <MiniatureEntertaiment
-                                    img={item.imageLinks.thumbnail}
+                                    img={item.imageLinks === undefined ? poster_default : item.imageLinks.thumbnail}
                                     text={item.description}
                                     title={item.title}
                                     id={item.industryIdentifiers !== undefined ? item.industryIdentifiers[0].identifier : 'not found'}

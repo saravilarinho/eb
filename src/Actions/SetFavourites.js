@@ -1,6 +1,6 @@
 //import authTypes from './auth.types'
 
-export const SetFavourites = (movies, series, books) => {
+export const SetFavourites = (movies, series, books,id) => {
 
     return (dispatch, getState) => {
 
@@ -8,7 +8,8 @@ export const SetFavourites = (movies, series, books) => {
               type: 'ADD_FAVOURITE',
               movies: movies,
               books: books,
-              series: series
+              series: series,
+              documentid:id,
           })
     }
 

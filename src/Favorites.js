@@ -12,6 +12,7 @@ class Favorites extends React.Component {
         this.state = {
             movies: 0,
             series: 0,
+            books: 0
         }
     }
 
@@ -48,6 +49,15 @@ class Favorites extends React.Component {
 
         }
 
+
+        if (this.props.user.favorites.books.length > 0 && this.state.books === 0) {
+            this.props.FetchActionFavorites(this.props.user.favorites.books, 'Books' );
+            this.setState({books: 1});
+
+        }
+
+
+
         return (
 
 
@@ -74,8 +84,14 @@ class Favorites extends React.Component {
 
 
 
+              {this.state.books !== 0 && this.props.user.favorites.books.length === this.props.user.favorites.books_content.length ?
 
+                      <HorizontalList titulo={'Favorite Books'} info={this.props.user.favorites.books_content} type={'Book'}
+                                      listacess={'yes'}
+                                      content={'Favorites'}/>
 
+                      : this.Loading()
+              }
             </div>
         )
 

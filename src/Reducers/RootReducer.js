@@ -13,7 +13,8 @@ const initialState = {
             },
             series_content: {
                 results: []
-            }
+            },
+            books_content: []
         }
     },
 
@@ -416,14 +417,29 @@ const rootReducer = (state = initialState, action) => {
                     }
                 }
             }
+        }
 
+        if(action.type_content === 'Books'){
 
+            return{
+            ...state,
+                users: {
+                ...state.users,
+                    favorites: {
+                    ...state.users.favorites,
+                        books_content: [
+                            ...state.users.favorites.books_content, action.result
+                        ]
+                        }
+                    }
+                }
+            }
 
 
         }
 
 
-    }
+
 
 
 

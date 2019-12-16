@@ -39,7 +39,6 @@ const SignUp = () => {
                          books:[]
                       })
                           .then(function (){
-
                               console.log("ja fez sign up")
                               }
                           )
@@ -55,6 +54,9 @@ const SignUp = () => {
         } else {
             console.log("password does not match")
         }
+
+
+
     };
 
 

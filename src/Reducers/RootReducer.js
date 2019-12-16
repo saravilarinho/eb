@@ -107,6 +107,47 @@ const rootReducer = (state = initialState, action) => {
         }
     }
 
+    if(action.type === 'CLEAR_DASH'){
+
+        if(action.type_content === 'Movies'){
+            return{
+                ...state,
+                users: {...state.users,
+                    favorites: {...state.users.favorites,
+                    movies_content: {...state.users.favorites.movies_content,
+                    results: [] }}
+                }
+
+            }
+        }
+
+        if(action.type_content === 'Series'){
+            return{
+                ...state,
+                users: {...state.users,
+                    favorites: {...state.users.favorites,
+                        series_content: {...state.users.favorites.series_content,
+                            results: [] }}
+                }
+
+            }
+        }
+
+        if(action.type_content === 'Books'){
+            return{
+                ...state,
+                users: {...state.users,
+                    favorites: {...state.users.favorites,
+                        books_content: []}
+                }
+
+            }
+        }
+
+
+    }
+
+
     if (action.type === 'FETCH_API') {
 
         if (action.content === 'search') {

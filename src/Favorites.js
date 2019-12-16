@@ -34,12 +34,14 @@ class Favorites extends React.Component {
 
     };
 
+
+
     render() {
+
 
         if (this.props.user.favorites.movies.length > 0 && this.state.movies === 0) {
             this.props.FetchActionFavorites(this.props.user.favorites.movies, 'Movies', 1);
             this.setState({movies: 1});
-
         }
 
 
@@ -65,11 +67,9 @@ class Favorites extends React.Component {
               <h1 className="titulos pt-3 pb-3">FAVORITES</h1>
 
 
-              {this.state.movies !== 0 && this.props.user.favorites.movies.length === this.props.user.favorites.movies_content.results.length ?
+              {this.state.movies !== 0 && this.props.user.favorites.movies_content.results.length <= 20 ?
 
                   <div>
-
-
 
                       <HorizontalList titulo={'Favorite Movies'} info={this.props.user.favorites.movies_content} type={'Movie'}
                                   listacess={'yes'}
@@ -80,22 +80,30 @@ class Favorites extends React.Component {
               }
 
 
-              {this.state.series !== 0 && this.props.user.favorites.series.length === this.props.user.favorites.series_content.results.length ?
+              {this.state.series !== 0 && this.props.user.favorites.series_content.results.length <= 20 ?
+
+                  <div>
 
                   <HorizontalList titulo={'Favorite Series'} info={this.props.user.favorites.series_content} type={'Serie'}
                                   listacess={'yes'}
                                   content={'Favorites'}/>
+
+                  </div>
 
                   : this.Loading()
               }
 
 
 
-              {this.state.books !== 0 && this.props.user.favorites.books.length === this.props.user.favorites.books_content.length ?
+              {this.state.books !== 0 && this.props.user.favorites.books_content.length <= 20 ?
+
+                  <div>
 
                       <HorizontalList titulo={'Favorite Books'} info={this.props.user.favorites.books_content} type={'Book'}
                                       listacess={'yes'}
                                       content={'Favorites'}/>
+
+                  </div>
 
                       : this.Loading()
               }
@@ -121,14 +129,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchtoProps = (dispatch) => {
     return {
-        FetchActionFavorites: (IDS, type_content, page) => { dispatch(FetchActionFavorites(IDS,type_content, page)) }
-
+        FetchActionFavorites: (IDS, type_content, page) => { dispatch(FetchActionFavorites(IDS,type_content, page)) },
     }
     };
-
-
-
-
 
 
 export default connect(mapStateToProps, mapDispatchtoProps)(Favorites);

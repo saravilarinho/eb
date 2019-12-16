@@ -8,6 +8,7 @@ import arrowright from './Images/arrow_emblem.svg';
 import {Link} from 'react-router-dom';
 import poster_default from  './Images/dafaul_poster.png'
 import {FetchActionFavorites} from "./Actions/FetchActionFavorites";
+import {Clear_dashboard} from "./Actions/Clear_dashboard";
 
 
 class List extends React.Component {
@@ -17,6 +18,8 @@ class List extends React.Component {
         this.state = {
             page_update: this.props.match.params.page,
             movies: 0,
+            series: 0,
+            books:0
         }
     }
 
@@ -27,30 +30,7 @@ class List extends React.Component {
         const Content = this.props.match.params.content;
         let page = this.props.match.params.page;
 
-
-
-       /* if (this.props.user.favorites.movies.length > 0 && this.state.movies === 0) {
-            this.props.FetchActionFavorites(this.props.user.favorites.movies, 'Movies', 1);
-            this.setState({movies: 1});
-
-        }
-
-
-        if (this.props.user.favorites.series.length > 0 && this.state.series === 0) {
-            this.props.FetchActionFavorites(this.props.user.favorites.series, 'Series', 1 );
-            this.setState({series: 1});
-
-        }
-
-
-        if (this.props.user.favorites.books.length > 0 && this.state.books === 0) {
-            this.props.FetchActionFavorites(this.props.user.favorites.books, 'Books', 1 );
-            this.setState({books: 1});
-
-        }*/
-
-
-
+        this.props.Clear_dashboard('Movies');
 
         switch (Type) {
             case 'Movie':
@@ -64,7 +44,6 @@ class List extends React.Component {
                     case 'Popular':
                         this.props.FetchAPI("https://api.themoviedb.org/3/movie/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + page, 'popular', 'movies');
                         break;
-
                     default:
                         this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + Content + "%&page="+page+"&include_adult=false", 'search', 'movies');
 
@@ -109,12 +88,18 @@ class List extends React.Component {
                 break;
 
         }
-
-
     }
 
 
+
+
     PageMove = (direction) => {
+
+        this.props.Clear_dashboard('Movies');
+        this.props.Clear_dashboard('Series');
+        this.props.Clear_dashboard('Books');
+
+
 
         const Type = this.props.match.params.type;
         const Content = this.props.match.params.content;
@@ -169,7 +154,10 @@ class List extends React.Component {
                         this.props.FetchAPI("https://api.themoviedb.org/3/tv/popular?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&page=" + this.state.page_update, 'popular', 'series');
                         this.setState({page_update: this.state.page_update});
                         break;
-
+                    case 'Favorites':
+                        this.props.FetchActionFavorites(this.props.user.favorites.series, 'Series', this.state.page_update);
+                        this.setState({page_update: this.state.page_update});
+                        break;
                     default:
                         this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + Content + "&page=" + this.state.page_update, 'search', 'series');
                         this.setState({page_update: this.state.page_update});
@@ -238,6 +226,9 @@ class List extends React.Component {
                     case 'Popular':
                         info = this.props.series.popular;
                         break;
+                    case 'Favorites':
+                        info = this.props.user.favorites.series_content;
+                        break;
                     default:
                         info = this.props.search.series;
                         break
@@ -301,6 +292,16 @@ class List extends React.Component {
         if (this.props.user.login !== false && this.props.user.favorites.movies.length > 0 && this.state.movies === 0 && Type === 'Movie' && Content=== 'Favorites'){
             this.props.FetchActionFavorites(this.props.user.favorites.movies, 'Movies', this.props.match.params.page);
             this.setState({movies: 1});
+        }
+
+        if (this.props.user.login !== false && this.props.user.favorites.series.length > 0 && this.state.series === 0 && Type === 'Serie' && Content=== 'Favorites'){
+            this.props.FetchActionFavorites(this.props.user.favorites.series, 'Series', this.props.match.params.page);
+            this.setState({series: 1});
+        }
+
+        if (this.props.user.login !== false && this.props.user.favorites.books.length > 0 && this.state.books === 0 && Type === 'Book' && Content=== 'Favorites'){
+            this.props.FetchActionFavorites(this.props.user.favorites.books, 'Books', this.props.match.params.page);
+            this.setState({books: 1});
         }
 
         let info = this.CheckContentOfLisit();
@@ -420,9 +421,11 @@ const mapStateToProps = (state) => {
 const mapDispatchtoProps = (dispatch) => {
     return {
         FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content)),
-        FetchActionFavorites: (IDS, type_content, page) => { dispatch(FetchActionFavorites(IDS,type_content, page)) }
+        FetchActionFavorites: (IDS, type_content, page) => { dispatch(FetchActionFavorites(IDS,type_content, page))},
+        Clear_dashboard: (type_content) => {dispatch(Clear_dashboard(type_content))}
 
-}
+
+    }
 
 };
 

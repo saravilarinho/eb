@@ -28,15 +28,13 @@ const SignIn = (props) => {
 
     const onFullfilled = (user) => {
 
-        console.log('Bem-vindo de volta', props.users.email);
+       alert('Bem-vindo de volta' + props.users.email);
 
     };
 
     const onRejected = (err) => {
 
         console.log(err.message);
-
-        return alert(err.message)
     };
 
 
@@ -112,7 +110,7 @@ const SignIn = (props) => {
 
             {props.users.login !== false &&
 
-                <Redirect to={'./Homepage'} />
+                <Redirect to={'./Homepage'}/>
                 
             }
 

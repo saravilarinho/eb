@@ -14,7 +14,8 @@ export const FetchAPIBooks = (API, content, type_content) => {
 
                         if (Array.isArray(book.book_details) === true) {
 
-                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY').then((response) => {
+                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyCMhPWtvzMZf6RFRR7xJ69I9UIBEHT80Gk')
+                                .then((response) => {
 
                                 if (response.totalItems > 0) {
 

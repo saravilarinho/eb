@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Styles/Styles.css';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 import {auth} from './Config/fbConfig';
 
 import * as firebase from "firebase/app";
@@ -10,6 +10,7 @@ import "firebase/firestore";
 
 
 const SignUp = () => {
+
 
     let db = firebase.firestore();
 
@@ -37,9 +38,11 @@ const SignUp = () => {
                          series:[],
                          books:[]
                       })
-                          .then(function(docRef) {
-                              console.log("lista feita");
-                          })
+                          .then(function (){
+
+                              console.log("ja fez sign up")
+                              }
+                          )
                           .catch(function(error) {
                               console.error("Error adding document: ", error);
                           });
@@ -52,42 +55,49 @@ const SignUp = () => {
         } else {
             console.log("password does not match")
         }
-
-
     };
+
+
 
 
     return (
         <div className={'divform pr-5 pl-5'}>
 
-            <Form className={'formulario pr-5 pl-5'}>
-                <FormGroup className={'col-md-4 pt-4'}>
-                    <Label for="exampleEmail">E-mail</Label>
-                    <Input type="email" name="email" id="exampleEmail" value={email}
-                           onChange={e => setEmail(e.target.value)} placeholder="E-mail"/>
-                </FormGroup>
 
-                <FormGroup className={'col-md-4 pt-4'}>
-                    <Label for="examplePassword">Password</Label>
-                    <Input type="password" name="password" id="examplePassword" value={password}
-                           onChange={e => setPassword(e.target.value)} placeholder="Password"/>
-                </FormGroup>
+            <section>
+                <Form className={'formulario pr-5 pl-5'}>
+                    <FormGroup className={'col-md-4 pt-4'}>
+                        <Label for="exampleEmail">E-mail</Label>
+                        <Input type="email" name="email" id="exampleEmail" value={email}
+                               onChange={e => setEmail(e.target.value)} placeholder="E-mail"/>
+                    </FormGroup>
 
-                <FormGroup className={'col-md-4 pt-4'}>
-                    <Label for="examplePassword">Password Confirmation</Label>
-                    <Input type="password" name="password" id="examplePassword" value={passwordConfirmation}
-                           onChange={e => setPasswordConfirmation(e.target.value)} placeholder="Password Confirmation"/>
-                </FormGroup>
+                    <FormGroup className={'col-md-4 pt-4'}>
+                        <Label for="examplePassword">Password</Label>
+                        <Input type="password" name="password" id="examplePassword" value={password}
+                               onChange={e => setPassword(e.target.value)} placeholder="Password"/>
+                    </FormGroup>
 
-                <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignUp}>SIGN UP</Button>
+                    <FormGroup className={'col-md-4 pt-4'}>
+                        <Label for="examplePassword">Password Confirmation</Label>
+                        <Input type="password" name="password" id="examplePassword" value={passwordConfirmation}
+                               onChange={e => setPasswordConfirmation(e.target.value)}
+                               placeholder="Password Confirmation"/>
+                    </FormGroup>
 
-            </Form>
+                    <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignUp}>SIGN UP</Button>
 
-            <div className={"aindanao  mt-5  pr-5 pl-5"}>
-                <p> Already have an account?
-                    <Link to={"/SignIn"} className={'registate '}>Sign In!</Link>
-                </p>
-            </div>
+                </Form>
+
+                <div className={"aindanao  mt-5  pr-5 pl-5"}>
+                    <p> Already have an account?
+                        <Link to={"/SignIn"} className={'registate '}>Sign In!</Link>
+                    </p>
+                </div>
+
+            </section>
+
+
 
         </div>
 

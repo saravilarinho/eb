@@ -4,6 +4,11 @@ import MiniatureEntertaiment from './MiniatureEntertaiment'
 import arrowemblem from "../Images/arrow_emblem.svg"
 import {Link} from 'react-router-dom'
 import poster_default from  '../Images/dafaul_poster.png'
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import {connect} from 'react-redux';
+import {SetFavourites} from "../Actions/SetFavourites";
 
 
 const Line20 = (props) => {
@@ -22,6 +27,29 @@ const Line20 = (props) => {
             }
         }, speed);
     }
+
+    const GetAndCheckUserFavorites = () => {
+        const db = firebase.firestore();
+
+
+        db.collection("favorites").where("id", "==",props.user.uid)
+            .get()
+            .then((querySnapshot) => {
+
+                if (querySnapshot.docs.length > 0) {
+
+                    querySnapshot.forEach((doc) => {
+                        let data = doc.data();
+                        props.SetFavourites(data.movies, data.series, data.books, doc.id)
+
+                    });
+                }
+
+            })
+
+
+    };
+
 
 
     return (
@@ -79,7 +107,7 @@ const Line20 = (props) => {
                             {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path}
                                                                                      text={item.overview}
                                                                                      title={item.title} id={item.id}
-                                                                                     type={props.type}/>)}
+                                                                                     type={props.type} func={GetAndCheckUserFavorites}/> )}
 
                         </li>
                     }
@@ -91,7 +119,7 @@ const Line20 = (props) => {
                             {props.info.results.map((item) => <MiniatureEntertaiment img={item.poster_path}
                                                                                      text={item.overview}
                                                                                      title={item.name} id={item.id}
-                                                                                     type={props.type}/>)}
+                                                                                     type={props.type} func={GetAndCheckUserFavorites}/>)}
 
                         </li>
                     }
@@ -110,7 +138,7 @@ const Line20 = (props) => {
                                     text={item.description}
                                     title={item.title}
                                     id={item.industryIdentifiers !== undefined ? item.industryIdentifiers[0].identifier : 'not found'}
-                                    type={props.type}/>
+                                    type={props.type} func={GetAndCheckUserFavorites}/>
                             )}
 
                         </li>
@@ -130,5 +158,22 @@ const Line20 = (props) => {
     );
 
 };
+const mapStateToProps = (state) => {
+    return {
+        user: state.users
 
-export default Line20;
+    }
+};
+
+const mapDispatchtoProps = (dispatch) => {
+    return {
+
+        SetFavourites: (movies, series, books, id) => {
+            dispatch(SetFavourites(movies, series, books, id))
+        }
+    }
+
+};
+
+
+export default connect(mapStateToProps,mapDispatchtoProps)(Line20);

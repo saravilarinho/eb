@@ -9,6 +9,10 @@ import {Link} from 'react-router-dom';
 import poster_default from  './Images/dafaul_poster.png'
 import {FetchActionFavorites} from "./Actions/FetchActionFavorites";
 import {Clear_dashboard} from "./Actions/Clear_dashboard";
+import {SetFavourites} from "./Actions/SetFavourites";
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
 
 
 class List extends React.Component {
@@ -92,6 +96,27 @@ class List extends React.Component {
 
 
 
+    GetAndCheckUserFavorites = () => {
+        const db = firebase.firestore();
+
+
+        db.collection("favorites").where("id", "==",this.props.user.uid)
+            .get()
+            .then((querySnapshot) => {
+
+                if (querySnapshot.docs.length > 0) {
+
+                    querySnapshot.forEach((doc) => {
+                        let data = doc.data();
+                        this.props.SetFavourites(data.movies, data.series, data.books, doc.id)
+
+                    });
+                }
+
+            })
+
+
+    };
 
     PageMove = (direction) => {
 
@@ -326,14 +351,14 @@ class List extends React.Component {
                     {Type === 'Movie' && info !== null &&
 
                     info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                      title={item.title} id={item.id} type={"Movie"}/>)
+                                                                      title={item.title} id={item.id} type={"Movie"} func={this.GetAndCheckUserFavorites}/>)
                     }
 
 
                     {Type === 'Serie' && info !== null &&
 
                     info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                      title={item.name} id={item.id} type={'Serie'}/>)
+                                                                      title={item.name} id={item.id} type={'Serie'} func={this.props.GetAndCheckUserFavorites}/>)
                     }
 
 
@@ -345,7 +370,7 @@ class List extends React.Component {
 
                                                       text={item.volumeInfo.description}
                                                                      title={item.volumeInfo.title} id={Array.isArray(item.volumeInfo.industryIdentifiers) === true?
-                            item.volumeInfo.industryIdentifiers[0].identifier : 0} type={'Book'}/>
+                            item.volumeInfo.industryIdentifiers[0].identifier : 0} type={'Book'}  func={this.props.GetAndCheckUserFavorites}/>
                     })
 
 
@@ -422,7 +447,10 @@ const mapDispatchtoProps = (dispatch) => {
     return {
         FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content)),
         FetchActionFavorites: (IDS, type_content, page) => { dispatch(FetchActionFavorites(IDS,type_content, page))},
-        Clear_dashboard: (type_content) => {dispatch(Clear_dashboard(type_content))}
+        Clear_dashboard: (type_content) => {dispatch(Clear_dashboard(type_content))},
+        SetFavourites: (movies, series, books, id) => {
+            dispatch(SetFavourites(movies, series, books, id))
+        }
 
 
     }

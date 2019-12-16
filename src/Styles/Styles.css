@@ -66,6 +66,21 @@ body {
     color: #FFD015;
     font-size: 25px !important;
     transition: all .2s ease-in-out;
+}
+
+
+.nome{
+    text-underline-mode: none;
+    text-underline: none !important;
+    padding: 1.5vw !important;
+    text-decoration: none !important;
+    color: white;
+    font-size: 20px;
+    display: inline;
+}
+
+.nome:hover{
+    color: #FFD015;
 
 }
 
@@ -428,11 +443,10 @@ margin-left: 2rem !important;
         display: block;
         padding: 20px 80px 20px 20px !important;
         color: white !important;
-        margin-left: -40px !important;
         background: rgb(8, 6, 6) !important;
         /* rgb(28, 27, 27) !important*/
         margin-right: 3vw !important;
-        margin-top: 5px !important;
+        margin-top: -10px !important;
         -webkit-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);
         -moz-box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);
         box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.68);

@@ -103,7 +103,7 @@ function Navbar2(props) {
                     {props.users.login === true &&
 
                     <span className="nav-item dropdown p-3 col-12 col-lg-6 ">
-                        <p className={"links col-md-1"}>{props.users.email}</p>
+                        <p className={"nome col-md-1"}>{props.users.email}</p>
 
                         <span className="dropdown-menu opa " aria-labelledby="navbarDropdown">
 

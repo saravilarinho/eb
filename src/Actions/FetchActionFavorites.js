@@ -15,6 +15,10 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
 
         for (let x = start; x <= end; x++) {
 
+            console.log(IDS.length);
+            console.log(x);
+
+
 
             if (type_content === "Movies") {
 
@@ -55,12 +59,18 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
 
 
             //CONDIÇÃO PARA MAIS DE 20 FILMES FAVORITOS
-            if (IDS.length < 20 && x >= IDS.length-1) {
+            if (IDS.length > 20 && x >= IDS.length - 1) {
+                console.log("ta a dar merda ola");
+                console.log(page);
                 x = 20;
+
             }
 
 
-        }}
+        }
+
+
+        }
 
 
     }

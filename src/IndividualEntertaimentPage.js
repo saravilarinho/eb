@@ -130,7 +130,7 @@ class IndividualEntertaimentPage extends React.Component {
                     this.props.user.favorites.books.map(item => {
                         if (parseInt(item) !== parseInt(this.props.match.params.identertaiment)) {
 
-                            newboos.push('"'+item+'"')
+                            newboos.push(parseInt(item))
                         }
                     });
 
@@ -183,7 +183,7 @@ class IndividualEntertaimentPage extends React.Component {
 
                     let newbooks = this.props.user.favorites.books;
 
-                    newbooks.push(parseInt(this.props.match.params.identertaiment));
+                    newbooks.push(this.props.match.params.identertaiment);
 
                     return updatedocument.update({
 

@@ -97,7 +97,7 @@ const MiniatureEntertaiment = (props) => {
                    props.user.favorites.books.map(item => {
                         if (parseInt(item) !== parseInt(id)) {
 
-                            newboos.push('"'+item+'"')
+                            newboos.push(parseInt(item))
                         }
                     });
 
@@ -150,7 +150,7 @@ const MiniatureEntertaiment = (props) => {
 
                     let newbooks = props.user.favorites.books;
 
-                    newbooks.push(parseInt(id));
+                    newbooks.push(id);
 
                     return updatedocument.update({
 

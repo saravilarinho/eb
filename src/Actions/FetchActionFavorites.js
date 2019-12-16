@@ -13,8 +13,6 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
         console.log(end);
 
 
-
-
         for (let x = start; x <= end; x++) {
 
 
@@ -33,9 +31,6 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
                                 type_content: type_content
                             }))
                 }
-
-
-
 
             }
 
@@ -70,26 +65,11 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
                                 type_content: type_content
                             })
                         )
-
                 }
-            
                 // {console.log(result.items[0].volumeInfo)}
                 //nova key: AIzaSyCMhPWtvzMZf6RFRR7xJ69I9UIBEHT80Gk
                 //antiga key: AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY
             }
-
-
-            //CONDIÇÃO PARA MAIS DE 20 FILMES FAVORITOS
-           /* if (IDS.length < (page * 20) && x >= IDS.length - 1) {
-                x = 20;
-            }*/
-
-
         }
-
-
-
-
-
     }
 };

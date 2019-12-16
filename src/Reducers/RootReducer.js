@@ -4,6 +4,8 @@ const initialState = {
     users: {
         login: false,
         email: null,
+        uid:'',
+        documentid:'',
         favorites: {
             movies: [],
             series: [],
@@ -70,12 +72,14 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
 
     if (action.type === 'SIGN_IN') {
+
         return {
             ...state,
             users: {
                 ...state.users,
                 login: true,
-                email: action.email
+                email: action.email,
+                uid:action.user.uid
             }
         }
     }
@@ -359,6 +363,7 @@ const rootReducer = (state = initialState, action) => {
             ...state,
             users: {
                 ...state.users,
+                documentid:action.documentid,
                 favorites: {
                     ...state.users.favorites,
                     movies: action.movies,

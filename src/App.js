@@ -39,7 +39,7 @@ function App(props) {
 
                     querySnapshot.forEach(function (doc) {
                         let data = doc.data();
-                        props.SetFavourites(data.movies, data.series, data.books)
+                        props.SetFavourites(data.movies, data.series, data.books,doc.id)
                     });
                 } else {
                     //se nao existir uma coleção já criada, cria uma:
@@ -120,8 +120,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchStateToProps = dispatch => ({
-    SetFavourites: (movies, series, books) => {
-        dispatch(SetFavourites(movies, series, books))
+    SetFavourites: (movies, series, books,id) => {
+        dispatch(SetFavourites(movies, series, books,id))
     },
     setCurrentUser: (user) => {
         dispatch(SetCurrentUser(user))

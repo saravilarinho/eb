@@ -7,7 +7,6 @@ export const FetchAPI = (API, content, type_content) => {
         ConnectAPI(API).then((response) => {
 
                 (console.log('api connect'));
-            console.log(response);
                 dispatch({
                     type: 'FETCH_API',
                     result: response,

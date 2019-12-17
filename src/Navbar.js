@@ -112,12 +112,6 @@ function Navbar2(props) {
                                 <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
                         Favourites</a>
 
-
-                            <a className="dropdown-item" >
-
-                                <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>
-                        Settings</a>
-
                             <a className="dropdown-item" onClick={() =>{props.clearCurrentUser(); auth.signOut(); window.location.replace('/Homepage');} } >
 
                                 <img alt={'arrowemblem'}  src={arrowemblem} className={'d-inline arrowemblem'} width={30}/>

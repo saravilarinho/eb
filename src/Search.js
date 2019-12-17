@@ -36,7 +36,7 @@ class Movies extends React.Component {
         this.state.term = word;
         this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
         this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
-        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&maxResults=20&key=AIzaSyD-zklYb-4hfvnS0K4AVXp08nLn_eW3Wlg', 'search', 'books');
+        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&maxResults=20&key=AIzaSyAAeXbPJxjdvxtcFPStqTV5sYK1GOLi8VQ', 'search', 'books');
 
 
     }
@@ -49,7 +49,7 @@ class Movies extends React.Component {
 
             this.props.FetchAPI("https://api.themoviedb.org/3/search/movie?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "%&page=1&include_adult=false", 'search', 'movies');
             this.props.FetchAPI("https://api.themoviedb.org/3/search/tv?api_key=9af2cb9433dbe1e985ec3f026427fe3d&language=en-US&query=" + word + "&page=1", 'search', 'series');
-            this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&key=AIzaSyD-zklYb-4hfvnS0K4AVXp08nLn_eW3Wlg', 'search', 'books');
+            this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + word + '&key=AIzaSyAAeXbPJxjdvxtcFPStqTV5sYK1GOLi8VQ', 'search', 'books');
             this.setState({term: word})
         }
 

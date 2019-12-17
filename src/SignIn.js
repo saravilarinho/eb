@@ -12,17 +12,12 @@ const SignIn = (props) => {
 
     const [password, setPassword] = useState('');
 
-
     const handleSignIn = (e) => {
-
-
         e.preventDefault();
         auth
             .signInWithEmailAndPassword(email, password)
             .then(user => {onFullfilled(user)})
             .catch(err => {onRejected(err)});
-
-
     };
 
 
@@ -36,8 +31,6 @@ const SignIn = (props) => {
 
         console.log(err.message);
     };
-
-
 
     useEffect(() => {
 
@@ -60,8 +53,6 @@ const SignIn = (props) => {
 
 
     return (
-
-
         <div className={'divform  pr-5 pl-5'}>
 
 
@@ -97,15 +88,7 @@ const SignIn = (props) => {
             }
 
             {props.users.login !== false &&
-
-                <Redirect to={'./Homepage'}/>
-                
-            }
-
-
-
-
-
+            <Redirect to={'./Homepage'}/> }
                 </div>
     )
 };

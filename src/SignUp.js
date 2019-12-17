@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './Styles/Styles.css';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import {Link, Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {auth} from './Config/fbConfig';
 
 import * as firebase from "firebase/app";
@@ -39,7 +39,6 @@ const SignUp = () => {
                          books:[]
                       })
                           .then(()=>{
-                              console.log("ja fez sign up");
                               window.location.replace('/Homepage');
                               }
                           )
@@ -55,13 +54,7 @@ const SignUp = () => {
         } else {
             console.log("password does not match")
         }
-
-
-
     };
-
-
-
 
     return (
         <div className={'divform pr-5 pl-5'}>

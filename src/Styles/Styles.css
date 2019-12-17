@@ -777,6 +777,19 @@ li {
 }
 
 
+.feedbackestilo{
+    font-size: 15px;
+    margin-left: 3.5vw !important;
+    padding-bottom: 10px !important;
+    color: red;
+}
+
+.labelnote{
+    font-size: 15px;
+    padding-bottom: 10px !important;
+}
+
+
 .arrowemblem {
 
     position: relative;

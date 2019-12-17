@@ -30,6 +30,15 @@ const SignIn = (props) => {
     const onRejected = (err) => {
 
         console.log(err.message);
+
+        if (err.message === "There is no user record corresponding to this identifier. The user may have been deleted.") {
+            document.getElementById("feedback").innerHTML = "E-mail does not exist or is misspelt."
+        }
+        if(err.message === "The password is invalid or the user does not have a password."){
+            document.getElementById("feedback").innerHTML = "Password is invalid."
+        }
+
+
     };
 
     useEffect(() => {
@@ -78,6 +87,8 @@ const SignIn = (props) => {
                     <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignIn}>SIGN IN</Button>
 
                 </Form>
+
+                <p className={'feedbackestilo'} id="feedback"> </p>
 
                 <div className={"aindanao mt-5 pr-5 pl-5"}>
                     <p> Don't have an account?

@@ -33,7 +33,7 @@ const SignUp = () => {
                     console.log('utilizador criado');
 
                     db.collection("favorites").add({
-                          id: user.user.uid,
+                         id: user.user.uid,
                          movies:[],
                          series:[],
                          books:[]
@@ -44,15 +44,17 @@ const SignUp = () => {
                           )
                           .catch(function(error) {
                               console.error("Error adding document: ", error);
+                              document.getElementById("feedback").innerHTML = "Sorry, there was an error during sign up. Try again."
                           });
 
 
 
                 })
-                .catch(err => console.error(err))
+                .catch(err => document.getElementById("feedback").innerHTML = "Sorry, your password or e-mail are not valid. Try again.")
 
         } else {
-            console.log("password does not match")
+            console.log("password does not match");
+            document.getElementById("feedback").innerHTML = 'Password does not match Password Confirmation'
         }
     };
 
@@ -69,7 +71,8 @@ const SignUp = () => {
                     </FormGroup>
 
                     <FormGroup className={'col-md-4 pt-4'}>
-                        <Label for="examplePassword">Password</Label>
+                        <Label for="examplePassword">Password <small className={'labelnote'}>(At least 6 characters)</small> </Label>
+
                         <Input type="password" name="password" id="examplePassword" value={password}
                                onChange={e => setPassword(e.target.value)} placeholder="Password"/>
                     </FormGroup>
@@ -84,6 +87,7 @@ const SignUp = () => {
                     <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignUp}>SIGN UP</Button>
 
                 </Form>
+                <p className={'feedbackestilo'} id="feedback"> </p>
 
                 <div className={"aindanao  mt-5  pr-5 pl-5"}>
                     <p> Already have an account?

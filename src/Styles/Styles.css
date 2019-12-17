@@ -488,6 +488,8 @@ margin-left: 2rem !important;
     background-color: #FFD015;
     border: none;
     border-radius: 15px;
+    text-decoration: none!important;
+    color: black;
 
 }
 

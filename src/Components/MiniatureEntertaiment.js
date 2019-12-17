@@ -207,9 +207,31 @@ const MiniatureEntertaiment = (props) => {
                             <Link to={'/Individual/'+props.type+'s/' + props.id} className={"col-4 col-lg-3 d-flex align-items-center"}>
                                 <img className={'img-fluid '} src={eyeicon}/>
                             </Link>
+
+                            {console.log(props.id+"-"+props.title)}
+
+
                             <img className={"col-5 col-lg-4 img-fluid d-flex align-items-center"} src={GetLikeUnlikeInfo(props.id, props.type)} onClick={()=>{
-                                AddandDeleteHeart(props.id, props.type);
-                               props.func();
+
+
+                                
+                                    if (/[a-zA-Z]/.test(props.id)) {
+
+
+                                        if (props.id.includes('X') !== true && props.id.includes('x') !== true) {
+
+                                            alert('Letter Found' + props.id )
+
+
+                                        }
+                                        
+                                    }
+
+
+
+
+                                /*AddandDeleteHeart(props.id, props.type);
+                               props.func();*/
                             }}/>
                         </div>
                     </div>

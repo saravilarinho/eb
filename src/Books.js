@@ -1,12 +1,9 @@
 import React from 'react';
 import './Styles/Styles.css'
 import HorizontalList from './Components/HorizontalList'
-import {Link} from "react-router-dom";
-import arrowemblem from "./Images/arrow_emblem.svg";
 import './Styles/Styles.css';
 import {connect} from 'react-redux';
 import {FetchAPIBooks} from "./Actions/FetchActionBooks";
-import Logo from './Images/Logo.png';
 
 
 class Books extends React.Component {
@@ -51,38 +48,36 @@ class Books extends React.Component {
 
             <div>
                 <h1 className="titulos pt-3 pb-3">BOOKS</h1>
-                 <h2 className={'titulos3 d-inline'}> ALL OF THE BEST SELLERS ACCORDING TO NEW YORK TIMES...</h2>
 
-
-
+                <h2 className={'titulos3 d-inline'}> ALL OF THE BEST SELLERS ACCORDING TO NEW YORK TIMES...</h2>
 
                 <section>
                     {this.props.young_adult.length > 0 ?
 
-                        <HorizontalList titulo={'Young Adult...'} info={this.props.young_adult} type={'Book'}
-                                        listacess={'no'}
-                                        content={'YoungAdult'}/> : this.Loading('Young Adult')}
+                        <HorizontalList titulo={'Young Adult...'} info={this.props.young_adult} type={'Book'} listacess={'no'} content={'YoungAdult'}/>
+
+                        : this.Loading('Young Adult')}
 
                     {this.props.hardcover_fiction.length > 0 ?
 
-                        <HorizontalList titulo={'Fiction ...'} info={this.props.hardcover_fiction} type={'Book'}
-                                        listacess={'no'}
-                                        content={'Fiction'}/> : this.Loading('Fiction')}
+                        <HorizontalList titulo={'Fiction ...'} info={this.props.hardcover_fiction} type={'Book'} listacess={'no'} content={'Fiction'}/>
+
+                        : this.Loading('Fiction')}
 
                     {this.props.hardcover_nonfiction.length > 0 ?
 
-                        <HorizontalList titulo={'NonFiction ...'} info={this.props.hardcover_nonfiction} type={'Book'}
-                                        listacess={'no'}
-                                        content={'NonFiction'}/> : this.Loading('NonFiction')}
+                        <HorizontalList titulo={'NonFiction ...'} info={this.props.hardcover_nonfiction} type={'Book'} listacess={'no'} content={'NonFiction'}/> :
+
+                        this.Loading('NonFiction')}
 
                     {this.props.graphic_books_and_manga.length > 0 ?
 
-                        <HorizontalList titulo={'Graphic Novels & Manga ...'} info={this.props.graphic_books_and_manga}
-                                        type={'Book'}
-                                        listacess={'no'}
-                                        content={'GraphicNovels&Manga'}/> : this.Loading('Graphic Novels & Manga')}
+                        <HorizontalList titulo={'Graphic Novels & Manga ...'} info={this.props.graphic_books_and_manga} type={'Book'} listacess={'no'} content={'GraphicNovels&Manga'}/> :
+
+                        this.Loading('Graphic Novels & Manga')}
 
                 </section>
+
             </div>
         )
     }

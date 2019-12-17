@@ -24,8 +24,6 @@ import "firebase/firestore";
 
 function App(props) {
 
-    //R: explicar a existencia da componente App
-
     const GetAndCheckUserFavorites = (user) => {
 
         const db = firebase.firestore();
@@ -83,10 +81,6 @@ function App(props) {
         }
 
     }, [props.users, props.setCurrentUser]);
-
-
-    //R: explicar o que é um use Effect
-
 
     return (
         <Router>

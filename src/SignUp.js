@@ -38,8 +38,9 @@ const SignUp = () => {
                          series:[],
                          books:[]
                       })
-                          .then(function (){
-                              console.log("ja fez sign up")
+                          .then(()=>{
+                              console.log("ja fez sign up");
+                              window.location.replace('/Homepage');
                               }
                           )
                           .catch(function(error) {

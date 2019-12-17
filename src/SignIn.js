@@ -28,7 +28,7 @@ const SignIn = (props) => {
 
     const onFullfilled = (user) => {
 
-       alert('Bem-vindo de volta' + props.users.email);
+        window.location.replace('/Homepage');
 
     };
 
@@ -47,9 +47,6 @@ const SignIn = (props) => {
 
             if (user) {
                 props.setCurrentUser(user);
-
-
-
             }
         });
 
@@ -72,10 +69,6 @@ const SignIn = (props) => {
 
             <section>
                 <Form className={'formulario pr-5 pl-5'}>
-                    {/*<FormGroup className={'col-md-4 pt-4'} >
-                        <Label for="exampleUsername">Username</Label>
-                        <Input type="username" name="username" id="exampleUsername" placeholder=" Username" />
-                    </FormGroup>*/}
 
                     <FormGroup className={'col-md-4 pt-4'}>
                         <Label for="exampleEmail">E-mail</Label>
@@ -90,11 +83,6 @@ const SignIn = (props) => {
                             setPassword(e.target.value)
                         }} placeholder="Password"/>
                     </FormGroup>
-
-                    {/*<FormGroup className={'col-md-4 pt-4'}>
-                        <Label for="exampleFile">Profile Picture</Label>
-                        <Input type="file" name="file" id="exampleFile"/>
-                    </FormGroup>*/}
 
                     <Button className={'col-md-2 mt-4 mb-4 botao pt-1'} onClick={handleSignIn}>SIGN IN</Button>
 

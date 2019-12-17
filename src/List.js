@@ -35,6 +35,8 @@ class List extends React.Component {
         let page = this.props.match.params.page;
 
         this.props.Clear_dashboard('Movies');
+        this.props.Clear_dashboard('Series');
+        this.props.Clear_dashboard('Books');
 
         switch (Type) {
             case 'Movie':
@@ -86,7 +88,7 @@ class List extends React.Component {
                         break;
 
                     default:
-                        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + Content + '&maxResults=20&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
+                        this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + Content + '&maxResults=20&key=AIzaSyCg9iTNiLd_9f9k55g2wrxjJOTpdokFZqs', 'search', 'books');
                         break
                 }
                 break;
@@ -199,7 +201,9 @@ class List extends React.Component {
                     case 'NonFiction':
                         console.log('hi');
                         break;
-
+                    case 'Favorites':
+                        this.props.FetchActionFavorites(this.props.user.favorites.books, 'Books', this.state.page_update);
+                        break;
                     default:
                         this.props.FetchAPI('https://www.googleapis.com/books/v1/volumes?q=' + Content + '&startIndex='+(this.state.page_update -1)*19+'&maxResults=20&key=AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY', 'search', 'books');
                         this.setState({page_update: this.state.page_update});
@@ -270,7 +274,9 @@ class List extends React.Component {
                     case 'NonFiction':
                         console.log('hi');
                         break;
-
+                    case 'Favorites':
+                        info = this.props.user.favorites.books_content;
+                        break;
                     default:
                         info = this.props.search.books;
                         break
@@ -337,7 +343,7 @@ class List extends React.Component {
 
         let page_prev = parseInt(this.props.match.params.page) - 1;
 
-
+        console.log(this.props.user.favorites.books_content);
 
 
         return (
@@ -358,23 +364,28 @@ class List extends React.Component {
                     {Type === 'Serie' && info !== null &&
 
                     info.results.map((item) => <MiniatureEntertaiment img={item.poster_path} text={item.overview}
-                                                                      title={item.name} id={item.id} type={'Serie'} func={this.props.GetAndCheckUserFavorites}/>)
+                                                                      title={item.name} id={item.id} type={'Serie'} func={this.GetAndCheckUserFavorites}/>)
                     }
 
 
-                    {Type === 'Book' && info !== null &&
+
+                   {Type === 'Book'  && info !== null && Content !== 'Favorites' &&
 
                     info.items.map((item) => {
                         console.log(item);
-                        return <MiniatureEntertaiment img={item.volumeInfo.imageLinks === undefined ? poster_default : item.volumeInfo.imageLinks.thumbnail}
-
-                                                      text={item.volumeInfo.description}
+                        return <MiniatureEntertaiment img={item.volumeInfo.imageLinks === undefined ? poster_default : item.volumeInfo.imageLinks.thumbnail} text={item.volumeInfo.description}
                                                                      title={item.volumeInfo.title} id={Array.isArray(item.volumeInfo.industryIdentifiers) === true?
-                            item.volumeInfo.industryIdentifiers[0].identifier : 0} type={'Book'}  func={this.props.GetAndCheckUserFavorites}/>
+                            item.volumeInfo.industryIdentifiers[0].identifier : 0} type={'Book'} func={this.GetAndCheckUserFavorites}/>
                     })
+                   }
 
+                    {Type === 'Book'  && info !== null && Content === 'Favorites' &&
 
-
+                    info.map((item) => {
+                        return <MiniatureEntertaiment img={item.imageLinks === undefined ? poster_default : item.imageLinks.thumbnail} text={item.description}
+                                                      title={item.title} id={Array.isArray(item.industryIdentifiers) === true?
+                            item.industryIdentifiers[0].identifier : 0} type={'Book'} func={this.GetAndCheckUserFavorites}/>
+                    })
                     }
 
 

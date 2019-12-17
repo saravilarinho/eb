@@ -58,7 +58,7 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
 
                 }else {
 
-                    ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + IDS[x] + '&key=AIzaSyA3NQ18-cLUvwl6PFpWG1gLenSazhEs8ms')
+                    ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + IDS[x] + '&key=AIzaSyCg9iTNiLd_9f9k55g2wrxjJOTpdokFZqs')
                         .then((response) => dispatch({
                                 type: 'FETCH_FAVORITES',
                                 result: response.items[0].volumeInfo,

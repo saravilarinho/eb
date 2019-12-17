@@ -92,10 +92,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchStateToProps = dispatch => ({
-    setCurrentUser: (user) => {
-        dispatch(SetCurrentUser(user));
-
-    },
+    setCurrentUser: (user) => {dispatch(SetCurrentUser(user));},
     FetchAPI: (API, content, type_content) => dispatch(FetchAPI(API, content, type_content)),
     BookRandom: (result,content,type_contetn) => {dispatch({type: 'FETCH_API',content: content, type_content: type_contetn,result:result})}
 });

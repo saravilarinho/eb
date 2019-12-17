@@ -58,12 +58,12 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
 
                 }else {
 
-                    ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + IDS[x] + '&key=AIzaSyAiDQzrYuazi4kakyEopdexfMzPXwxqwqw')
-                        .then((response) => dispatch({
+                    ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + IDS[x] + '&key=AIzaSyD-zklYb-4hfvnS0K4AVXp08nLn_eW3Wlg')
+                        .then((response) => response.totalItems > 0  ? dispatch({
                                 type: 'FETCH_FAVORITES',
                                 result: response.items[0].volumeInfo,
                                 type_content: type_content
-                            })
+                            }):console.log(IDS[x])
                         )
                 }
                 // {console.log(result.items[0].volumeInfo)}

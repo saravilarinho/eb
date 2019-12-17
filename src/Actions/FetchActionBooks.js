@@ -21,7 +21,7 @@ export const FetchAPIBooks = (API, content, type_content) => {
                             //key nova nova nova nova nova: AIzaSyAiDQzrYuazi4kakyEopdexfMzPXwxqwqw
 
 
-                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyAiDQzrYuazi4kakyEopdexfMzPXwxqwqw')
+                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyD-zklYb-4hfvnS0K4AVXp08nLn_eW3Wlg')
                                 .then((response) => {
 
                                 if (response.totalItems > 0) {

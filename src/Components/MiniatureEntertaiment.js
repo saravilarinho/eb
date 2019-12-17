@@ -4,9 +4,10 @@ import '../Styles/Styles.css';
 import img from "../Images/film.jpg";
 import eyeicon from '../Images/plus-solid.svg'
 import hearticon from '../Images/heart_unfill.svg'
+import block from '../Images/ban-solid.svg'
 import hearticon_1 from '../Images/heart_fill.svg';
 import {Link} from 'react-router-dom'
-import poster_default from  '../Images/dafaul_poster.png'
+import poster_default from '../Images/dafaul_poster.png'
 import {connect} from 'react-redux';
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -26,7 +27,7 @@ const MiniatureEntertaiment = (props) => {
     };
 
 
-    if (props.type ==='Movie' || props.type === 'Serie' || props.type === 'Favourite_Movie') {
+    if (props.type === 'Movie' || props.type === 'Serie' || props.type === 'Favourite_Movie') {
         path = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + props.img;
     }
     const GetLikeUnlikeInfo = (id, type) => {
@@ -68,6 +69,18 @@ const MiniatureEntertaiment = (props) => {
 
             });
 
+
+            if (/[a-zA-Z]/.test(id) || props.id === 'not found') {
+
+
+                if (id.includes('X') !== true && props.id.includes('x') !== true) {
+
+                    bol = block
+
+                }
+            }
+
+
             return bol
 
         }
@@ -77,24 +90,23 @@ const MiniatureEntertaiment = (props) => {
     const AddandDeleteHeart = (id, type) => {
 
 
-
         const db = firebase.firestore();
 
-        let bol = GetLikeUnlikeInfo(id,type);
+        let bol = GetLikeUnlikeInfo(id, type);
 
 
         if (props.user.documentid !== '') {
 
             let updatedocument = db.collection("favorites").doc(props.user.documentid);
 
-            if (bol ===hearticon_1 ) {
+            if (bol === hearticon_1) {
 
 
                 if (type === 'Book') {
 
                     let newboos = [];
 
-                   props.user.favorites.books.map(item => {
+                    props.user.favorites.books.map(item => {
                         if (parseInt(item) !== parseInt(id)) {
 
                             newboos.push(parseInt(item))
@@ -130,7 +142,7 @@ const MiniatureEntertaiment = (props) => {
 
                     let newmovies = [];
 
-                   props.user.favorites.movies.map(item => {
+                    props.user.favorites.movies.map(item => {
                         if (parseInt(item) !== parseInt(id)) {
 
                             newmovies.push(item)
@@ -190,7 +202,8 @@ const MiniatureEntertaiment = (props) => {
 
             }
 
-        }};
+        }
+    };
 
     return (
 
@@ -198,48 +211,44 @@ const MiniatureEntertaiment = (props) => {
         <section className={'d-inline mb-5 w-100'}>
             <div className={'col-10 col-md-5 col-lg-3 listentertaiment mb-5'}>
                 <section className={'col-11 h-100'}>
-                    <img src={props.img === null ? poster_default : path} className={'w-100 d-block img-back'} />
+                    <img src={props.img === null ? poster_default : path} className={'w-100 d-block img-back'}/>
                     <div className={'position-absolute above p-3 w-100'}>
                         <h1 className={'text-wrap'}> {props.title} </h1>
-                        <p className={' text-adapt text-wrap'}>{props.text ? readMore(props.text): console.log('nok') }
+                        <p className={' text-adapt text-wrap'}>{props.text ? readMore(props.text) : console.log('nok')}
                         </p>
                         <div className={'row justify-content-between likeandview w-100 '}>
-                            <Link to={'/Individual/'+props.type+'s/' + props.id} className={"col-4 col-lg-3 d-flex align-items-center"}>
+                            <Link to={'/Individual/' + props.type + 's/' + props.id}
+                                  className={"col-4 col-lg-3 d-flex align-items-center"}>
                                 <img className={'img-fluid '} src={eyeicon}/>
                             </Link>
 
-                            {console.log(props.id+"-"+props.title)}
+                            <img className={"col-5 col-lg-4 img-fluid d-flex align-items-center"}
+                                 src={GetLikeUnlikeInfo(props.id, props.type)} onClick={() => {
 
 
-                            <img className={"col-5 col-lg-4 img-fluid d-flex align-items-center"} src={GetLikeUnlikeInfo(props.id, props.type)} onClick={()=>{
+                                if (/[a-zA-Z]/.test(props.id) || props.id === 'not found') {
 
 
-                                
-                                    if (/[a-zA-Z]/.test(props.id)) {
+                                    if (props.id.includes('X') === true || props.id.includes('x') === true) {
 
-
-                                        if (props.id.includes('X') !== true && props.id.includes('x') !== true) {
-
-                                            alert('Letter Found' + props.id )
-
-
-                                        }
-                                        
+                                        AddandDeleteHeart(props.id, props.type);
+                                        props.func();
                                     }
 
+                                } else {
+                                    AddandDeleteHeart(props.id, props.type);
+                                    props.func();
+                                }
 
 
-
-                                /*AddandDeleteHeart(props.id, props.type);
-                               props.func();*/
                             }}/>
                         </div>
                     </div>
                 </section>
                 <section className={'col-12 text-center seemore'}>
-                    <Link to={'/Individual/'+props.type+'s/' + props.id}>
+                    <Link to={'/Individual/' + props.type + 's/' + props.id}>
 
-                    <button className={'buttonseemore'}>SEE MORE</button>
+                        <button className={'buttonseemore'}>SEE MORE</button>
                     </Link>
 
                 </section>
@@ -255,7 +264,6 @@ const mapStateToProps = (state) => {
 
     }
 };
-
 
 
 export default connect(mapStateToProps)(MiniatureEntertaiment);

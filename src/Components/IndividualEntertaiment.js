@@ -26,9 +26,6 @@ const IndividualEntertaiment = (props) => {
                         console.log('hiii');
                         props.likeandunlike();
                         props.check();
-                    } else {
-                        console.log('hiii');
-                        alert("Hello! I am an alert box!!");
                     }
                 }}/>
                 <img className={'col-3  icon'} src={props.heart === true ? hearticon_1 : hearticon}/>
@@ -97,8 +94,6 @@ const IndividualEntertaiment = (props) => {
                     if (props.user !== false) {
                         props.likeandunlike();
                         props.check();
-                    } else {
-                        alert("Hello! I am an alert box!!");
                     }
                 }}/>
                 <img className={'col-3  icon'} src={props.heart === true ? hearticon_1 : hearticon}/>
@@ -158,8 +153,6 @@ const IndividualEntertaiment = (props) => {
                     if (props.user !== false) {
                         props.likeandunlike();
                         props.check();
-                    } else {
-                        alert("Hello! I am an alert box!!");
                     }
                 }}/>
                 <img alt={'heart'} className={'col-3  icon'} src={props.heart === true ? hearticon_1 : hearticon}/>

@@ -14,7 +14,12 @@ export const FetchAPIBooks = (API, content, type_content) => {
 
                         if (Array.isArray(book.book_details) === true) {
 
-                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyCMhPWtvzMZf6RFRR7xJ69I9UIBEHT80Gk')
+                            //key nova: AIzaSyCMhPWtvzMZf6RFRR7xJ69I9UIBEHT80Gk
+                            //key nova nova: AIzaSyDkibc59KVVXNm-6LbWRp5HUybKJY7Yhpw
+                            //key nova nova nova: AIzaSyA3NQ18-cLUvwl6PFpWG1gLenSazhEs8ms
+
+
+                            ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + book.book_details[0].primary_isbn13 + '&key=AIzaSyA3NQ18-cLUvwl6PFpWG1gLenSazhEs8ms')
                                 .then((response) => {
 
                                 if (response.totalItems > 0) {

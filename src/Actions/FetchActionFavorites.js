@@ -58,7 +58,7 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
 
                 }else {
 
-                    ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + IDS[x] + '&key=AIzaSyCMhPWtvzMZf6RFRR7xJ69I9UIBEHT80Gk')
+                    ConnectAPI('https://www.googleapis.com/books/v1/volumes?q=isbn:' + IDS[x] + '&key=AIzaSyA3NQ18-cLUvwl6PFpWG1gLenSazhEs8ms')
                         .then((response) => dispatch({
                                 type: 'FETCH_FAVORITES',
                                 result: response.items[0].volumeInfo,
@@ -67,8 +67,10 @@ export const FetchActionFavorites = (IDS, type_content, page) => {
                         )
                 }
                 // {console.log(result.items[0].volumeInfo)}
+                // nova nova key: AIzaSyDkibc59KVVXNm-6LbWRp5HUybKJY7Yhpw
                 //nova key: AIzaSyCMhPWtvzMZf6RFRR7xJ69I9UIBEHT80Gk
                 //antiga key: AIzaSyC755kq2kWZ-_6Gb21br9piXNrqJEB5GoY
+                //nova nova nova key: AIzaSyA3NQ18-cLUvwl6PFpWG1gLenSazhEs8ms
             }
         }
     }

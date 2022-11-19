@@ -19,7 +19,7 @@
     "react-router-apply-middleware": "0.0.2",
     "react-router-dom": "^5.1.2",
     "react-router-relative-links": "^0.1.0",
-    "react-scripts": "^3.3.0",
+    "react-scripts": "^5.0.1",
     "reactstrap": "^8.2.0",
     "redux": "^4.0.4",
     "redux-firestore": "^0.11.0",
